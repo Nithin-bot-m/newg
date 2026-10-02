@@ -42,22 +42,22 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[75vh] lg:min-h-screen bg-gradient-to-b from-[#04190f] via-[#062417] to-[#03150d] overflow-hidden flex items-center pt-16 lg:pt-20">
+    <section id="hero" className="relative min-h-[75vh] lg:min-h-screen bg-gradient-to-b from-[#051429] via-[#071D3A] to-[#040E1C] overflow-hidden flex items-center pt-16 lg:pt-20">
       {/* Animmaster: Spotlight Background (replaces Aceternity Background Beams) */}
-      <SpotlightBackground color="#FC6C18" intensity={0.4} />
+      <SpotlightBackground color="#00B8E6" intensity={0.45} />
 
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-[#FC6C18]/10 blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 h-[30rem] w-[30rem] rounded-full bg-[#084428]/35 blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 h-96 w-96 rounded-full bg-[#FC6C18]/5 blur-3xl" />
+        <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-[#0878E8]/10 blur-3xl" />
+        <div className="absolute top-1/3 right-1/4 h-[30rem] w-[30rem] rounded-full bg-[#00AFA8]/25 blur-3xl" />
+        <div className="absolute bottom-1/4 -right-32 h-96 w-96 rounded-full bg-[#00B8E6]/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: copy */}
           <div className="text-white">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#FC6C18]/20 px-4 py-1.5 text-xs font-semibold text-[#FC6C18] mb-6">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/20 px-4 py-1.5 text-xs font-semibold text-[#0878E8] mb-6">
               <Sparkles className="h-3.5 w-3.5" />
               100% Career Audit Included
             </span>
@@ -71,7 +71,7 @@ export function Hero() {
                 scrambleDuration={1400}
               />
               <br />
-              <span className="text-[#FC6C18] inline-block mt-2">
+              <span className="text-[#0878E8] inline-block mt-2">
                 <GlitchText
                   text="Actually Wants."
                   as="span"
@@ -88,7 +88,7 @@ export function Hero() {
                 "Fast Tracks: 2–3 Months intensive, outcome-focused programs",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-gray-300">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#FC6C18] shrink-0" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#0878E8] shrink-0" />
                   <span className="text-base lg:text-lg">{item}</span>
                 </div>
               ))}
@@ -99,7 +99,7 @@ export function Hero() {
               <WordRotate
                 words={["freshers", "working pros", "career switchers", "gap-year returns"]}
                 duration={2200}
-                className="text-[#FC6C18] font-bold inline-flex"
+                className="text-[#0878E8] font-bold inline-flex"
               />
               <span className="block mt-2">who want a job, not just a degree.</span>
             </div>
@@ -107,8 +107,8 @@ export function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a href="#programs">
                 <PulsatingButton
-                  className="group inline-flex items-center gap-2 hover:bg-[#e55a0a]"
-                  pulseColor="rgba(252, 108, 24,  0.45)"
+                  className="group inline-flex items-center gap-2 hover:bg-[#0766c6]"
+                  pulseColor="rgba(8, 120, 232,   0.45)"
                   duration="2s"
                 >
                   Explore 8 Programs
@@ -129,9 +129,9 @@ export function Hero() {
                   size={88}
                   fontSize={9}
                   duration={18}
-                  color="#FC6C18"
+                  color="#0878E8"
                 >
-                  <span className="text-[#FC6C18] text-xl font-black">★</span>
+                  <span className="text-[#32D583] text-xl font-black">★</span>
                 </CircularText>
               </div>
             </div>
@@ -140,7 +140,7 @@ export function Hero() {
           {/* Right: lead form */}
           <div className="lg:justify-self-end w-full max-w-md">
             <div className="bg-white rounded-2xl shadow-2xl p-6 lg:p-8">
-              <h3 className="text-2xl font-bold text-[#0a0a0a]">Talk to a Counsellor</h3>
+              <h3 className="text-2xl font-bold text-[#071D3A]">Talk to a Counsellor</h3>
               <p className="mt-2 text-sm text-gray-600">
                 Tell us where you want to land. We reply within 4 hours with a personalised counselling slot, recommended tests, and a rough budget map.
               </p>
@@ -152,7 +152,7 @@ export function Hero() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name *"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#FC6C18] focus:border-transparent text-gray-900"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
                   />
                 </div>
                 <div>
@@ -162,7 +162,7 @@ export function Hero() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="Phone Number *"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#FC6C18] focus:border-transparent text-gray-900"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
                   />
                 </div>
                 <div>
@@ -171,14 +171,14 @@ export function Hero() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email Address (optional)"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#FC6C18] focus:border-transparent text-gray-900"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
                   />
                 </div>
                 <div>
                   <select
                     value={program}
                     onChange={(e) => setProgram(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#FC6C18] focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent"
                   >
                     <option value="">Select Program</option>
                     <option value="Power BI Mastery">Power BI Mastery</option>
@@ -194,7 +194,7 @@ export function Hero() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-3 bg-[#FC6C18] text-white font-bold rounded-lg hover:bg-[#e55a0a] shadow-lg shadow-[#FC6C18]/25 transition-colors disabled:opacity-70 cursor-pointer"
+                  className="w-full py-3 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-lg hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 transition-all disabled:opacity-70 cursor-pointer"
                 >
                   {submitting ? "Sending..." : "Get Free Counselling →"}
                 </button>

@@ -35,12 +35,12 @@ export const PulsatingButton = React.forwardRef<
           className,
         )}
         style={{
-          background: "var(--bg, #FC6C18)",
+          background: "var(--bg, linear-gradient(135deg, #0878E8, #00B8E6))",
           color: "#ffffff",
           // Pseudo-element pulse via box-shadow
           animation: "pulsate var(--pulse-duration, 1.5s) ease-in-out infinite",
           // CSS vars consumed by the @keyframes pulsate rule
-          ["--pulse-color" as any]: pulseColor || "rgba(252, 108, 24,  0.5)",
+          ["--pulse-color" as any]: pulseColor || "rgba(8, 120, 232, 0.5)",
           ["--pulse-distance" as any]: distance,
           ["--pulse-duration" as any]: duration,
         }}

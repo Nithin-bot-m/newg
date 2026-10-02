@@ -13,16 +13,16 @@ const SkeletonOne = () => {
     animate: { x: 10, rotate: 5, transition: { duration: 0.2 } },
   };
   return (
-    <div className="flex flex-1 w-full h-full min-h-[8rem] rounded-xl bg-gradient-to-br from-[#FC6C18]/15 via-zinc-900 to-black overflow-hidden relative">
+    <div className="flex flex-1 w-full h-full min-h-[8rem] rounded-xl bg-gradient-to-br from-[#0878E8]/15 via-zinc-900 to-black overflow-hidden relative">
       <motion.div
         variants={variants}
         initial="initial"
         animate="animate"
-        className="flex flex-1 w-full h-full min-h-[8rem] bg-gradient-to-r from-[#FC6C18]/40 to-transparent"
+        className="flex flex-1 w-full h-full min-h-[8rem] bg-gradient-to-r from-[#0878E8]/40 to-transparent"
       />
       <div className="absolute inset-0 flex items-center justify-center">
-        <p className="text-5xl font-black text-[#FC6C18]/60">Career</p>
-        <p className="text-5xl font-black text-[#FC6C18]/60 ml-2">Audit</p>
+        <p className="text-5xl font-black text-[#0878E8]/60">Career</p>
+        <p className="text-5xl font-black text-[#0878E8]/60 ml-2">Audit</p>
       </div>
     </div>
   );
@@ -38,7 +38,7 @@ const SkeletonTwo = () => (
           whileInView={{ height: `${h}%` }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 * i, duration: 0.6 }}
-          className="flex-1 bg-gradient-to-t from-[#FC6C18] to-[#FC6C18]/40 rounded-t"
+          className="flex-1 bg-gradient-to-t from-[#0878E8] to-[#0878E8]/40 rounded-t"
         />
       ))}
     </div>
@@ -52,7 +52,7 @@ const SkeletonThree = () => (
       whileInView={{ rotate: 360 }}
       viewport={{ once: true }}
       transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-24 w-24 rounded-full border-4 border-[#FC6C18] border-t-transparent"
+      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-24 w-24 rounded-full border-4 border-[#0878E8] border-t-transparent"
     />
     <div className="absolute inset-0 flex items-center justify-center">
       <p className="text-3xl font-black text-white">2–3 mo</p>
@@ -72,11 +72,11 @@ const SkeletonFour = () => (
           transition={{ delay: 0.1 * n }}
           className="rounded-lg bg-zinc-800 flex items-center justify-center"
         >
-          <Users className="h-6 w-6 text-[#FC6C18]" />
+          <Users className="h-6 w-6 text-[#0878E8]" />
         </motion.div>
       ))}
     </div>
-    <div className="absolute bottom-2 right-3 text-xs font-bold text-[#FC6C18]">
+    <div className="absolute bottom-2 right-3 text-xs font-bold text-[#0878E8]">
       10+ yrs
     </div>
   </div>
@@ -92,7 +92,7 @@ const SkeletonFive = () => (
           whileInView={{ width: `${w}%` }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 * i, duration: 0.6 }}
-          className="h-3 rounded bg-[#FC6C18]/40"
+          className="h-3 rounded bg-[#0878E8]/40"
         />
       ))}
     </div>
@@ -100,7 +100,7 @@ const SkeletonFive = () => (
 );
 
 const SkeletonSix = () => (
-  <div className="flex flex-1 w-full h-full min-h-[8rem] rounded-xl bg-gradient-to-br from-[#FC6C18]/15 via-zinc-900 to-black overflow-hidden relative">
+  <div className="flex flex-1 w-full h-full min-h-[8rem] rounded-xl bg-gradient-to-br from-[#0878E8]/15 via-zinc-900 to-black overflow-hidden relative">
     <div className="absolute inset-0 flex items-center justify-around px-4">
       {["TCS", "Infosys", "Accenture", "Deloitte"].map((c, i) => (
         <motion.div
@@ -116,7 +116,7 @@ const SkeletonSix = () => (
       ))}
     </div>
     <div className="absolute bottom-2 right-3">
-      <Briefcase className="h-4 w-4 text-[#FC6C18]" />
+      <Briefcase className="h-4 w-4 text-[#0878E8]" />
     </div>
   </div>
 );
@@ -126,7 +126,7 @@ const ITEMS = [
     title: "Career Audit First",
     description:
       "Before you join, we assess your background, strengths, and market fit — then recommend the exact track that maximises your placement odds.",
-    icon: <Target className="h-4 w-4 text-[#FC6C18]" />,
+    icon: <Target className="h-4 w-4 text-[#0878E8]" />,
     header: <SkeletonOne />,
     className: "md:col-span-2",
   },
@@ -134,35 +134,35 @@ const ITEMS = [
     title: "Industry-Mapped Curriculum",
     description:
       "Every module is benchmarked to what TCS, Infosys, Accenture, Deloitte, and top GCCs are actually hiring for — not textbook theory.",
-    icon: <BarChart3 className="h-4 w-4 text-[#FC6C18]" />,
+    icon: <BarChart3 className="h-4 w-4 text-[#0878E8]" />,
     header: <SkeletonTwo />,
   },
   {
     title: "Fast Tracks: 2–3 Months",
     description:
       "Intensive, outcome-focused programs so you upskill and enter the market quickly. No year-long commitments. Results, not degrees.",
-    icon: <Clock className="h-4 w-4 text-[#FC6C18]" />,
+    icon: <Clock className="h-4 w-4 text-[#0878E8]" />,
     header: <SkeletonThree />,
   },
   {
     title: "Expert Trainers",
     description:
       "All instructors have 10+ years of active industry experience. They don’t just teach — they’ve done the job you’re aiming for.",
-    icon: <Users className="h-4 w-4 text-[#FC6C18]" />,
+    icon: <Users className="h-4 w-4 text-[#0878E8]" />,
     header: <SkeletonFour />,
   },
   {
     title: "Resume & LinkedIn Prep",
     description:
       "ATS-optimised resume writing, LinkedIn profile overhaul, and Naukri setup. Your first impression is built with you, not for you.",
-    icon: <FileText className="h-4 w-4 text-[#FC6C18]" />,
+    icon: <FileText className="h-4 w-4 text-[#0878E8]" />,
     header: <SkeletonFive />,
   },
   {
     title: "Placement Support",
     description:
       "Mock interviews, referrals, and recruiter connects. Placement service charges apply — because we only charge when we deliver results.",
-    icon: <Briefcase className="h-4 w-4 text-[#FC6C18]" />,
+    icon: <Briefcase className="h-4 w-4 text-[#0878E8]" />,
     header: <SkeletonSix />,
     className: "md:col-span-2",
   },

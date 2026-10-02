@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const ParticleStarfield = ({
   className,
   density = 1.2,
-  color = "#FC6C18",
+  color = "#00B8E6",
   twinkle = true,
   drift = true,
 }: {

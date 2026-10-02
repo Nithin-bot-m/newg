@@ -15,7 +15,7 @@ export function Locations() {
     <section id="locations" className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             Our Hyderabad Campus
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">

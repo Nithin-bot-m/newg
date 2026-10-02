@@ -10,7 +10,7 @@ const STATS = [
 
 export function Results() {
   return (
-    <section className="bg-black py-16 lg:py-24 overflow-hidden relative">
+    <section className="bg-gradient-to-b from-[#040E1C] via-[#071D3A] to-[#051429] py-16 lg:py-24 overflow-hidden relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
@@ -28,7 +28,7 @@ export function Results() {
               key={s.label}
               className="text-center bg-white/5 ring-1 ring-white/10 rounded-2xl p-6"
             >
-              <div className="text-3xl lg:text-5xl font-black text-[#FC6C18]">
+              <div className="text-3xl lg:text-5xl font-black text-[#32D583]">
                 <AnimateCount value={s.value} suffix={s.suffix} duration={2} />
               </div>
               <div className="mt-2 text-xs lg:text-sm text-gray-400">

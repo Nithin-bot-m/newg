@@ -19,7 +19,7 @@ export const SparklesCore = ({
   minSize = 0.6,
   maxSize = 1.4,
   particleDensity = 100,
-  particleColor = "#FC6C18",
+  particleColor = "#0878E8",
 }: SparklesCoreProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 

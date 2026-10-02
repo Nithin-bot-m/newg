@@ -14,7 +14,7 @@ export const CircularText = ({
   duration = 22,
   size = 160,
   fontSize = 13,
-  color = "#FC6C18",
+  color = "#00B8E6",
   children,
 }: {
   text: string;

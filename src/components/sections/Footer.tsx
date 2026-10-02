@@ -37,7 +37,7 @@ const FOOTER_COLUMNS = [
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#051c11] via-[#03150d] to-[#020d08] text-white border-t border-[#084428]/30 overflow-x-hidden">
+    <footer className="bg-gradient-to-b from-[#051429] via-[#071D3A] to-[#030B17] text-white border-t border-[#00AFA8]/30 overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand column */}
@@ -53,13 +53,13 @@ export function Footer() {
             <div className="mt-3 space-y-1 text-sm text-gray-400">
               <p>
                 Email:{" "}
-                <a href="mailto:greenroots.tech@outlook.com" className="hover:text-[#FC6C18]">
+                <a href="mailto:greenroots.tech@outlook.com" className="hover:text-[#0878E8]">
                   greenroots.tech@outlook.com
                 </a>
               </p>
               <p>
                 Phone:{" "}
-                <a href="tel:+919549543898" className="hover:text-[#FC6C18]">
+                <a href="tel:+919549543898" className="hover:text-[#0878E8]">
                   +91 95495 43898
                 </a>
               </p>
@@ -68,7 +68,7 @@ export function Footer() {
                   href="https://wa.me/919549543898?text=Hi%20Greenroots,%20I%20would%20like%20to%20know%20more%20about%20your%20courses."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#FC6C18] font-medium"
+                  className="hover:text-[#0878E8] font-medium"
                 >
                   Chat with us on WhatsApp →
                 </a>
@@ -87,7 +87,7 @@ export function Footer() {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-sm text-gray-400 hover:text-[#FC6C18] transition-colors"
+                      className="text-sm text-gray-400 hover:text-[#0878E8] transition-colors"
                     >
                       {link.name}
                     </a>

@@ -51,7 +51,7 @@ export function StudyAbroadServices() {
     <section id="services" className="py-16 lg:py-24 bg-[#faf8f5]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             From your first question to your boarding pass.
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -70,10 +70,10 @@ export function StudyAbroadServices() {
                 <span className="absolute top-5 right-5 text-[11px] font-bold text-gray-300 tracking-wide">
                   {s.num}
                 </span>
-                <div className="h-11 w-11 rounded-xl bg-[#FC6C18]/15 text-[#FC6C18] flex items-center justify-center mb-4">
+                <div className="h-11 w-11 rounded-xl bg-[#0878E8]/15 text-[#0878E8] flex items-center justify-center mb-4">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0a0a0a]">{s.title}</h3>
+                <h3 className="text-lg font-bold text-[#071D3A]">{s.title}</h3>
                 <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                   {s.desc}
                 </p>
@@ -94,7 +94,7 @@ export function StudyAbroadServices() {
             {["IELTS", "PTE", "GRE", "GMAT", "TOEFL", "SAT", "Duolingo"].map((exam) => (
               <span
                 key={exam}
-                className="px-4 py-1.5 rounded-full bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-[#FC6C18]"
+                className="px-4 py-1.5 rounded-full bg-white/5 ring-1 ring-white/10 text-sm font-semibold text-[#0878E8]"
               >
                 {exam}
               </span>

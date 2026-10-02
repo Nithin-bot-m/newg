@@ -17,7 +17,7 @@ export function Mentors() {
     <section id="mentors" className="py-12 sm:py-16 lg:py-24 bg-gray-50 overflow-hidden relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             Rushi — Head Trainer at Greenroots
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -36,7 +36,7 @@ export function Mentors() {
               className="w-full bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center"
             >
               <AvatarPlaceholder label={m.name || "—"} className="h-20 w-20 mb-3" />
-              <h3 className="text-sm font-bold text-[#0a0a0a]">
+              <h3 className="text-sm font-bold text-[#071D3A]">
                 {m.name || <span className="text-gray-400">—</span>}
               </h3>
               <p className="text-xs text-gray-500 mt-0.5">

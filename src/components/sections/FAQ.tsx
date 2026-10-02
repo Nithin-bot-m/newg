@@ -39,20 +39,20 @@ export function FAQ() {
       {/* Magic UI: Dot Pattern ambient background */}
       <DotPattern
         glow
-        color="#FC6C18"
-        className="text-[#FC6C18]/15"
+        color="#0878E8"
+        className="text-[#0878E8]/15"
         width={24}
         height={24}
         cr={1.2}
       />
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             Before You Apply
           </h2>
           <p className="mt-4 text-gray-600">
             Common questions trainers and content partners ask before joining Greenroots. Can&apos;t find what you&apos;re looking for?{" "}
-            <a href="#" className="text-[#0a0a0a] underline">
+            <a href="#" className="text-[#071D3A] underline">
               Contact us
             </a>
             .
@@ -72,12 +72,12 @@ export function FAQ() {
                   onClick={() => setOpenIdx(open ? null : i)}
                   aria-expanded={open}
                 >
-                  <span className="text-sm sm:text-base font-semibold text-[#0a0a0a]">
+                  <span className="text-sm sm:text-base font-semibold text-[#071D3A]">
                     {faq.q}
                   </span>
                   <span
                     className={`shrink-0 h-7 w-7 rounded-full flex items-center justify-center transition-colors ${
-                      open ? "bg-[#FC6C18] text-white" : "bg-gray-100 text-gray-600"
+                      open ? "bg-[#0878E8] text-white" : "bg-gray-100 text-gray-600"
                     }`}
                   >
                     {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
@@ -94,10 +94,10 @@ export function FAQ() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <button className="px-6 py-3 border border-gray-300 text-[#0a0a0a] font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+          <button className="px-6 py-3 border border-gray-300 text-[#071D3A] font-semibold rounded-lg hover:bg-gray-50 transition-colors">
             See If You Qualify
           </button>
-          <button className="px-6 py-3 bg-[#FC6C18] text-white font-semibold rounded-lg hover:bg-[#e55a0a] transition-colors">
+          <button className="px-6 py-3 bg-[#0878E8] text-white font-semibold rounded-lg hover:bg-[#0766c6] transition-colors">
             Apply to Join Us →
           </button>
         </div>

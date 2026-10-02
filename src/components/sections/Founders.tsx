@@ -25,12 +25,12 @@ const FOUNDERS = [
 
 export function Founders() {
   return (
-    <section className="relative py-16 lg:py-24 bg-gradient-to-b from-[#04190f] via-[#072517] to-[#04160d] overflow-hidden">
+    <section className="relative py-16 lg:py-24 bg-gradient-to-b from-[#051429] via-[#071D3A] to-[#040E1C] overflow-hidden">
       {/* Animmaster: Particle Starfield ambient background */}
-      <ParticleStarfield density={0.8} color="#FC6C18" />
+      <ParticleStarfield density={0.8} color="#0878E8" />
       {/* Unlumen: Wave Background — animated flowing lines */}
-      <WaveBackground color="#FC6C18" lineCount={20} opacity={0.12} amplitude={20} speed={0.8} />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-96 w-[40rem] rounded-full bg-[#FC6C18]/5 blur-3xl pointer-events-none" />
+      <WaveBackground color="#0878E8" lineCount={20} opacity={0.12} amplitude={20} speed={0.8} />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-96 w-[40rem] rounded-full bg-[#0878E8]/5 blur-3xl pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
@@ -49,7 +49,7 @@ export function Founders() {
             >
               <AvatarPlaceholder label={f.name || "—"} className="h-24 w-24 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white">{f.name || <span className="text-gray-500">—</span>}</h3>
-              <p className="mt-1 text-sm text-[#FC6C18] font-medium">{f.role || <span className="text-gray-600">—</span>}</p>
+              <p className="mt-1 text-sm text-[#0878E8] font-medium">{f.role || <span className="text-gray-600">—</span>}</p>
               <p className="text-xs text-gray-500 mt-0.5">{f.college || <span className="text-gray-700">—</span>}</p>
               <p className="mt-4 text-sm text-gray-400 leading-relaxed">{f.bio || <span className="text-gray-700">—</span>}</p>
             </div>
@@ -57,7 +57,7 @@ export function Founders() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="px-8 py-3 bg-[#FC6C18] text-white font-semibold rounded-lg hover:bg-[#e55a0a] transition-colors">
+          <button className="px-8 py-3 bg-[#0878E8] text-white font-semibold rounded-lg hover:bg-[#0766c6] transition-colors">
             Apply to Join Us as a Trainer
           </button>
         </div>

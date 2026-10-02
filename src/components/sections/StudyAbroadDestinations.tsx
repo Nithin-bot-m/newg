@@ -63,11 +63,11 @@ export function StudyAbroadDestinations() {
     <section id="study-abroad" className="py-16 lg:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#FC6C18]/15 px-4 py-1.5 text-xs font-semibold text-[#FC6C18] mb-4">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#0878E8] mb-4">
             <Globe className="h-3.5 w-3.5" />
             Greenroots × SIG Global Edu — Official Partner
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             Where do you want to land?
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -79,15 +79,15 @@ export function StudyAbroadDestinations() {
           {DESTINATIONS.map((dest) => (
             <div
               key={dest.country}
-              className="bg-gray-50 hover:bg-white rounded-2xl p-6 ring-1 ring-gray-100 hover:ring-[#FC6C18]/40 hover:shadow-lg transition-all duration-300 group"
+              className="bg-gray-50 hover:bg-white rounded-2xl p-6 ring-1 ring-gray-100 hover:ring-[#0878E8]/40 hover:shadow-lg transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-3xl leading-none">{dest.flag}</span>
-                <h3 className="text-xl font-bold text-[#0a0a0a]">
+                <h3 className="text-xl font-bold text-[#071D3A]">
                   {dest.country}
                 </h3>
               </div>
-              <p className="text-xs font-semibold text-[#FC6C18] uppercase tracking-wide mb-2">
+              <p className="text-xs font-semibold text-[#0878E8] uppercase tracking-wide mb-2">
                 {dest.tag}
               </p>
               <p className="text-sm text-gray-600 leading-relaxed">
@@ -98,7 +98,7 @@ export function StudyAbroadDestinations() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="inline-flex items-center gap-2 px-8 py-3 bg-[#FC6C18] text-white font-semibold rounded-lg hover:bg-[#e55a0a] transition-colors">
+          <button className="inline-flex items-center gap-2 px-8 py-3 bg-[#0878E8] text-white font-semibold rounded-lg hover:bg-[#0766c6] transition-colors">
             <Plane className="h-4 w-4" />
             Get Free Counselling
           </button>

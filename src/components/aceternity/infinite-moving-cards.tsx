@@ -74,7 +74,7 @@ export const InfiniteMovingCards = ({
                   </div>
                 )}
                 <div>
-                  <span className="font-semibold text-[#FC6C18] block">{item.name}</span>
+                  <span className="font-semibold text-[#0878E8] block">{item.name}</span>
                   {item.title && <span className="text-neutral-400 text-[11px]">{item.title}</span>}
                 </div>
               </footer>

@@ -16,7 +16,7 @@ const COURSES: Course[] = [
   {
     title: "Power BI 60-Day Mastery Track",
     tag: "High Demand",
-    accent: "#FC6C18",
+    accent: "#0878E8",
     desc: "From SQL foundations to advanced DAX and live dashboards — the complete, project-led path into a Data Analyst role.",
     duration: "60 days",
     level: "Beginner-friendly",
@@ -96,7 +96,7 @@ const COURSES: Course[] = [
   {
     title: "DevSecOps Mastery Track",
     tag: "Cloud + Security",
-    accent: "#FC6C18",
+    accent: "#0878E8",
     desc: "16 modules and 25+ tools — Docker to Kubernetes, Terraform to AWS — building a full, secure delivery pipeline.",
     duration: "3 months",
     level: "Some IT exp.",
@@ -148,7 +148,7 @@ export function Courses() {
     <section id="courses" className="py-12 sm:py-16 lg:py-24 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             All 8 High-Demand Tech Programs
           </h2>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
@@ -164,7 +164,7 @@ export function Courses() {
               style={{ borderTopColor: course.accent }}
             >
               <div className="flex items-start justify-between gap-3 mb-3">
-                <h3 className="text-lg font-bold text-[#0a0a0a] leading-snug">
+                <h3 className="text-lg font-bold text-[#071D3A] leading-snug">
                   {course.title}
                 </h3>
                 <span
@@ -232,7 +232,7 @@ export function Courses() {
               </div>
 
               <button
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0a0a0a] hover:gap-2.5 transition-all"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#071D3A] hover:gap-2.5 transition-all"
                 style={{ color: course.accent }}
               >
                 Book Free Counselling

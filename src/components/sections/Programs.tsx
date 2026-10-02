@@ -15,7 +15,7 @@ const PROGRAMS = [
       "60 days · Beginner-friendly · Live + recorded",
       "Power BI Desktop, Power Query, Power BI Service",
     ],
-    accent: "#FC6C18",
+    accent: "#0878E8",
   },
   {
     title: "Senior Business Analyst Program",
@@ -44,7 +44,7 @@ export function Programs() {
     <section id="programs" className="py-8 sm:py-12 lg:py-16 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             High-Demand Tech Tracks Built for 2026
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ export function Programs() {
                 size={120}
                 duration={8}
                 colorFrom={program.accent}
-                colorTo="#FC6C18"
+                colorTo="#00AFA8"
               />
               {/* Magic UI: MagicCard - mouse-following spotlight */}
               <MagicCard
@@ -88,7 +88,7 @@ export function Programs() {
                   >
                     {program.tag}
                   </span>
-                  <h3 className="text-lg lg:text-xl font-bold text-[#0a0a0a] leading-snug">
+                  <h3 className="text-lg lg:text-xl font-bold text-[#071D3A] leading-snug">
                     {program.title}
                   </h3>
                   <ul className="mt-4 space-y-2 flex-1">
@@ -105,7 +105,7 @@ export function Programs() {
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0a0a0a] hover:gap-2.5 transition-all">
+                  <button className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#071D3A] hover:gap-2.5 transition-all">
                     Learn More
                     <ArrowRight className="h-3.5 w-3.5" />
                   </button>

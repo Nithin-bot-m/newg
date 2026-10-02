@@ -45,7 +45,7 @@ export function LogoStrip() {
             {ROW_1_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/70 hover:bg-white border border-gray-100 hover:border-[#FC6C18] shadow-xs hover:shadow-sm flex items-center justify-center p-3 sm:p-4 transition-all duration-300"
+                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/70 hover:bg-white border border-gray-100 hover:border-[#0878E8] shadow-xs hover:shadow-sm flex items-center justify-center p-3 sm:p-4 transition-all duration-300"
               >
                 <img
                   src={c.logo}
@@ -68,7 +68,7 @@ export function LogoStrip() {
             {ROW_2_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/70 hover:bg-white border border-gray-100 hover:border-[#FC6C18] shadow-xs hover:shadow-sm flex items-center justify-center p-3 sm:p-4 transition-all duration-300"
+                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/70 hover:bg-white border border-gray-100 hover:border-[#0878E8] shadow-xs hover:shadow-sm flex items-center justify-center p-3 sm:p-4 transition-all duration-300"
               >
                 <img
                   src={c.logo}

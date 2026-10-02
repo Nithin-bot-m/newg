@@ -38,14 +38,14 @@ export function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0a0a0a] hover:bg-gray-50 rounded-md transition-colors"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#071D3A] hover:bg-gray-50 rounded-md transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0a0a0a] hover:bg-gray-50 rounded-md transition-colors"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#071D3A] hover:bg-gray-50 rounded-md transition-colors"
             >
               Contact
             </a>
@@ -55,13 +55,13 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="#contact"
-              className="px-4 py-2 text-sm font-semibold text-[#084428] border border-[#084428]/30 rounded-md hover:bg-[#084428]/5 transition-colors inline-block"
+              className="px-4 py-2 text-sm font-semibold text-[#00AFA8] border border-[#00AFA8]/40 rounded-md hover:bg-[#00AFA8]/10 transition-colors inline-block"
             >
               Free Career Audit
             </a>
             <a
               href="#contact"
-              className="px-5 py-2 text-sm font-semibold bg-[#FC6C18] text-white rounded-md hover:bg-[#e55a0a] transition-colors shadow-sm inline-block"
+              className="px-5 py-2 text-sm font-semibold bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white rounded-md hover:from-[#0766c6] hover:to-[#00a3cc] transition-all shadow-sm inline-block"
             >
               Talk to a Counsellor
             </a>
@@ -69,7 +69,7 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 -mr-2 text-[#0a0a0a]"
+            className="lg:hidden p-2 -mr-2 text-[#071D3A]"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -94,14 +94,14 @@ export function Header() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="flex-1 text-center px-4 py-2 text-sm font-semibold text-[#084428] border border-[#084428]/30 rounded-md hover:bg-[#084428]/5"
+                className="flex-1 text-center px-4 py-2 text-sm font-semibold text-[#00AFA8] border border-[#00AFA8]/30 rounded-md hover:bg-[#00AFA8]/5"
               >
                 Career Audit
               </a>
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="flex-1 text-center px-5 py-2 text-sm font-semibold bg-[#FC6C18] text-white rounded-md hover:bg-[#e55a0a]"
+                className="flex-1 text-center px-5 py-2 text-sm font-semibold bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white rounded-md hover:from-[#0766c6] hover:to-[#00a3cc]"
               >
                 Talk to Counsellor
               </a>

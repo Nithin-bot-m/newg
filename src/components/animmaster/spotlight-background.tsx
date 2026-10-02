@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
  */
 export const SpotlightBackground = ({
   className,
-  color = "#FC6C18",
+  color = "#0878E8",
   intensity = 0.55,
   showDust = true,
 }: {

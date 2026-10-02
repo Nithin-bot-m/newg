@@ -31,7 +31,7 @@ export function Placement() {
     <section id="placement" className="pt-12 sm:pt-16 lg:pt-24 pb-12 sm:pb-16 lg:pb-24 bg-gradient-to-b from-white via-gray-50/50 to-white overflow-hidden relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a0a0a]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             Placement Support
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ export function Placement() {
             {ROW_1_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-20 sm:h-24 w-40 sm:w-52 shrink-0 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-[#FC6C18] flex items-center justify-center p-4 sm:p-5 transition-all duration-300"
+                className="h-20 sm:h-24 w-40 sm:w-52 shrink-0 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-[#0878E8] flex items-center justify-center p-4 sm:p-5 transition-all duration-300"
               >
                 <img
                   src={c.logo}
@@ -75,7 +75,7 @@ export function Placement() {
             {ROW_2_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-20 sm:h-24 w-40 sm:w-52 shrink-0 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-[#FC6C18] flex items-center justify-center p-4 sm:p-5 transition-all duration-300"
+                className="h-20 sm:h-24 w-40 sm:w-52 shrink-0 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-[#0878E8] flex items-center justify-center p-4 sm:p-5 transition-all duration-300"
               >
                 <img
                   src={c.logo}

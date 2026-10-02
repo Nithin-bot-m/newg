@@ -22,8 +22,8 @@ const CAMPUS_PHOTOS = Array.from({ length: 8 });
 
 export function CampusLife() {
   return (
-    <section id="campus" className="relative py-16 lg:py-24 bg-gradient-to-b from-[#051c11] via-[#082a1b] to-[#04160d] overflow-hidden">
-      <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#FC6C18]/5 blur-3xl pointer-events-none" />
+    <section id="campus" className="relative py-16 lg:py-24 bg-gradient-to-b from-[#051429] via-[#071D3A] to-[#040E1C] overflow-hidden">
+      <div className="absolute -top-32 right-0 h-96 w-96 rounded-full bg-[#0878E8]/5 blur-3xl pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: copy + tags */}
@@ -34,7 +34,7 @@ export function CampusLife() {
             <div className="mt-6 space-y-3">
               {BULLET_POINTS.map((b) => (
                 <div key={b} className="flex items-start gap-3 text-gray-300">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#FC6C18] shrink-0" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#0878E8] shrink-0" />
                   <span className="text-base">{b}</span>
                 </div>
               ))}
@@ -54,7 +54,7 @@ export function CampusLife() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#contact"
-                className="px-6 py-3 bg-[#FC6C18] text-white font-semibold rounded-lg hover:bg-[#e55a0a] transition-colors inline-block"
+                className="px-6 py-3 bg-[#0878E8] text-white font-semibold rounded-lg hover:bg-[#0766c6] transition-colors inline-block"
               >
                 Book a Free Career Audit
               </a>

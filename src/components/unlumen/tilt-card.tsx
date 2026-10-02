@@ -14,7 +14,7 @@ export const TiltCard = ({
   className,
   maxTilt = 8,
   glare = true,
-  glareColor = "rgba(252, 108, 24,  0.15)",
+  glareColor = "rgba(8, 120, 232,   0.15)",
   scale = 1.02,
 }: {
   children: React.ReactNode;

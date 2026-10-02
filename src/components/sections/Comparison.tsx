@@ -40,9 +40,9 @@ export function Comparison() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24">
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto -mt-8">
           {/* Quad Advantage column */}
-          <div className="bg-gradient-to-br from-[#052114] via-[#083820] to-[#03170e] border border-[#084428]/50 rounded-2xl p-6 lg:p-8 text-white shadow-xl">
+          <div className="bg-gradient-to-br from-[#071D3A] via-[#0A2A54] to-[#04142B] border border-[#00AFA8]/50 rounded-2xl p-6 lg:p-8 text-white shadow-xl">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-10 w-10 rounded-lg bg-[#FC6C18] text-white flex items-center justify-center font-black">
+              <div className="h-10 w-10 rounded-lg bg-[#32D583] text-[#071D3A] flex items-center justify-center font-black">
                 ✓
               </div>
               <h3 className="text-xl lg:text-2xl font-bold">After CRT</h3>
@@ -50,7 +50,7 @@ export function Comparison() {
             <ul className="space-y-3">
               {ROWS.map((row, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm">
-                  <span className="mt-0.5 shrink-0 h-5 w-5 rounded-full bg-[#FC6C18] text-white flex items-center justify-center">
+                  <span className="mt-0.5 shrink-0 h-5 w-5 rounded-full bg-[#32D583] text-[#071D3A] flex items-center justify-center">
                     <Check className="h-3 w-3" strokeWidth={3} />
                   </span>
                   <span className="text-gray-200">
@@ -74,7 +74,7 @@ export function Comparison() {
               <div className="h-10 w-10 rounded-lg bg-gray-300 text-gray-600 flex items-center justify-center font-black">
                 ✕
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-[#0a0a0a]">
+              <h3 className="text-xl lg:text-2xl font-bold text-[#071D3A]">
                 Before CRT
               </h3>
             </div>
