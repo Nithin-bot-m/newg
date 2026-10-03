@@ -9,21 +9,15 @@ const ROW_1_LOGOS = [
   { name: "Wipro", logo: "/logos/companies/wipro.svg" },
   { name: "Cognizant", logo: "/logos/companies/cognizant.svg" },
   { name: "Capgemini", logo: "/logos/companies/capgemini.svg" },
-  { name: "Deloitte", logo: "/logos/companies/deloitte.svg" },
-  { name: "HCLTech", logo: "/logos/companies/hcltech.svg" },
-  { name: "Tech Mahindra", logo: "/logos/companies/techmahindra.svg" },
 ];
 
 const ROW_2_LOGOS = [
+  { name: "Deloitte", logo: "/logos/companies/deloitte.svg" },
+  { name: "HCL Technologies", logo: "/logos/companies/hcltech.svg" },
+  { name: "Tech Mahindra", logo: "/logos/companies/techmahindra.svg" },
   { name: "LTIMindtree", logo: "/logos/companies/ltimindtree.svg" },
-  { name: "IBM", logo: "/logos/companies/ibm.svg" },
-  { name: "Microsoft", logo: "/logos/companies/microsoft.svg" },
-  { name: "Amazon", logo: "/logos/companies/amazon.svg" },
-  { name: "Oracle", logo: "/logos/companies/oracle.svg" },
-  { name: "Google", logo: "/logos/companies/google.svg" },
-  { name: "Cisco", logo: "/logos/companies/cisco.svg" },
-  { name: "Salesforce", logo: "/logos/companies/salesforce.svg" },
-  { name: "Intel", logo: "/logos/companies/intel.svg" },
+  { name: "Mphasis", logo: "/logos/companies/mphasis.svg" },
+  { name: "Hexaware", logo: "/logos/companies/hexaware.svg" },
 ];
 
 export function Placement() {

@@ -61,19 +61,22 @@ const REVIEWS = [
   },
 ];
 
-const COMPANIES = [
-  "TCS",
-  "Infosys",
-  "Accenture",
-  "Wipro",
-  "Cognizant",
-  "Capgemini",
-  "Deloitte",
-  "HCL Technologies",
-  "Tech Mahindra",
-  "LTIMindtree",
-  "Mphasis",
-  "Hexaware",
+const ROW_1_COMPANIES = [
+  { name: "TCS", logo: "/logos/companies/tcs.svg" },
+  { name: "Infosys", logo: "/logos/companies/infosys.svg" },
+  { name: "Accenture", logo: "/logos/companies/accenture.svg" },
+  { name: "Wipro", logo: "/logos/companies/wipro.svg" },
+  { name: "Cognizant", logo: "/logos/companies/cognizant.svg" },
+  { name: "Capgemini", logo: "/logos/companies/capgemini.svg" },
+];
+
+const ROW_2_COMPANIES = [
+  { name: "Deloitte", logo: "/logos/companies/deloitte.svg" },
+  { name: "HCL Technologies", logo: "/logos/companies/hcltech.svg" },
+  { name: "Tech Mahindra", logo: "/logos/companies/techmahindra.svg" },
+  { name: "LTIMindtree", logo: "/logos/companies/ltimindtree.svg" },
+  { name: "Mphasis", logo: "/logos/companies/mphasis.svg" },
+  { name: "Hexaware", logo: "/logos/companies/hexaware.svg" },
 ];
 
 const PROCESS_STEPS = [
@@ -152,22 +155,44 @@ export default function ReviewsPage() {
         </section>
 
         {/* Hiring Companies with SmoothUI InfiniteSlider */}
-        <section className="py-8 sm:py-10 border-b border-slate-200/80 bg-[#07172c] overflow-hidden">
+        <section className="py-10 sm:py-14 border-b border-gray-100 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-slate-400">
+            <h3 className="text-xs uppercase tracking-widest font-semibold text-gray-400">
               Hiring Our Alumni
             </h3>
           </div>
-          <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-            <InfiniteSlider speed={35} speedOnHover={15} gap={16}>
-              {COMPANIES.map((company) => (
-                <span
-                  key={company}
-                  className="px-5 py-2.5 rounded-xl bg-white/[0.08] backdrop-blur-sm border border-white/12 text-sm font-semibold text-slate-200 shadow-sm hover:border-emerald-400/60 hover:text-white transition-all shrink-0 inline-flex items-center"
+          <div className="relative w-full overflow-hidden space-y-4 [mask-image:linear-gradient(to_right,transparent,white_8%,white_92%,transparent)]">
+            {/* Row 1 moving forward */}
+            <InfiniteSlider speed={45} speedOnHover={15} gap={20}>
+              {ROW_1_COMPANIES.map((c) => (
+                <div
+                  key={c.name}
+                  className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#0878E8]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(8,120,232,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
                 >
-                  <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 mr-2 shadow-[0_0_8px_#34d399]"></span>
-                  {company}
-                </span>
+                  <img
+                    src={c.logo}
+                    alt={c.name}
+                    className="h-7 sm:h-8 w-auto max-w-[110px] sm:max-w-[130px] object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </InfiniteSlider>
+
+            {/* Row 2 moving reverse */}
+            <InfiniteSlider speed={40} speedOnHover={15} reverse gap={20}>
+              {ROW_2_COMPANIES.map((c) => (
+                <div
+                  key={c.name}
+                  className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#0878E8]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(8,120,232,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
+                >
+                  <img
+                    src={c.logo}
+                    alt={c.name}
+                    className="h-7 sm:h-8 w-auto max-w-[110px] sm:max-w-[130px] object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                    loading="lazy"
+                  />
+                </div>
               ))}
             </InfiniteSlider>
           </div>
