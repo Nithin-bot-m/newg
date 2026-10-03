@@ -12,7 +12,6 @@ const LOCATIONS = [
   },
 ];
 
-import { BorderBeam } from "@/components/smoothui/border-beam";
 import { MagneticButton } from "@/components/smoothui/magnetic-button";
 import { ShineText } from "@/components/smoothui/shine-text";
 
@@ -141,13 +140,12 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Right: contact form with SmoothUI BorderBeam */}
-          <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200/80 p-6 sm:p-8 lg:p-9 overflow-hidden">
-            <BorderBeam size={180} duration={8} colorFrom="#0878E8" colorTo="#00A86B" />
+          {/* Right: contact form */}
+          <div className="relative bg-white rounded-3xl shadow-xl border border-slate-200/90 p-7 sm:p-9 lg:p-10">
             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">
                     First Name *
                   </label>
                   <input
@@ -156,11 +154,11 @@ export function Contact() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="Enter first name"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">
                     Last Name
                   </label>
                   <input
@@ -168,13 +166,13 @@ export function Contact() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Enter last name"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">
                     Email
                   </label>
                   <input
@@ -182,11 +180,11 @@ export function Contact() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter email"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">
                     Phone *
                   </label>
                   <input
@@ -195,12 +193,12 @@ export function Contact() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="Enter phone"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
+                <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">
                   Message
                 </label>
                 <textarea
@@ -208,7 +206,7 @@ export function Contact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Type your message or goals here"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] resize-none text-gray-900 transition-all placeholder:text-gray-400"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] resize-none text-slate-900 transition-all placeholder:text-slate-400"
                 />
               </div>
               <div className="pt-2">

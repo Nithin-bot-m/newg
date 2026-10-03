@@ -35,17 +35,16 @@ export function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-16 lg:py-24 bg-white overflow-hidden">
-      {/* Magic UI: Dot Pattern ambient background */}
+    <section id="faq" className="relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden scroll-mt-20">
+      {/* Calm, quiet background texture */}
       <DotPattern
-        glow
-        color="#0878E8"
-        className="text-[#0878E8]/15"
+        color="#94a3b8"
+        className="text-slate-300 opacity-40 pointer-events-none"
         width={24}
         height={24}
-        cr={1.2}
+        cr={1}
       />
-      <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center mb-10 lg:mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
             Before You Apply

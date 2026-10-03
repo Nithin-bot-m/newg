@@ -4,9 +4,7 @@ import Link from "next/link";
 import { ImagePlaceholder } from "@/components/placeholders";
 import { ArrowRight } from "lucide-react";
 import { TiltCard } from "@/components/smoothui/tilt-card";
-import { BorderBeam } from "@/components/smoothui/border-beam";
 import { MagneticButton } from "@/components/smoothui/magnetic-button";
-import { ShineText } from "@/components/smoothui/shine-text";
 
 const PROGRAMS = [
   {
@@ -42,62 +40,121 @@ const PROGRAMS = [
 ];
 
 export function Programs() {
+  const featured = PROGRAMS[0];
+  const supporting = PROGRAMS.slice(1);
+
   return (
-    <section id="courses" className="py-16 sm:py-20 lg:py-24 bg-gray-50/80 scroll-mt-20">
+    <section id="courses" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-slate-50/60 to-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <div className="inline-flex mb-3.5">
-            <ShineText
-              text="⚡ INDUSTRY-ALIGNED TRACKS"
-              className="text-xs font-bold uppercase tracking-wider text-[#0878E8] bg-[#0878E8]/10 px-4 py-1.5 rounded-full border border-[#0878E8]/20"
-            />
+            <span className="text-xs font-bold uppercase tracking-wider text-[#0878E8] bg-[#0878E8]/10 px-4 py-1.5 rounded-full border border-[#0878E8]/20">
+              ⚡ INDUSTRY-ALIGNED TRACKS
+            </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
             High-Demand Tech Tracks Built for 2026
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+          <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
             Data Analytics, Business Analysis, DevSecOps, Power BI, AI Product Management, Automation Testing, Cloud, and Data Science.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {PROGRAMS.map((program) => (
+        {/* Editorial Bento System */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          {/* Dominant Featured Program (7 cols) */}
+          <div className="lg:col-span-7">
             <TiltCard
-              key={program.title}
-              className="relative bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-gray-200/80"
-              maxTilt={6}
-              glareColor={`rgba(${parseInt(program.accent.slice(1,3),16)}, ${parseInt(program.accent.slice(3,5),16)}, ${parseInt(program.accent.slice(5,7),16)}, 0.16)`}
+              maxTilt={4}
+              glareColor="rgba(8, 120, 232, 0.08)"
+              className="h-full bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
-              {/* SmoothUI: BorderBeam animated border glow */}
-              <BorderBeam
-                size={160}
-                duration={7}
-                colorFrom={program.accent}
-                colorTo="#00AFA8"
-              />
-              <div className="flex flex-col h-full">
-                <ImagePlaceholder
-                  label="Programme cover image"
-                  className="aspect-[16/10] w-full"
-                />
-                <div className="p-6 sm:p-7 flex flex-col flex-1">
-                  <span
-                    className="inline-flex w-fit items-center px-3 py-1 rounded-full text-xs font-bold mb-3.5 tracking-wide"
-                    style={{
-                      backgroundColor: `${program.accent}18`,
-                      color: program.accent,
-                    }}
-                  >
-                    {program.tag}
-                  </span>
-                  <h3 className="text-lg lg:text-xl font-bold text-[#071D3A] leading-snug">
+              <div>
+                <div className="relative overflow-hidden aspect-[16/9] w-full bg-slate-100">
+                  <ImagePlaceholder
+                    label="Programme cover image"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span
+                      className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide shadow-sm"
+                      style={{
+                        backgroundColor: `${featured.accent}18`,
+                        color: featured.accent,
+                        border: `1px solid ${featured.accent}30`,
+                      }}
+                    >
+                      {featured.tag}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-7 sm:p-9">
+                  <h3 className="text-2xl sm:text-3xl font-black text-[#071D3A] tracking-tight leading-snug">
+                    {featured.title}
+                  </h3>
+
+                  <ul className="mt-6 space-y-3">
+                    {featured.points.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 text-slate-600 text-sm sm:text-base leading-relaxed"
+                      >
+                        <span
+                          className="mt-2 h-2 w-2 rounded-full shrink-0"
+                          style={{ backgroundColor: featured.accent }}
+                        />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="px-7 sm:px-9 pb-7 sm:pb-9 pt-2 border-t border-slate-100 flex items-center justify-between">
+                <Link
+                  href="/courses"
+                  className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#0878E8] hover:gap-3 transition-all"
+                >
+                  Learn More
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </TiltCard>
+          </div>
+
+          {/* Supporting Programs Column (5 cols, stacked) */}
+          <div className="lg:col-span-5 flex flex-col gap-6">
+            {supporting.map((program) => (
+              <TiltCard
+                key={program.title}
+                maxTilt={4}
+                glareColor={`rgba(${parseInt(program.accent.slice(1,3),16)}, ${parseInt(program.accent.slice(3,5),16)}, ${parseInt(program.accent.slice(5,7),16)}, 0.08)`}
+                className="flex-1 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+              >
+                <div className="p-6 sm:p-7">
+                  <div className="flex items-center justify-between gap-3 mb-3.5">
+                    <span
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                      style={{
+                        backgroundColor: `${program.accent}18`,
+                        color: program.accent,
+                        border: `1px solid ${program.accent}30`,
+                      }}
+                    >
+                      {program.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-bold text-[#071D3A] leading-snug">
                     {program.title}
                   </h3>
-                  <ul className="mt-4 space-y-2.5 flex-1">
+
+                  <ul className="mt-4 space-y-2.5">
                     {program.points.map((point) => (
                       <li
                         key={point}
-                        className="flex items-start gap-2.5 text-sm text-gray-600 leading-normal"
+                        className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-normal"
                       >
                         <span
                           className="mt-1.5 h-1.5 w-1.5 rounded-full shrink-0"
@@ -107,25 +164,26 @@ export function Programs() {
                       </li>
                     ))}
                   </ul>
-                  <div className="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
-                    <Link
-                      href="/courses"
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-[#0878E8] hover:gap-2.5 transition-all"
-                    >
-                      Learn More
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
-                  </div>
                 </div>
-              </div>
-            </TiltCard>
-          ))}
+
+                <div className="px-6 sm:p-7 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+                  <Link
+                    href="/courses"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#0878E8] hover:gap-2.5 transition-all"
+                  >
+                    Learn More
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </TiltCard>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-12 text-center flex justify-center">
+        <div className="mt-12 lg:mt-16 text-center flex justify-center">
           <MagneticButton
             href="/courses"
-            className="px-8 py-3.5 bg-[#071D3A] text-white font-bold rounded-xl hover:bg-[#0c2e59] transition-all shadow-lg shadow-[#071D3A]/15 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2"
+            className="px-8 py-4 bg-[#071D3A] text-white font-bold rounded-xl hover:bg-[#0c2e59] transition-all shadow-lg shadow-[#071D3A]/15 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 cursor-pointer"
           >
             View All 8 Programs →
           </MagneticButton>
