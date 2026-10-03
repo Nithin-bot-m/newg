@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { useToast } from "@/hooks/use-toast";
 import MagneticButton from "@/components/smoothui/magnetic-button";
@@ -48,11 +48,6 @@ export function Hero() {
         <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-14 items-center">
           {/* Left: copy (7 cols) */}
           <div className="lg:col-span-7 text-white">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-3.5 py-1.5 text-xs font-semibold text-[#38bdf8] mb-6 border border-[#0878E8]/30">
-              <Sparkles className="h-3.5 w-3.5 text-amber-300" />
-              <span>100% Career Audit Included · Hyderabad Tech Training</span>
-            </span>
-
             <h1 className="text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.12] sm:leading-[1.08] tracking-tight text-white">
               Build a Career<br />
               <span className="bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa] bg-clip-text text-transparent">
