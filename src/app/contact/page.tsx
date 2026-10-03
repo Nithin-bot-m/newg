@@ -52,30 +52,35 @@ export default function ContactPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Contact Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#f3f9f5] via-white to-white py-10 sm:py-14 lg:py-20 border-b border-slate-100 text-center">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(22,101,52,0.08),rgba(8,120,232,0.04)_60%,transparent_100%)] pointer-events-none" />
+        <section className="relative overflow-hidden bg-[#071D3A] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#0878E8]/20 via-[#166534]/25 to-transparent blur-3xl pointer-events-none" />
+
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-3.5 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20 backdrop-blur-xs">
-              <Phone className="h-3.5 w-3.5 text-amber-500" />
-              <ShineText baseColor="#166534" shineColor="#15803d" duration={2}>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/35 backdrop-blur-md shadow-[0_0_18px_rgba(8,120,232,0.25)]">
+              <Phone className="h-3.5 w-3.5 text-amber-400" />
+              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2}>
                 Direct Support &amp; Walk-in Kukatpally Campus
               </ShineText>
             </span>
-            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15]">
-              Let&apos;s Talk About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#166534] via-[#15803d] to-[#0878E8]">Your Career.</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+              Let&apos;s Talk About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">Your Career.</span>
             </h1>
-            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
               Fill out the form or reach us directly. Our team will get back to you within a few hours with program details and next steps.
             </p>
           </div>
         </section>
 
         {/* Content Split: Details + Form */}
-        <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 items-start">
             {/* Left: Info */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-4 tracking-tight">
+              <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-emerald-50 text-[#166534] border border-emerald-200/80 text-xs uppercase tracking-widest font-bold mb-3">
+                Get In Touch
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-black text-gray-900 mb-3 tracking-tight">
                 Reach Out Directly
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8">
@@ -83,61 +88,61 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-4">
-                <div className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-xs hover:border-emerald-300/60 hover:shadow-xs transition-all duration-300">
-                  <div className="h-11 w-11 rounded-xl bg-emerald-50 text-[#166534] ring-1 ring-emerald-200/70 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase font-bold text-slate-400">Phone</div>
-                    <a href="tel:+919549543898" className="text-base font-bold text-gray-900 hover:text-[#166534] transition-colors">
+                    <div className="text-[11px] uppercase tracking-wider font-bold text-slate-400">Phone</div>
+                    <a href="tel:+919549543898" className="text-base sm:text-lg font-bold text-gray-900 hover:text-[#166534] transition-colors">
                       +91 95495 43898
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-xs hover:border-emerald-300/60 hover:shadow-xs transition-all duration-300">
-                  <div className="h-11 w-11 rounded-xl bg-emerald-50 text-[#166534] ring-1 ring-emerald-200/70 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase font-bold text-slate-400">Email</div>
-                    <a href="mailto:greenroots.tech@outlook.com" className="text-base font-bold text-gray-900 hover:text-[#166534] transition-colors">
+                    <div className="text-[11px] uppercase tracking-wider font-bold text-slate-400">Email</div>
+                    <a href="mailto:greenroots.tech@outlook.com" className="text-base sm:text-lg font-bold text-gray-900 hover:text-[#166534] transition-colors">
                       greenroots.tech@outlook.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-xs hover:border-emerald-300/60 hover:shadow-xs transition-all duration-300">
-                  <div className="h-11 w-11 rounded-xl bg-emerald-50 text-[#166534] ring-1 ring-emerald-200/70 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Globe className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase font-bold text-slate-400">Website</div>
-                    <a href="https://grootstechnologies.com" target="_blank" rel="noopener noreferrer" className="text-base font-bold text-gray-900 hover:text-[#166534] transition-colors">
+                    <div className="text-[11px] uppercase tracking-wider font-bold text-slate-400">Website</div>
+                    <a href="https://grootstechnologies.com" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-bold text-gray-900 hover:text-[#166534] transition-colors">
                       grootstechnologies.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-xs hover:border-emerald-300/60 hover:shadow-xs transition-all duration-300">
-                  <div className="h-11 w-11 rounded-xl bg-emerald-50 text-[#166534] ring-1 ring-emerald-200/70 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase font-bold text-slate-400">Campus Address</div>
-                    <div className="text-sm font-semibold text-gray-900 leading-snug">
+                    <div className="text-[11px] uppercase tracking-wider font-bold text-slate-400">Campus Address</div>
+                    <div className="text-sm sm:text-base font-semibold text-gray-900 leading-snug">
                       Unit 206, Manjeera Majestic Commercial, Opposite JNTU, Next to Lulu Mall, Kukatpally, Hyderabad 500072
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-xs hover:border-emerald-300/60 hover:shadow-xs transition-all duration-300">
-                  <div className="h-11 w-11 rounded-xl bg-emerald-50 text-[#166534] ring-1 ring-emerald-200/70 flex items-center justify-center shrink-0">
+                <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase font-bold text-slate-400">Office Hours</div>
-                    <div className="text-sm font-semibold text-gray-900">
+                    <div className="text-[11px] uppercase tracking-wider font-bold text-slate-400">Office Hours</div>
+                    <div className="text-sm sm:text-base font-semibold text-gray-900">
                       Monday – Saturday · 9:00 AM – 7:00 PM
                     </div>
                   </div>
@@ -145,13 +150,13 @@ export default function ContactPage() {
               </div>
 
               {/* WhatsApp Button */}
-              <div className="mt-7 sm:mt-8">
+              <div className="mt-8">
                 <MagneticButton asChild strength={14} className="w-full">
                   <a
                     href="https://wa.me/919549543898?text=Hi%20Greenroots!%20I%27d%20like%20to%20know%20more%20about%20your%20training%20programs."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full min-h-[48px] py-3.5 sm:py-4 px-6 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 inline-flex items-center justify-center gap-2 transition-all cursor-pointer text-sm sm:text-base text-center"
+                    className="w-full min-h-[50px] py-4 px-6 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:shadow-emerald-900/30 inline-flex items-center justify-center gap-2 transition-all cursor-pointer text-sm sm:text-base text-center"
                   >
                     WhatsApp Us Now (+91 95495 43898) →
                   </a>
@@ -160,7 +165,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: Enquiry Form */}
-            <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-5 sm:p-10 shadow-lg">
+            <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-12 shadow-xl">
               <BorderBeam
                 colorFrom="#34d399"
                 colorTo="#38bdf8"
@@ -170,12 +175,12 @@ export default function ContactPage() {
                 radius={24}
               />
               <div className="relative z-10">
-                <h3 className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight">Send an Enquiry</h3>
-                <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-5 sm:mb-6">
+                <h3 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">Send an Enquiry</h3>
+                <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-6 sm:mb-8">
                   We&apos;ll reply with a personalised program recommendation within 4 hours.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold text-slate-700 mb-1.5">Full Name *</label>
@@ -185,7 +190,7 @@ export default function ContactPage() {
                         placeholder="Your name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/60 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       />
                     </div>
                     <div>
@@ -196,7 +201,7 @@ export default function ContactPage() {
                         placeholder="+91 XXXXX XXXXX"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/60 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       />
                     </div>
                   </div>
@@ -208,7 +213,7 @@ export default function ContactPage() {
                       placeholder="you@email.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                      className="w-full min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/60 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                     />
                   </div>
 
@@ -219,7 +224,7 @@ export default function ContactPage() {
                         required
                         value={course}
                         onChange={(e) => setCourse(e.target.value)}
-                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/60 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       >
                         <option value="">-- Select Program --</option>
                         <option>Power BI 60-Day Mastery</option>
@@ -238,7 +243,7 @@ export default function ContactPage() {
                       <select
                         value={status}
                         onChange={(e) => setStatus(e.target.value)}
-                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/60 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       >
                         <option value="">-- Select Status --</option>
                         <option>Fresh Graduate</option>
@@ -257,15 +262,15 @@ export default function ContactPage() {
                       placeholder="Tell us about your background, career goals, or any specific questions..."
                       value={msg}
                       onChange={(e) => setMsg(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/60 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                     />
                   </div>
 
-                  <MagneticButton strength={10} className="w-full">
+                  <MagneticButton asChild strength={10} className="w-full">
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full min-h-[48px] py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center transition-all shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 cursor-pointer flex items-center justify-center"
+                      className="w-full min-h-[50px] py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center text-sm sm:text-base transition-all shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:shadow-emerald-900/30 cursor-pointer flex items-center justify-center"
                     >
                       {submitting ? "Submitting..." : "Submit Enquiry & Book Free Audit →"}
                     </button>

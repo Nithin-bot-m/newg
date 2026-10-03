@@ -12,23 +12,28 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      <main className="flex-1 pt-24 lg:pt-28 pb-20 bg-gradient-to-b from-[#f3f9f5] via-slate-50/50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-full bg-white border border-slate-200/80 text-[#166534] hover:bg-emerald-50 hover:border-emerald-300 transition-all shadow-2xs mb-8"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" /> Back to Greenroots
-          </Link>
-
-          <div className="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-12 shadow-sm">
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
-              Privacy Policy
+      <main className="flex-1 pt-24 lg:pt-28 pb-20 bg-gradient-to-b from-[#f8fafc] to-white">
+        {/* Privacy Hero Header */}
+        <section className="relative overflow-hidden bg-[#071D3A] text-white py-12 sm:py-16 border-b border-white/10 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
+          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-slate-200 hover:bg-white/15 hover:border-emerald-400/50 transition-all mb-5 shadow-xs"
+            >
+              <ArrowLeft className="h-3.5 w-3.5 text-emerald-400" /> Back to Greenroots
+            </Link>
+            <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+              Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">Policy</span>
             </h1>
-            <p className="text-xs sm:text-sm font-mono text-slate-500 mt-2 mb-8 pb-6 border-b border-slate-100">
-              Last updated: 22 May 2026
+            <p className="text-xs sm:text-sm font-mono text-slate-300 mt-2.5">
+              Last updated: 22 May 2026 · DPDP Act, 2023 Compliant
             </p>
+          </div>
+        </section>
 
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+          <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-12 shadow-xl">
             <div className="prose prose-emerald max-w-none text-slate-700 space-y-6 text-sm sm:text-base leading-relaxed">
               <p>
                 This policy explains what personal information Greenroots Technology Training Institute

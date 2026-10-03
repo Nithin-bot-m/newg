@@ -111,47 +111,50 @@ export default function ReviewsPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Header Hero */}
-        <section className="bg-gradient-to-b from-[#f3f9f5] to-white py-10 sm:py-12 lg:py-16 border-b border-gray-100 text-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-3.5 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20">
-              <Award className="h-3.5 w-3.5 text-amber-500" />
-              <ShineText baseColor="#166534" shineColor="#15803d" duration={2.2}>
+        <section className="relative overflow-hidden bg-[#071D3A] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#0878E8]/20 via-[#166534]/25 to-transparent blur-3xl pointer-events-none" />
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/35 backdrop-blur-md shadow-[0_0_18px_rgba(8,120,232,0.25)]">
+              <Award className="h-3.5 w-3.5 text-amber-400" />
+              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2.2}>
                 Proven Placement Track Record · Hyderabad Hub
               </ShineText>
             </span>
-            <h1 className="text-2xl sm:text-5xl font-black text-gray-900 tracking-tight">
-              Our Placement Track Record & Student Reviews
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+              Our Placement Track Record &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">Student Reviews</span>
             </h1>
-            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
               Real students. Real companies. Real salaries. Here&apos;s what Greenroots has delivered.
             </p>
 
             {/* Stats Row */}
-            <div className="mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-4xl mx-auto">
-              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-[#166534]">85%</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Placement Rate</div>
+            <div className="mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
+                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">85%</div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Placement Rate</div>
               </div>
-              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-[#166534]">₹4.5L</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Avg. Fresher Package</div>
+              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
+                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">₹4.5L</div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Avg. Fresher Package</div>
               </div>
-              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-[#166534]">60+</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Alumni Placed</div>
+              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
+                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">60+</div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Alumni Placed</div>
               </div>
-              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-[#166534]">3 mo</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Avg. Time to Offer</div>
+              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
+                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">3 mo</div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Avg. Time to Offer</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Hiring Companies with SmoothUI InfiniteSlider */}
-        <section className="py-10 border-b border-gray-100 bg-[#fafaf9] overflow-hidden">
+        <section className="py-8 sm:py-10 border-b border-slate-200/80 bg-[#07172c] overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-6">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-gray-400">
+            <h3 className="text-xs uppercase tracking-widest font-bold text-slate-400">
               Hiring Our Alumni
             </h3>
           </div>
@@ -160,9 +163,9 @@ export default function ReviewsPage() {
               {COMPANIES.map((company) => (
                 <span
                   key={company}
-                  className="px-5 py-2.5 rounded-xl bg-white border border-gray-200 text-sm font-semibold text-gray-800 shadow-xs hover:border-[#166534] transition-colors shrink-0 inline-flex items-center"
+                  className="px-5 py-2.5 rounded-xl bg-white/[0.08] backdrop-blur-sm border border-white/12 text-sm font-semibold text-slate-200 shadow-sm hover:border-emerald-400/60 hover:text-white transition-all shrink-0 inline-flex items-center"
                 >
-                  <span className="inline-block h-2 w-2 rounded-full bg-[#166534] mr-2"></span>
+                  <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 mr-2 shadow-[0_0_8px_#34d399]"></span>
                   {company}
                 </span>
               ))}
@@ -171,45 +174,47 @@ export default function ReviewsPage() {
         </section>
 
         {/* 5-Step Process */}
-        <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs uppercase tracking-widest font-bold text-[#166534]">
+        <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-emerald-50 text-[#166534] border border-emerald-200/80 text-xs uppercase tracking-widest font-bold">
               How It Works
             </span>
-            <h2 className="text-2xl sm:text-4xl font-black text-gray-900 mt-1">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-3 tracking-tight">
               From Enrolment to Offer Letter
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
             {PROCESS_STEPS.map((step) => (
               <div
                 key={step.step}
-                className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-[#166534]/50 transition-all shadow-xs flex flex-col"
+                className="bg-white border border-slate-200/90 rounded-2xl p-6 hover:border-[#166534] hover:shadow-lg hover:-translate-y-1 transition-all shadow-xs flex flex-col justify-between group"
               >
-                <div className="h-8 w-8 rounded-full bg-[#166534] text-white font-bold flex items-center justify-center text-sm mb-3">
-                  {step.step}
+                <div>
+                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white font-black flex items-center justify-center text-sm mb-4 shadow-md group-hover:scale-105 transition-transform">
+                    {step.step}
+                  </div>
+                  <h4 className="font-bold text-gray-900 text-base mb-1.5">{step.title}</h4>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{step.desc}</p>
                 </div>
-                <h4 className="font-bold text-gray-900 text-base mb-1">{step.title}</h4>
-                <p className="text-xs text-gray-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Reviews Grid */}
-        <section className="py-16 bg-[#fbfdfa] border-t border-gray-100">
+        <section className="py-16 sm:py-24 bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9]/60 to-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="text-xs uppercase tracking-widest font-bold text-[#166534]">
+            <div className="text-center mb-12 sm:mb-16">
+              <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-emerald-50 text-[#166534] border border-emerald-200/80 text-xs uppercase tracking-widest font-bold">
                 Student Voices
               </span>
-              <h2 className="text-2xl sm:text-4xl font-black text-gray-900 mt-1">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-3 tracking-tight">
                 What Our Graduates Say
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {REVIEWS.map((review, idx) => (
                 <TiltCard
                   key={review.name}
@@ -219,7 +224,7 @@ export default function ReviewsPage() {
                   glareOpacity={0.12}
                   className="h-full rounded-2xl"
                 >
-                  <div className="relative h-full bg-white p-6 sm:p-7 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                  <div className="relative h-full bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between overflow-hidden">
                     {idx === 0 && (
                       <BorderBeam
                         colorFrom="#166534"
@@ -231,25 +236,25 @@ export default function ReviewsPage() {
                       />
                     )}
                     <div>
-                      <div className="flex gap-1 text-amber-400 mb-3">
+                      <div className="flex gap-1 text-amber-400 mb-4">
                         {Array.from({ length: review.rating }).map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                          <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400 drop-shadow-xs" />
                         ))}
                       </div>
-                      <p className="text-sm text-gray-700 leading-relaxed italic">
+                      <p className="text-sm sm:text-base text-slate-700 leading-relaxed italic">
                         &ldquo;{review.quote}&rdquo;
                       </p>
                     </div>
 
-                    <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
-                      <div className="h-10 w-10 rounded-full bg-[#166534] text-white font-bold flex items-center justify-center text-sm shrink-0 shadow-xs">
+                    <div className="mt-8 pt-5 border-t border-slate-100 flex items-center gap-3.5">
+                      <div className="h-11 w-11 rounded-full bg-gradient-to-br from-[#166534] to-[#071D3A] text-white font-bold flex items-center justify-center text-sm shrink-0 shadow-md">
                         {review.name.slice(0, 2)}
                       </div>
-                      <div>
-                        <div className="font-bold text-sm text-gray-900">{review.name}</div>
-                        <div className="text-xs text-gray-500 font-medium">{review.track}</div>
-                        <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#166534] mt-0.5">
-                          <CheckCircle className="h-3 w-3" /> Placed at {review.company}
+                      <div className="min-w-0">
+                        <div className="font-bold text-sm text-gray-900 truncate">{review.name}</div>
+                        <div className="text-xs text-slate-500 font-medium truncate">{review.track}</div>
+                        <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#166534] bg-emerald-50/90 border border-emerald-200/70 px-2 py-0.5 rounded-full mt-1">
+                          <CheckCircle className="h-3 w-3 text-emerald-600" /> Placed at {review.company}
                         </div>
                       </div>
                     </div>
@@ -259,11 +264,11 @@ export default function ReviewsPage() {
             </div>
 
             {/* Bottom CTA */}
-            <div className="mt-10 sm:mt-14 text-center">
+            <div className="mt-14 sm:mt-18 text-center">
               <MagneticButton asChild strength={15} className="w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto min-h-[48px] justify-center px-8 py-3.5 bg-[#166534] hover:bg-[#14532d] text-white font-bold rounded-xl shadow-md hover:shadow-lg active:scale-[0.98] inline-flex items-center gap-2 transition-all text-center"
+                  className="w-full sm:w-auto min-h-[50px] justify-center px-9 py-4 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:shadow-emerald-900/30 active:scale-[0.98] inline-flex items-center gap-2 transition-all text-center text-base"
                 >
                   Start Your Career Transformation →
                 </Link>

@@ -175,25 +175,32 @@ export default function CoursesPage() {
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
 
-      <main className="flex-1 pt-24 lg:pt-28 pb-20">
+      <main className="flex-1 pt-18 lg:pt-20 pb-20 bg-slate-50/60">
         {/* Page Hero Header */}
-        <section className="bg-gradient-to-b from-[#f3f9f5] to-white py-10 sm:py-12 lg:py-16 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-3.5 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20">
-              <Sparkles className="h-3.5 w-3.5 text-amber-500" />
-              <ShineText baseColor="#166534" shineColor="#15803d" duration={2}>
+        <section className="relative bg-[#071D3A] overflow-hidden pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 text-white">
+          {/* Ambient Lighting */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),transparent_70%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(22,101,52,0.2),transparent_60%)] pointer-events-none" />
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/30 backdrop-blur-xs">
+              <Sparkles className="h-3.5 w-3.5 text-amber-300" />
+              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2}>
                 8 High-Demand Programs · Industry-Mapped Curriculums
               </ShineText>
             </span>
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
-              High-Demand Tech Tracks Built for 2026
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
+              High-Demand Tech Tracks<br />
+              <span className="bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa] bg-clip-text text-transparent">
+                Built for 2026.
+              </span>
             </h1>
-            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Every track is built around what employers are hiring for right now — from ₹20,000 onwards, in 2–3 months, freshers to experienced.
             </p>
 
             {/* Pricing Banner */}
-            <div className="relative overflow-hidden mt-6 sm:mt-8 max-w-4xl mx-auto bg-gradient-to-r from-[#166534] to-[#0f3f21] rounded-2xl p-5 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-left">
+            <div className="relative overflow-hidden mt-8 sm:mt-10 max-w-4xl mx-auto bg-gradient-to-r from-[#0c2a4f] via-[#103866] to-[#0c2a4f] rounded-2xl p-6 sm:p-8 text-white shadow-2xl border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-left">
               <BorderBeam
                 colorFrom="#34d399"
                 colorTo="#38bdf8"
@@ -203,16 +210,16 @@ export default function CoursesPage() {
                 radius={16}
               />
               <div className="relative z-10 w-full sm:w-auto text-center sm:text-left">
-                <div className="text-2xl sm:text-3xl font-black text-amber-300">From ₹20,000 onwards</div>
-                <div className="text-xs sm:text-sm md:text-base text-gray-200 mt-1">
-                  All programs · <strong>2 to 3 months</strong> · EMI available on request
+                <div className="text-2xl sm:text-3xl font-black text-amber-300 tracking-tight">From ₹20,000 onwards</div>
+                <div className="text-xs sm:text-sm md:text-base text-slate-200 mt-1 font-medium">
+                  All programs · <strong className="text-white">2 to 3 months</strong> · EMI available on request
                 </div>
               </div>
-              <div className="relative z-10 w-full sm:w-auto">
+              <div className="relative z-10 w-full sm:w-auto shrink-0">
                 <MagneticButton asChild strength={14} className="w-full sm:w-auto">
                   <Link
                     href="/contact"
-                    className="w-full sm:w-auto min-h-[48px] justify-center px-6 py-3 bg-white text-[#166534] font-bold rounded-xl hover:bg-gray-100 transition-all shadow-md shrink-0 inline-flex items-center gap-2"
+                    className="w-full sm:w-auto min-h-[48px] justify-center px-6 py-3 bg-gradient-to-r from-[#34d399] to-[#10b981] text-[#071D3A] font-bold rounded-xl hover:opacity-95 transition-all shadow-lg shadow-emerald-500/20 shrink-0 inline-flex items-center gap-2 cursor-pointer"
                   >
                     Get Fee Details <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -220,21 +227,24 @@ export default function CoursesPage() {
               </div>
             </div>
           </div>
+
+          {/* Smooth bottom transition */}
+          <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-b from-transparent to-slate-50/60 pointer-events-none" />
         </section>
 
         {/* Courses Grid */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {COURSES.map((course, idx) => (
               <TiltCard
                 key={course.title}
-                maxTilt={5}
-                scale={1.015}
+                maxTilt={4}
+                scale={1.012}
                 glare={true}
-                glareOpacity={0.1}
+                glareOpacity={0.08}
                 className="h-full rounded-2xl"
               >
-                <div className="relative h-full bg-white rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden">
+                <div className="relative h-full bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-slate-300/90 transition-all duration-300 flex flex-col overflow-hidden">
                   {idx === 0 && (
                     <BorderBeam
                       colorFrom="#166534"
@@ -246,7 +256,7 @@ export default function CoursesPage() {
                     />
                   )}
                   {/* Card Top */}
-                  <div className="p-5 sm:p-8 border-b border-gray-100 bg-[#fbfdfa]">
+                  <div className="p-6 sm:p-8 border-b border-slate-100 bg-gradient-to-b from-slate-50/80 to-white">
                     <div className="flex items-center justify-between gap-2 mb-3">
                       <span
                         className="px-3 py-1 rounded-full text-xs font-bold text-white shadow-xs"
@@ -254,38 +264,40 @@ export default function CoursesPage() {
                       >
                         {course.tag}
                       </span>
-                      <span className="text-xs font-semibold text-gray-500 bg-gray-100/80 px-2.5 py-0.5 rounded-full">{course.mode}</span>
+                      <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200/60">{course.mode}</span>
                     </div>
-                    <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg sm:text-2xl font-bold text-slate-900 mb-2 tracking-tight">
                       {course.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
                       {course.desc}
                     </p>
-                    <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-medium text-gray-500 pt-2 border-t border-gray-100">
-                      <span className="flex items-center gap-1.5">
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-medium text-slate-500 pt-3 border-t border-slate-100">
+                      <span className="flex items-center gap-1.5 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-100">
                         <Clock className="h-3.5 w-3.5 text-[#166534]" /> {course.duration}
                       </span>
-                      <span className="flex items-center gap-1.5">
+                      <span className="flex items-center gap-1.5 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-100">
                         <Signal className="h-3.5 w-3.5 text-[#166534]" /> {course.level}
                       </span>
-                      <span className="flex items-center gap-1.5">
+                      <span className="flex items-center gap-1.5 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-100">
                         <Laptop className="h-3.5 w-3.5 text-[#166534]" /> {course.mode}
                       </span>
                     </div>
                   </div>
 
                   {/* Card Bottom */}
-                  <div className="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
                     <div>
-                      <h4 className="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">
+                      <h4 className="text-xs uppercase tracking-wider font-bold text-slate-400 mb-3.5">
                         What you&apos;ll master
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2.5">
                         {course.learn.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700">
-                            <Check className="h-4 w-4 text-[#166534] shrink-0 mt-0.5" />
-                            <span>{item}</span>
+                          <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                            <span className="h-4.5 w-4.5 rounded-full bg-emerald-50 text-[#166534] flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200/60">
+                              <Check className="h-3 w-3 stroke-[2.5]" />
+                            </span>
+                            <span className="leading-snug">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -295,7 +307,7 @@ export default function CoursesPage() {
                         {course.skills.map((skill) => (
                           <span
                             key={skill}
-                            className="px-2.5 py-1 text-xs rounded-lg bg-gray-100/80 hover:bg-gray-200/70 text-gray-700 font-semibold ring-1 ring-gray-200/50 transition-colors"
+                            className="px-2.5 py-1 text-xs rounded-lg bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 font-semibold border border-slate-200/60 transition-colors"
                           >
                             {skill}
                           </span>
@@ -304,22 +316,22 @@ export default function CoursesPage() {
                     </div>
 
                     {/* Outcome + Action */}
-                    <div className="pt-5 border-t border-gray-100">
+                    <div className="pt-5 border-t border-slate-100">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
                         <div>
-                          <div className="text-[11px] uppercase font-bold text-gray-400">Leads to roles</div>
-                          <div className="text-xs sm:text-sm font-semibold text-gray-800">{course.roles}</div>
+                          <div className="text-[11px] uppercase font-bold text-slate-400">Leads to roles</div>
+                          <div className="text-xs sm:text-sm font-semibold text-slate-800">{course.roles}</div>
                         </div>
                         <div className="sm:text-right shrink-0">
-                          <div className="text-[11px] uppercase font-bold text-gray-400">Typical pay</div>
-                          <div className="text-sm font-black text-[#166534]">{course.salary}</div>
+                          <div className="text-[11px] uppercase font-bold text-slate-400">Typical pay</div>
+                          <div className="text-sm sm:text-base font-black text-[#166534]">{course.salary}</div>
                         </div>
                       </div>
 
                       <MagneticButton asChild strength={10} className="w-full">
                         <Link
                           href="/contact"
-                          className="w-full min-h-[48px] py-3 px-4 bg-[#166534] hover:bg-[#14532d] text-white font-bold text-sm rounded-xl text-center transition-all shadow-sm hover:shadow-md active:scale-[0.98] flex items-center justify-center"
+                          className="w-full min-h-[48px] py-3.5 px-4 bg-[#166534] hover:bg-[#14532d] text-white font-bold text-sm rounded-xl text-center transition-all shadow-sm hover:shadow-md hover:shadow-emerald-900/20 active:scale-[0.98] flex items-center justify-center cursor-pointer"
                         >
                           Book Free Counselling →
                         </Link>
@@ -332,19 +344,20 @@ export default function CoursesPage() {
           </div>
 
           {/* Career Audit Callout */}
-          <div className="mt-12 sm:mt-16 bg-[#f3f9f5] border border-[#166534]/20 rounded-2xl p-5 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
-            <div>
-              <h3 className="text-lg sm:text-2xl font-bold text-gray-900">
+          <div className="mt-12 sm:mt-16 relative overflow-hidden bg-gradient-to-r from-[#071D3A] via-[#0d2a52] to-[#166534] text-white rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-white/10">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative z-10">
+              <h3 className="text-xl sm:text-3xl font-black text-white tracking-tight">
                 Not sure which course is right for you?
               </h3>
-              <p className="mt-2 text-xs sm:text-base text-gray-600 max-w-2xl leading-relaxed">
+              <p className="mt-2.5 text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">
                 Book a free career audit session. We&apos;ll review your background, market demand, and salary potential — then recommend the exact track that gives you the strongest return.
               </p>
             </div>
-            <MagneticButton asChild strength={15} className="w-full md:w-auto">
+            <MagneticButton asChild strength={14} className="w-full md:w-auto shrink-0 relative z-10">
               <Link
                 href="/contact"
-                className="w-full md:w-auto min-h-[48px] justify-center px-7 py-3.5 bg-[#166534] text-white font-bold rounded-xl hover:bg-[#14532d] transition-all shadow-md hover:shadow-lg active:scale-[0.98] shrink-0 inline-flex items-center gap-2 text-center"
+                className="w-full md:w-auto min-h-[50px] justify-center px-8 py-3.5 bg-gradient-to-r from-[#34d399] to-[#10b981] text-[#071D3A] font-bold rounded-xl hover:opacity-95 transition-all shadow-lg shadow-emerald-500/25 shrink-0 inline-flex items-center gap-2 text-center cursor-pointer"
               >
                 Book Free Audit →
               </Link>
