@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { ImagePlaceholder } from "@/components/placeholders";
 import { ArrowRight } from "lucide-react";
 import { TiltCard } from "@/components/smoothui/tilt-card";
 import { MagneticButton } from "@/components/smoothui/magnetic-button";
@@ -66,22 +65,24 @@ export function Programs() {
           <div className="lg:col-span-7">
             <TiltCard
               maxTilt={4}
-              glareColor="rgba(8, 120, 232, 0.08)"
+              glareColor="rgba(234, 88, 12, 0.12)"
               className="h-full bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
               <div>
                 <div className="relative overflow-hidden aspect-[16/9] w-full bg-slate-100">
-                  <ImagePlaceholder
-                    label="Programme cover image"
+                  <img
+                    src="/images/power-bi-mastery-track.jpg"
+                    alt="Power BI 60-Day Mastery Track — Data Analytics & Business Intelligence Dashboard Lab"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute top-4 left-4">
                     <span
-                      className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide shadow-sm"
+                      className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide shadow-sm backdrop-blur-md"
                       style={{
-                        backgroundColor: `${featured.accent}18`,
-                        color: featured.accent,
-                        border: `1px solid ${featured.accent}30`,
+                        backgroundColor: `${featured.accent}ee`,
+                        color: "#ffffff",
+                        border: `1px solid ${featured.accent}`,
                       }}
                     >
                       {featured.tag}
