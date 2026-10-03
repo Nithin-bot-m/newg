@@ -6,8 +6,6 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/logo";
 
-import MagneticButton from "@/components/smoothui/magnetic-button";
-
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
@@ -82,26 +80,6 @@ export function Header() {
             })}
           </nav>
 
-          {/* CTA buttons */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0">
-            <MagneticButton asChild strength={10}>
-              <Link
-                href="/contact"
-                className="px-3 xl:px-4 py-2 text-xs xl:text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-lg hover:border-[#166534] hover:bg-[#166534]/5 active:scale-[0.98] transition-all inline-block whitespace-nowrap"
-              >
-                Career Audit
-              </Link>
-            </MagneticButton>
-            <MagneticButton asChild strength={14}>
-              <Link
-                href="/contact"
-                className="px-3 xl:px-4 py-2 text-xs xl:text-sm font-semibold bg-[#166534] text-white rounded-lg hover:bg-[#14532d] shadow-sm hover:shadow-md hover:shadow-[#166534]/20 active:scale-[0.98] transition-all inline-block whitespace-nowrap"
-              >
-                Enrol Now →
-              </Link>
-            </MagneticButton>
-          </div>
-
           {/* Mobile menu button */}
           <button
             className="lg:hidden p-2.5 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-800 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-[#166534]"
@@ -135,22 +113,6 @@ export function Header() {
                 </Link>
               );
             })}
-            <div className="flex gap-2.5 pt-3">
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="flex-1 min-h-[46px] flex items-center justify-center text-center px-4 py-3 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-xl hover:bg-[#166534]/5 active:scale-[0.98] transition-colors"
-              >
-                Career Audit
-              </Link>
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="flex-1 min-h-[46px] flex items-center justify-center text-center px-4 py-3 text-sm font-semibold bg-[#166534] text-white rounded-xl hover:bg-[#14532d] shadow-sm active:scale-[0.98] transition-colors"
-              >
-                Enrol Now →
-              </Link>
-            </div>
           </div>
         )}
       </div>
