@@ -133,22 +133,33 @@ export default function ReviewsPage() {
             </p>
 
             {/* Stats Row */}
-            <div className="mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">85%</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Placement Rate</div>
+            <div className="mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 lg:gap-6 max-w-5xl mx-auto">
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">85%</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">Placement Rate</div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">₹4.5L</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Avg. Fresher Package</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">₹4.5L</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">Avg. Fresher Package</div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">60+</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Alumni Placed</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">60+</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">Alumni Placed</div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">3 mo</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Avg. Time to Offer</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">3 mo</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">Avg. Time to Offer</div>
               </div>
             </div>
           </div>

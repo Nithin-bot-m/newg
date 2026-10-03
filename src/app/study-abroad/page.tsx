@@ -104,26 +104,40 @@ export default function StudyAbroadPage() {
             </p>
 
             {/* Quick Stats */}
-            <div className="mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 max-w-4xl mx-auto">
-              <div className="bg-white/[0.07] backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">20yr+</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Experience</div>
+            <div className="mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 max-w-5xl mx-auto">
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[105px] sm:min-h-[125px] group">
+                <div className="flex items-center justify-center min-h-[32px] sm:min-h-[40px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">20yr+</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium leading-snug">Experience</div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">40K+</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Students Placed</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[105px] sm:min-h-[125px] group">
+                <div className="flex items-center justify-center min-h-[32px] sm:min-h-[40px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">40K+</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium leading-snug">Students Placed</div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">500+</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Universities</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[105px] sm:min-h-[125px] group">
+                <div className="flex items-center justify-center min-h-[32px] sm:min-h-[40px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">500+</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium leading-snug">Universities</div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">35+</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Branches</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[105px] sm:min-h-[125px] group">
+                <div className="flex items-center justify-center min-h-[32px] sm:min-h-[40px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">35+</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium leading-snug">Branches</div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all col-span-2 md:col-span-1">
-                <div className="text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">6</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium">Countries</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[105px] sm:min-h-[125px] col-span-2 md:col-span-1 group">
+                <div className="flex items-center justify-center min-h-[32px] sm:min-h-[40px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">6</span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-medium leading-snug">Countries</div>
               </div>
             </div>
           </div>

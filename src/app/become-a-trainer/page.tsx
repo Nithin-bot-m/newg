@@ -138,22 +138,49 @@ export default function BecomeATrainerPage() {
             </p>
 
             {/* Quick Stats */}
-            <div className="mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">5yr+</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Minimum Experience</div>
+            <div className="mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 lg:gap-6 max-w-5xl mx-auto">
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">
+                    5yr+
+                  </span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">
+                  Minimum Experience
+                </div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">2–3×</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Income Potential</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">
+                    2–3×
+                  </span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">
+                  Income Potential
+                </div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">IT &amp; Non-IT</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Both Welcome</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-lg sm:text-2xl lg:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">
+                    IT &amp; Non-IT
+                  </span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">
+                  Both Welcome
+                </div>
               </div>
-              <div className="bg-white/[0.07] backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-white/10 shadow-xl hover:bg-white/[0.11] hover:border-emerald-400/40 hover:-translate-y-1 transition-all">
-                <div className="text-3xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Flexible</div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1.5 font-medium">Teach Live or Record</div>
+
+              <div className="relative overflow-hidden bg-white/[0.07] hover:bg-white/[0.11] backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-2xl border border-white/10 hover:border-emerald-400/40 shadow-xl hover:shadow-[0_12px_30px_rgba(16,185,129,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[110px] sm:min-h-[130px] group">
+                <div className="flex items-center justify-center min-h-[36px] sm:min-h-[44px]">
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200 tracking-tight whitespace-nowrap">
+                    Flexible
+                  </span>
+                </div>
+                <div className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-1.5 font-medium leading-snug">
+                  Teach Live or Record
+                </div>
               </div>
             </div>
           </div>
