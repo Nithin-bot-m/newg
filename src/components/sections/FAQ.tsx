@@ -47,44 +47,48 @@ export function FAQ() {
       />
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
             Before You Apply
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
             Common questions trainers and content partners ask before joining Greenroots. Can&apos;t find what you&apos;re looking for?{" "}
-            <a href="#" className="text-[#071D3A] underline">
+            <a href="/contact" className="text-[#0878E8] font-semibold underline hover:text-[#0766c6] transition-colors">
               Contact us
             </a>
             .
           </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-3.5">
           {FAQS.map((faq, i) => {
             const open = openIdx === i;
             return (
               <div
                 key={faq.q}
-                className="border border-gray-200 rounded-xl overflow-hidden"
+                className={`rounded-2xl transition-all duration-300 overflow-hidden border ${
+                  open
+                    ? "bg-blue-50/20 border-[#0878E8]/40 shadow-sm ring-1 ring-[#0878E8]/15"
+                    : "bg-white border-gray-200/80 hover:border-gray-300 shadow-xs hover:shadow-sm"
+                }`}
               >
                 <button
-                  className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                  className="w-full flex items-center justify-between gap-4 px-6 py-4.5 text-left cursor-pointer"
                   onClick={() => setOpenIdx(open ? null : i)}
                   aria-expanded={open}
                 >
-                  <span className="text-sm sm:text-base font-semibold text-[#071D3A]">
+                  <span className={`text-sm sm:text-base font-bold transition-colors ${open ? "text-[#0878E8]" : "text-[#071D3A]"}`}>
                     {faq.q}
                   </span>
                   <span
-                    className={`shrink-0 h-7 w-7 rounded-full flex items-center justify-center transition-colors ${
-                      open ? "bg-[#0878E8] text-white" : "bg-gray-100 text-gray-600"
+                    className={`shrink-0 h-8 w-8 rounded-full flex items-center justify-center transition-all duration-200 ${
+                      open ? "bg-[#0878E8] text-white shadow-xs" : "bg-gray-100 text-gray-600"
                     }`}
                   >
                     {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
                   </span>
                 </button>
                 {open && (
-                  <div className="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
+                  <div className="px-6 pb-6 text-sm sm:text-[15px] text-gray-600 leading-relaxed border-t border-[#0878E8]/10 pt-4">
                     {faq.a}
                   </div>
                 )}
@@ -93,13 +97,19 @@ export function FAQ() {
           })}
         </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <button className="px-6 py-3 border border-gray-300 text-[#071D3A] font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <a
+            href="/contact"
+            className="w-full sm:w-auto text-center px-7 py-3.5 border border-gray-300 text-[#071D3A] font-bold rounded-xl hover:bg-gray-50 active:scale-[0.98] transition-all shadow-xs"
+          >
             See If You Qualify
-          </button>
-          <button className="px-6 py-3 bg-[#0878E8] text-white font-semibold rounded-lg hover:bg-[#0766c6] transition-colors">
+          </a>
+          <a
+            href="/become-a-trainer"
+            className="w-full sm:w-auto text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all"
+          >
             Apply to Join Us →
-          </button>
+          </a>
         </div>
       </div>
     </section>

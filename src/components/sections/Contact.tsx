@@ -72,65 +72,67 @@ export function Contact() {
           {/* Left: contact info */}
           <div className="space-y-6">
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-white rounded-xl p-6 ring-1 ring-gray-100 hover:shadow-md transition-shadow">
-                <div className="h-10 w-10 rounded-lg bg-[#0878E8]/20 text-[#071D3A] flex items-center justify-center mb-3">
+              <div className="bg-white rounded-2xl p-6 sm:p-7 border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300">
+                <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-[#0878E8]/15 to-[#00B8E6]/15 text-[#0878E8] flex items-center justify-center mb-3.5 ring-1 ring-[#0878E8]/20">
                   <Phone className="h-5 w-5" />
                 </div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                   Phone
                 </h3>
-                <p className="mt-1 text-[#071D3A] font-medium">
-                  <a href="tel:+919549543898" className="hover:underline">
+                <p className="mt-1.5 text-[#071D3A] font-bold text-base">
+                  <a href="tel:+919549543898" className="hover:text-[#0878E8] transition-colors">
                     +91 95495 43898
                   </a>
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-6 ring-1 ring-gray-100 hover:shadow-md transition-shadow">
-                <div className="h-10 w-10 rounded-lg bg-[#0878E8]/20 text-[#071D3A] flex items-center justify-center mb-3">
+              <div className="bg-white rounded-2xl p-6 sm:p-7 border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300">
+                <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-[#0878E8]/15 to-[#00B8E6]/15 text-[#0878E8] flex items-center justify-center mb-3.5 ring-1 ring-[#0878E8]/20">
                   <Mail className="h-5 w-5" />
                 </div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                   Email
                 </h3>
-                <p className="mt-1 text-[#071D3A] font-medium">
-                  <a href="mailto:greenroots.tech@outlook.com" className="hover:underline">
+                <p className="mt-1.5 text-[#071D3A] font-bold text-base break-all">
+                  <a href="mailto:greenroots.tech@outlook.com" className="hover:text-[#0878E8] transition-colors">
                     greenroots.tech@outlook.com
                   </a>
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 ring-1 ring-gray-100 hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-2 mb-4">
-                <MapPin className="h-5 w-5 text-[#071D3A]" />
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300">
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="h-8 w-8 rounded-lg bg-[#071D3A]/10 text-[#071D3A] flex items-center justify-center">
+                  <MapPin className="h-4.5 w-4.5 text-[#071D3A]" />
+                </div>
                 <h3 className="text-lg font-bold text-[#071D3A]">Our Location</h3>
               </div>
               <div className="space-y-4">
                 {LOCATIONS.map((loc, i) => (
                   <div key={`loc-${i}`}>
-                    <h4 className="text-sm font-semibold text-[#071D3A]">
+                    <h4 className="text-sm font-bold text-[#071D3A]">
                       {loc.city}
                     </h4>
-                    <p className="mt-1 text-sm text-gray-600">
+                    <p className="mt-1 text-sm text-gray-600 leading-relaxed">
                       {loc.address}
                     </p>
                   </div>
                 ))}
-                <div className="pt-3 border-t border-gray-100">
-                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                <div className="pt-4 border-t border-gray-100">
+                  <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                     Office Hours
                   </h4>
-                  <p className="mt-1 text-sm text-gray-600">
+                  <p className="mt-1.5 text-sm text-gray-600 leading-relaxed">
                     Monday – Saturday: 9:00 AM – 7:00 PM <br />
                     Sunday: By appointment / counselling
                   </p>
                 </div>
-                <div className="pt-3 border-t border-gray-100 flex">
+                <div className="pt-4 border-t border-gray-100 flex">
                   <MagneticButton
                     href="https://wa.me/919549543898?text=Hi%20Greenroots!%20I%27d%20like%20to%20know%20more%20about%20your%20training%20programs."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#0878E8] hover:text-[#065cb5] bg-[#0878E8]/10 px-4 py-2 rounded-lg"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#166534] hover:text-[#14532d] bg-[#166534]/10 hover:bg-[#166534]/15 px-4.5 py-2.5 rounded-xl transition-colors"
                   >
                     Chat with us on WhatsApp (+91 95495 43898) →
                   </MagneticButton>
@@ -140,12 +142,12 @@ export function Contact() {
           </div>
 
           {/* Right: contact form with SmoothUI BorderBeam */}
-          <div className="relative bg-white rounded-2xl shadow-xl ring-1 ring-gray-100 p-6 lg:p-8 overflow-hidden">
+          <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200/80 p-6 sm:p-8 lg:p-9 overflow-hidden">
             <BorderBeam size={180} duration={8} colorFrom="#0878E8" colorTo="#00A86B" />
             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
                     First Name *
                   </label>
                   <input
@@ -154,11 +156,11 @@ export function Contact() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="Enter first name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
                     Last Name
                   </label>
                   <input
@@ -166,13 +168,13 @@ export function Contact() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Enter last name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
                   />
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
                     Email
                   </label>
                   <input
@@ -180,11 +182,11 @@ export function Contact() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
                     Phone *
                   </label>
                   <input
@@ -193,12 +195,12 @@ export function Contact() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="Enter phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] text-gray-900 transition-all placeholder:text-gray-400"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+                <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wide">
                   Message
                 </label>
                 <textarea
@@ -206,7 +208,7 @@ export function Contact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Type your message or goals here"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] resize-none text-gray-900"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/70 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] resize-none text-gray-900 transition-all placeholder:text-gray-400"
                 />
               </div>
               <div className="pt-2">
@@ -217,7 +219,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 transition-all disabled:opacity-70 cursor-pointer text-center"
+                    className="w-full py-4 bg-gradient-to-r from-[#0878E8] via-[#00B8E6] to-[#00AFA8] text-white font-bold rounded-xl hover:opacity-95 shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer text-center"
                   >
                     {submitting ? "Sending..." : "Get Free Counselling →"}
                   </button>

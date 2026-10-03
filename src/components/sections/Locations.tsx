@@ -16,10 +16,10 @@ export function Locations() {
     <section id="locations" className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
             Our Hyderabad Campus
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
             Unit 206, Manjeera Majestic Commercial, Opposite JNTU, Next to Lulu Mall, Kukatpally, Hyderabad — walk-in career audit and overseas education counselling under one roof.
           </p>
         </div>
@@ -34,17 +34,17 @@ export function Locations() {
               key={`hub-${i}`}
               maxTilt={8}
               glareColor="rgba(8, 120, 232, 0.18)"
-              className="group relative overflow-hidden rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 h-full border border-gray-100"
+              className="group relative overflow-hidden rounded-2xl bg-gray-50 shadow-xs hover:shadow-2xl transition-all duration-300 h-full border border-gray-200/70 hover:border-[#0878E8]/40"
             >
               <ImagePlaceholder
                 label={hub.name}
-                className="aspect-[3/4] w-full"
+                className="aspect-[3/4] w-full group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-4 sm:p-6 pointer-events-none">
-                <h3 className="text-lg sm:text-xl font-bold text-white">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 sm:p-6 pointer-events-none backdrop-blur-[1px]">
+                <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#38bdf8] transition-colors">
                   {hub.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-300 mt-1">{hub.tag}</p>
+                <p className="text-xs sm:text-sm text-gray-300/90 mt-1 leading-snug">{hub.tag}</p>
               </div>
             </TiltCard>
           ))}

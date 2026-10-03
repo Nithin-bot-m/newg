@@ -127,22 +127,22 @@ export default function ReviewsPage() {
             </p>
 
             {/* Stats Row */}
-            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
                 <div className="text-3xl sm:text-4xl font-black text-[#166534]">85%</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Placement Rate</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Placement Rate</div>
               </div>
-              <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
                 <div className="text-3xl sm:text-4xl font-black text-[#166534]">₹4.5L</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Avg. Fresher Package</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Avg. Fresher Package</div>
               </div>
-              <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
                 <div className="text-3xl sm:text-4xl font-black text-[#166534]">60+</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Alumni Placed</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Alumni Placed</div>
               </div>
-              <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
                 <div className="text-3xl sm:text-4xl font-black text-[#166534]">3 mo</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Avg. Time to Offer</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Avg. Time to Offer</div>
               </div>
             </div>
           </div>
@@ -219,7 +219,7 @@ export default function ReviewsPage() {
                   glareOpacity={0.12}
                   className="h-full rounded-2xl"
                 >
-                  <div className="relative h-full bg-white p-6 sm:p-7 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between overflow-hidden">
+                  <div className="relative h-full bg-white p-6 sm:p-7 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
                     {idx === 0 && (
                       <BorderBeam
                         colorFrom="#166534"
@@ -242,12 +242,12 @@ export default function ReviewsPage() {
                     </div>
 
                     <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-3">
-                      <div className="h-10 w-10 rounded-full bg-[#166534] text-white font-bold flex items-center justify-center text-sm shrink-0">
+                      <div className="h-10 w-10 rounded-full bg-[#166534] text-white font-bold flex items-center justify-center text-sm shrink-0 shadow-xs">
                         {review.name.slice(0, 2)}
                       </div>
                       <div>
                         <div className="font-bold text-sm text-gray-900">{review.name}</div>
-                        <div className="text-xs text-gray-500">{review.track}</div>
+                        <div className="text-xs text-gray-500 font-medium">{review.track}</div>
                         <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#166534] mt-0.5">
                           <CheckCircle className="h-3 w-3" /> Placed at {review.company}
                         </div>
@@ -263,7 +263,7 @@ export default function ReviewsPage() {
               <MagneticButton asChild strength={15}>
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 bg-[#166534] hover:bg-[#14532d] text-white font-bold rounded-xl shadow-md inline-flex items-center gap-2 transition-all"
+                  className="px-8 py-3.5 bg-[#166534] hover:bg-[#14532d] text-white font-bold rounded-xl shadow-md hover:shadow-lg active:scale-[0.98] inline-flex items-center gap-2 transition-all"
                 >
                   Start Your Career Transformation →
                 </Link>

@@ -78,34 +78,38 @@ export function Hero() {
               Greenroots delivers job-ready technology training — from Power BI to DevSecOps — with a career audit, personalised counselling, and placement support. We match you to the right technology, build your skills from zero, and stand beside you until you land the role.
             </p>
 
-            <div className="mt-6 space-y-3">
+            <div className="mt-6 space-y-3.5">
               {[
                 "Career Audit First — assess your background, strengths, and market fit",
                 "Industry-Mapped Curriculum benchmarked to TCS, Infosys, Accenture, Deloitte",
                 "Fast Tracks: 2–3 Months intensive, outcome-focused programs",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-gray-300">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#0878E8] shrink-0" />
-                  <span className="text-sm sm:text-base">{item}</span>
+                  <span className="flex items-center justify-center h-5 w-5 rounded-full bg-[#0878E8]/20 text-[#38bdf8] ring-1 ring-[#0878E8]/40 shrink-0 mt-0.5">
+                    <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none">
+                      <path d="M2.5 6L5 8.5L9.5 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  <span className="text-sm sm:text-base leading-snug">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-2 text-base lg:text-lg text-gray-300">
+            <div className="mt-4 text-base lg:text-lg text-gray-300">
               For{" "}
               <WordRotate
                 words={["freshers", "working pros", "career switchers", "gap-year returns"]}
                 duration={2200}
-                className="text-[#0878E8] font-bold inline-flex"
+                className="text-[#38bdf8] font-bold inline-flex"
               />
-              <span className="block mt-2">who want a job, not just a degree.</span>
+              <span className="block mt-1.5 text-gray-300/90">who want a job, not just a degree.</span>
             </div>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a href="#programs">
+              <a href="#courses">
                 <PulsatingButton
-                  className="group inline-flex items-center gap-2 hover:bg-[#0766c6]"
-                  pulseColor="rgba(8, 120, 232,   0.45)"
+                  className="group inline-flex items-center gap-2 hover:bg-[#0766c6] shadow-lg shadow-[#0878E8]/25"
+                  pulseColor="rgba(8, 120, 232, 0.45)"
                   duration="2s"
                 >
                   Explore 8 Programs
@@ -115,7 +119,7 @@ export function Hero() {
               <MagneticButton asChild strength={15}>
                 <a
                   href="#contact"
-                  className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors inline-block"
+                  className="px-6 py-3 border border-white/25 text-white font-semibold rounded-lg hover:bg-white/10 active:scale-[0.98] transition-all inline-block backdrop-blur-xs"
                 >
                   Talk to a Counsellor
                 </a>
@@ -138,7 +142,7 @@ export function Hero() {
 
           {/* Right: lead form */}
           <div className="lg:justify-self-end w-full max-w-md">
-            <div className="relative bg-white rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+            <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-8 overflow-hidden ring-1 ring-white/20">
               <BorderBeam
                 colorFrom="#0878E8"
                 colorTo="#34d399"
@@ -148,8 +152,8 @@ export function Hero() {
                 radius={16}
               />
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-[#071D3A]">Talk to a Counsellor</h3>
-                <p className="mt-2 text-sm text-gray-600">
+                <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Talk to a Counsellor</h3>
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                   Tell us where you want to land. We reply within 4 hours with a personalised counselling slot, recommended tests, and a rough budget map.
                 </p>
                 <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -160,7 +164,7 @@ export function Hero() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Full Name *"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/80 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900 transition-all placeholder:text-gray-400"
                     />
                   </div>
                   <div>
@@ -170,7 +174,7 @@ export function Hero() {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="Phone Number *"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/80 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900 transition-all placeholder:text-gray-400"
                     />
                   </div>
                   <div>
@@ -179,14 +183,14 @@ export function Hero() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email Address (optional)"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/80 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900 transition-all placeholder:text-gray-400"
                     />
                   </div>
                   <div>
                     <select
                       value={program}
                       onChange={(e) => setProgram(e.target.value)}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200/90 bg-gray-50/80 hover:bg-white focus:bg-white text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent transition-all cursor-pointer"
                     >
                       <option value="">Select Program</option>
                       <option value="Power BI Mastery">Power BI Mastery</option>
@@ -203,14 +207,14 @@ export function Hero() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full py-3 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-lg hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 transition-all disabled:opacity-70 cursor-pointer"
+                      className="w-full py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl hover:shadow-[#0878E8]/30 active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer"
                     >
                       {submitting ? "Sending..." : "Get Free Counselling →"}
                     </button>
                   </MagneticButton>
                   <p className="text-xs text-gray-500 text-center">
                     By submitting, you agree to our{" "}
-                    <a href="#contact" className="underline hover:text-gray-700">
+                    <a href="/privacy" className="underline hover:text-gray-700 transition-colors">
                       Privacy Policy
                     </a>
                   </p>

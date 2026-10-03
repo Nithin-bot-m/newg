@@ -41,13 +41,14 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="py-20 lg:py-28 overflow-hidden relative bg-black scroll-mt-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 lg:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
+    <section id="reviews" className="py-16 sm:py-20 lg:py-24 overflow-hidden relative bg-gradient-to-b from-[#040E1C] via-[#071D3A] to-[#040E1C] scroll-mt-20">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[32rem] w-[45rem] rounded-full bg-[#0878E8]/5 blur-3xl pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10 lg:mb-14">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             What Our Graduates Say
           </h2>
-          <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-300/90 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
             Real students. Real companies. Real salaries. Here&apos;s what Greenroots has delivered.
           </p>
         </div>

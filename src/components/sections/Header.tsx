@@ -22,6 +22,15 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const [active, setActive] = useState("Home");
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 15);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (pathname.startsWith("/courses")) setActive("Courses");
@@ -34,20 +43,26 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-xl border-b border-gray-200/80 shadow-[0_4px_24px_-4px_rgba(7,29,58,0.06)]"
+          : "bg-white/90 backdrop-blur-md border-b border-gray-100"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 lg:h-20 items-center justify-between gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="/" className="flex items-center gap-2 shrink-0 group">
             <Logo
               variant="dark"
               showTagline={false}
-              className="h-9 lg:h-10 w-auto"
+              className="h-9 lg:h-10 w-auto group-hover:opacity-95 transition-opacity"
             />
           </Link>
 
           {/* Desktop nav - matching user screenshot */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 p-1 bg-gray-50/60 rounded-xl border border-gray-100/80">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.label;
               return (
@@ -57,8 +72,8 @@ export function Header() {
                   onClick={() => setActive(link.label)}
                   className={
                     isActive
-                      ? "px-4 py-1.5 text-[15px] font-bold text-white bg-[#166534] hover:bg-[#14532d] rounded-lg shadow-sm transition-all inline-flex items-center justify-center"
-                      : "px-3.5 py-1.5 text-[15px] font-medium text-gray-700 hover:text-[#166534] hover:bg-gray-50/80 rounded-lg transition-colors inline-flex items-center justify-center"
+                      ? "px-4 py-1.5 text-[14px] xl:text-[15px] font-bold text-white bg-[#166534] hover:bg-[#14532d] rounded-lg shadow-sm transition-all duration-200 inline-flex items-center justify-center"
+                      : "px-3.5 py-1.5 text-[14px] xl:text-[15px] font-medium text-gray-700 hover:text-[#166534] hover:bg-white/90 rounded-lg transition-all duration-150 inline-flex items-center justify-center"
                   }
                 >
                   {link.label}
@@ -68,11 +83,11 @@ export function Header() {
           </nav>
 
           {/* CTA buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2.5">
             <MagneticButton asChild strength={10}>
               <Link
                 href="/contact"
-                className="px-4 py-2 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-lg hover:bg-[#166534]/5 transition-colors inline-block"
+                className="px-4 py-2 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-lg hover:border-[#166534] hover:bg-[#166534]/5 active:scale-[0.98] transition-all inline-block"
               >
                 Career Audit
               </Link>
@@ -80,7 +95,7 @@ export function Header() {
             <MagneticButton asChild strength={14}>
               <Link
                 href="/contact"
-                className="px-4 py-2 text-sm font-semibold bg-[#166534] text-white rounded-lg hover:bg-[#14532d] transition-all shadow-sm inline-block"
+                className="px-4 py-2 text-sm font-semibold bg-[#166534] text-white rounded-lg hover:bg-[#14532d] shadow-sm hover:shadow-md hover:shadow-[#166534]/20 active:scale-[0.98] transition-all inline-block"
               >
                 Enrol Now →
               </Link>
@@ -89,7 +104,7 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 -mr-2 text-gray-800"
+            className="lg:hidden p-2.5 -mr-2 text-gray-800 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -99,7 +114,7 @@ export function Header() {
 
         {/* Mobile nav drawer */}
         {open && (
-          <div className="lg:hidden border-t border-gray-100 py-4 space-y-1">
+          <div className="lg:hidden border-t border-gray-100 py-4 space-y-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.label;
               return (
@@ -110,28 +125,28 @@ export function Header() {
                     setActive(link.label);
                     setOpen(false);
                   }}
-                  className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-all ${
                     isActive
-                      ? "bg-[#166534] text-white font-semibold"
-                      : "text-gray-700 hover:bg-gray-50 hover:text-[#166534]"
+                      ? "bg-[#166534] text-white font-semibold shadow-xs"
+                      : "text-gray-700 hover:bg-gray-100/70 hover:text-[#166534]"
                   }`}
                 >
                   {link.label}
                 </Link>
               );
             })}
-            <div className="flex gap-2 pt-3">
+            <div className="flex gap-2.5 pt-3">
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="flex-1 text-center px-4 py-2 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-md hover:bg-[#166534]/5"
+                className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-lg hover:bg-[#166534]/5 transition-colors"
               >
                 Career Audit
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="flex-1 text-center px-5 py-2 text-sm font-semibold bg-[#166534] text-white rounded-md hover:bg-[#14532d]"
+                className="flex-1 text-center px-4 py-2.5 text-sm font-semibold bg-[#166534] text-white rounded-lg hover:bg-[#14532d] shadow-sm transition-colors"
               >
                 Enrol Now →
               </Link>

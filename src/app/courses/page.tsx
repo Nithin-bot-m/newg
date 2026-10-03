@@ -234,7 +234,7 @@ export default function CoursesPage() {
                 glareOpacity={0.1}
                 className="h-full rounded-2xl"
               >
-                <div className="relative h-full bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+                <div className="relative h-full bg-white rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden">
                   {idx === 0 && (
                     <BorderBeam
                       colorFrom="#166534"
@@ -254,7 +254,7 @@ export default function CoursesPage() {
                       >
                         {course.tag}
                       </span>
-                      <span className="text-xs font-medium text-gray-500">{course.mode}</span>
+                      <span className="text-xs font-semibold text-gray-500 bg-gray-100/80 px-2.5 py-0.5 rounded-full">{course.mode}</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                       {course.title}
@@ -295,7 +295,7 @@ export default function CoursesPage() {
                         {course.skills.map((skill) => (
                           <span
                             key={skill}
-                            className="px-2.5 py-1 text-xs rounded-md bg-gray-100 text-gray-700 font-medium"
+                            className="px-2.5 py-1 text-xs rounded-lg bg-gray-100/80 hover:bg-gray-200/70 text-gray-700 font-semibold ring-1 ring-gray-200/50 transition-colors"
                           >
                             {skill}
                           </span>
@@ -319,7 +319,7 @@ export default function CoursesPage() {
                       <MagneticButton asChild strength={10} className="w-full">
                         <Link
                           href="/contact"
-                          className="w-full py-2.5 px-4 bg-[#166534] hover:bg-[#14532d] text-white font-semibold text-sm rounded-xl text-center transition-colors block shadow-xs"
+                          className="w-full py-3 px-4 bg-[#166534] hover:bg-[#14532d] text-white font-bold text-sm rounded-xl text-center transition-all shadow-sm hover:shadow-md active:scale-[0.98] block"
                         >
                           Book Free Counselling →
                         </Link>
@@ -332,19 +332,19 @@ export default function CoursesPage() {
           </div>
 
           {/* Career Audit Callout */}
-          <div className="mt-16 bg-[#f3f9f5] border border-[#166534]/20 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="mt-16 bg-[#f3f9f5] border border-[#166534]/20 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Not sure which course is right for you?
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-gray-600 max-w-2xl">
+              <p className="mt-2 text-sm sm:text-base text-gray-600 max-w-2xl leading-relaxed">
                 Book a free career audit session. We&apos;ll review your background, market demand, and salary potential — then recommend the exact track that gives you the strongest return.
               </p>
             </div>
             <MagneticButton asChild strength={15}>
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-[#166534] text-white font-bold rounded-xl hover:bg-[#14532d] transition-all shadow-md shrink-0 inline-flex items-center gap-2"
+                className="px-7 py-3.5 bg-[#166534] text-white font-bold rounded-xl hover:bg-[#14532d] transition-all shadow-md hover:shadow-lg active:scale-[0.98] shrink-0 inline-flex items-center gap-2"
               >
                 Book Free Audit →
               </Link>
