@@ -55,8 +55,8 @@ export const InfiniteMovingCards = ({
             className="w-[320px] md:w-[420px] max-w-full relative rounded-2xl flex-shrink-0 px-6 py-5 md:w-[420px]"
             style={{
               background:
-                "linear-gradient(180deg, var(--slate-800, #1e293b), var(--slate-900, #0f172a))",
-              border: "1px solid rgba(255,255,255,0.08)",
+                "linear-gradient(180deg, #062117, #04150E)",
+              border: "1px solid rgba(16,185,129,0.15)",
             }}
           >
             <blockquote>
@@ -74,7 +74,7 @@ export const InfiniteMovingCards = ({
                   </div>
                 )}
                 <div>
-                  <span className="font-semibold text-[#0878E8] block">{item.name}</span>
+                  <span className="font-semibold text-[#34d399] block">{item.name}</span>
                   {item.title && <span className="text-neutral-400 text-[11px]">{item.title}</span>}
                 </div>
               </footer>

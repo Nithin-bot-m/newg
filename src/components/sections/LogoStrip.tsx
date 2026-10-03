@@ -33,7 +33,7 @@ export function LogoStrip() {
             {ROW_1_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#0878E8]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(8,120,232,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
+                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#166534]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(22,101,52,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
               >
                 <img
                   src={c.logo}
@@ -50,7 +50,7 @@ export function LogoStrip() {
             {ROW_2_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#0878E8]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(8,120,232,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
+                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#166534]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(22,101,52,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
               >
                 <img
                   src={c.logo}

@@ -52,21 +52,21 @@ export default function ContactPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Contact Hero */}
-        <section className="relative overflow-hidden bg-[#071D3A] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#0878E8]/20 via-[#166534]/25 to-transparent blur-3xl pointer-events-none" />
+        <section className="relative overflow-hidden bg-[#062117] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.18),rgba(234,88,12,0.12)_60%,transparent_100%)] pointer-events-none" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#166534]/30 via-[#EA580C]/15 to-transparent blur-3xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/35 backdrop-blur-md shadow-[0_0_18px_rgba(8,120,232,0.25)]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/30 px-4 py-1.5 text-xs font-semibold text-[#86efac] mb-5 border border-[#10B981]/30 backdrop-blur-md shadow-[0_0_18px_rgba(16,185,129,0.2)]">
               <Phone className="h-3.5 w-3.5 text-amber-400" />
-              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2}>
+              <ShineText baseColor="#86efac" shineColor="#ffffff" duration={2}>
                 Direct Support &amp; Walk-in Kukatpally Campus
               </ShineText>
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Let&apos;s Talk About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">Your Career.</span>
+              Let&apos;s Talk About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#86efac] to-[#FB923C]">Your Career.</span>
             </h1>
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-emerald-100/80 max-w-2xl mx-auto leading-relaxed">
               Fill out the form or reach us directly. Our team will get back to you within a few hours with program details and next steps.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
               <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-emerald-50 text-[#166534] border border-emerald-200/80 text-xs uppercase tracking-widest font-bold mb-3">
                 Get In Touch
               </span>
-              <h2 className="text-2xl sm:text-4xl font-black text-gray-900 mb-3 tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-black text-[#092B1D] mb-3 tracking-tight">
                 Reach Out Directly
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8">
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
-                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
-                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
-                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Globe className="h-5 w-5" />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
-                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -137,7 +137,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4 p-5 sm:p-6 rounded-3xl border border-slate-200/90 bg-white shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
-                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white flex items-center justify-center shrink-0 shadow-md">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
@@ -168,14 +168,14 @@ export default function ContactPage() {
             <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-12 shadow-xl">
               <BorderBeam
                 colorFrom="#34d399"
-                colorTo="#38bdf8"
+                colorTo="#F97316"
                 duration={6}
                 size={130}
                 borderWidth={1.5}
                 radius={24}
               />
               <div className="relative z-10">
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">Send an Enquiry</h3>
+                <h3 className="text-2xl sm:text-3xl font-black text-[#092B1D] tracking-tight">Send an Enquiry</h3>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-6 sm:mb-8">
                   We&apos;ll reply with a personalised program recommendation within 4 hours.
                 </p>
@@ -270,7 +270,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full min-h-[50px] py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center text-sm sm:text-base transition-all shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:shadow-emerald-900/30 cursor-pointer flex items-center justify-center"
+                      className="w-full min-h-[50px] py-3.5 px-6 bg-gradient-to-r from-[#EA580C] to-[#F97316] hover:from-[#c2410c] hover:to-[#ea580c] text-white font-bold rounded-xl text-center text-sm sm:text-base transition-all shadow-lg shadow-[#EA580C]/25 hover:shadow-xl hover:shadow-[#EA580C]/35 cursor-pointer flex items-center justify-center"
                     >
                       {submitting ? "Submitting..." : "Submit Enquiry & Book Free Audit →"}
                     </button>

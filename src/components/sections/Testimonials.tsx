@@ -41,14 +41,14 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="py-12 sm:py-20 lg:py-24 overflow-hidden relative bg-gradient-to-b from-[#040E1C] via-[#071D3A] to-[#040E1C] scroll-mt-20">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[32rem] w-[45rem] rounded-full bg-[#0878E8]/5 blur-3xl pointer-events-none" />
+    <section id="reviews" className="py-12 sm:py-20 lg:py-24 overflow-hidden relative bg-gradient-to-b from-[#04150E] via-[#062117] to-[#04150E] scroll-mt-20">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[32rem] w-[45rem] rounded-full bg-[#10B981]/8 blur-3xl pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-14">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             What Our Graduates Say
           </h2>
-          <p className="mt-3.5 sm:mt-4 text-gray-300/90 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="mt-3.5 sm:mt-4 text-emerald-100/80 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
             Real students. Real companies. Real salaries. Here&apos;s what Greenroots has delivered.
           </p>
         </div>

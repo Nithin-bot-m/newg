@@ -47,12 +47,12 @@ export function FAQ() {
       />
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-14">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#092B1D] tracking-tight">
             Before You Apply
           </h2>
           <p className="mt-4 text-gray-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
             Common questions trainers and content partners ask before joining Greenroots. Can&apos;t find what you&apos;re looking for?{" "}
-            <a href="/contact" className="text-[#0878E8] font-semibold underline hover:text-[#0766c6] transition-colors">
+            <a href="/contact" className="text-[#166534] font-semibold underline hover:text-[#0B4627] transition-colors">
               Contact us
             </a>
             .
@@ -67,7 +67,7 @@ export function FAQ() {
                 key={faq.q}
                 className={`rounded-2xl transition-all duration-300 overflow-hidden border ${
                   open
-                    ? "bg-blue-50/20 border-[#0878E8]/40 shadow-sm ring-1 ring-[#0878E8]/15"
+                    ? "bg-emerald-50/30 border-[#166534]/30 shadow-sm ring-1 ring-[#166534]/15"
                     : "bg-white border-gray-200/80 hover:border-gray-300 shadow-xs hover:shadow-sm"
                 }`}
               >
@@ -76,19 +76,19 @@ export function FAQ() {
                   onClick={() => setOpenIdx(open ? null : i)}
                   aria-expanded={open}
                 >
-                  <span className={`text-[15px] sm:text-base font-bold transition-colors leading-snug ${open ? "text-[#0878E8]" : "text-[#071D3A]"}`}>
+                  <span className={`text-[15px] sm:text-base font-bold transition-colors leading-snug ${open ? "text-[#166534]" : "text-[#092B1D]"}`}>
                     {faq.q}
                   </span>
                   <span
                     className={`shrink-0 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-200 ${
-                      open ? "bg-[#0878E8] text-white shadow-xs" : "bg-gray-100 text-gray-600"
+                      open ? "bg-[#166534] text-white shadow-xs" : "bg-gray-100 text-gray-600"
                     }`}
                   >
                     {open ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
                   </span>
                 </button>
                 {open && (
-                  <div className="px-4 sm:px-6 pb-5 pt-3 text-sm sm:text-[15px] text-gray-600 leading-relaxed border-t border-[#0878E8]/10">
+                  <div className="px-4 sm:px-6 pb-5 pt-3 text-sm sm:text-[15px] text-gray-600 leading-relaxed border-t border-[#166534]/10">
                     {faq.a}
                   </div>
                 )}
@@ -101,7 +101,7 @@ export function FAQ() {
           <MagneticButton asChild>
             <a
               href="/contact"
-              className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 border border-gray-300 text-[#071D3A] font-bold rounded-xl hover:bg-gray-50 active:scale-[0.98] transition-all shadow-xs inline-flex items-center justify-center cursor-pointer"
+              className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 border border-gray-300 text-[#092B1D] font-bold rounded-xl hover:bg-gray-50 hover:border-[#166534] active:scale-[0.98] transition-all shadow-xs inline-flex items-center justify-center cursor-pointer"
             >
               See If You Qualify
             </a>
@@ -109,7 +109,7 @@ export function FAQ() {
           <MagneticButton asChild>
             <a
               href="/become-a-trainer"
-              className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center justify-center cursor-pointer"
+              className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] shadow-lg shadow-[#EA580C]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center justify-center cursor-pointer"
             >
               Apply to Join Us →
             </a>

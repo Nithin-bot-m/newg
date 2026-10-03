@@ -129,10 +129,10 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[70vh] lg:min-h-screen bg-[#071D3A] overflow-hidden flex items-center pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-24">
-      {/* Calm, restrained ambient radial depth */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.18),transparent_70%)] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_50%,rgba(0,184,230,0.08),transparent_60%)] pointer-events-none" />
+    <section id="hero" className="relative min-h-[70vh] lg:min-h-screen bg-[#062117] overflow-hidden flex items-center pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-24">
+      {/* Calm, restrained ambient radial depth matching GROOTS brand green and orange */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.16),transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_50%,rgba(234,88,12,0.10),transparent_60%)] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:py-12 lg:py-16 w-full z-10">
         <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-14 items-center">
@@ -140,7 +140,7 @@ export function Hero() {
           <div className="lg:col-span-7 text-white">
             <h1 className="text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.12] sm:leading-[1.08] tracking-tight text-white">
               Build a Career<br />
-              <span className="bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#34d399] via-[#86efac] to-[#FB923C] bg-clip-text text-transparent">
                 That Actually Works.
               </span>
             </h1>
@@ -156,7 +156,7 @@ export function Hero() {
                 "Fast Tracks: 2–3 Months intensive, outcome-focused programs",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-slate-300">
-                  <span className="flex items-center justify-center h-5 w-5 rounded-full bg-[#0878E8]/20 text-[#38bdf8] ring-1 ring-[#0878E8]/40 shrink-0 mt-0.5">
+                  <span className="flex items-center justify-center h-5 w-5 rounded-full bg-[#166534]/30 text-[#4ade80] ring-1 ring-[#166534]/50 shrink-0 mt-0.5">
                     <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none">
                       <path d="M2.5 6L5 8.5L9.5 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -171,7 +171,7 @@ export function Hero() {
               <WordRotate
                 words={["freshers", "working pros", "career switchers", "gap-year returns"]}
                 duration={2200}
-                className="text-[#38bdf8] font-bold inline-flex"
+                className="text-[#FB923C] font-bold inline-flex"
               />
               <span className="block mt-1 text-slate-400 text-sm sm:text-base">who want a job, not just a degree.</span>
             </div>
@@ -180,7 +180,7 @@ export function Hero() {
               <MagneticButton asChild strength={12}>
                 <a
                   href="#courses"
-                  className="w-full sm:w-auto min-h-[48px] justify-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center gap-2 cursor-pointer group text-center"
+                  className="w-full sm:w-auto min-h-[48px] justify-center px-7 py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] shadow-lg shadow-[#EA580C]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center gap-2 cursor-pointer group text-center"
                 >
                   Explore 8 Programs
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -209,7 +209,7 @@ export function Hero() {
                         Free Curriculum PDF + Counselling
                       </span>
                     </div>
-                    <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Talk to a Counsellor</h3>
+                    <h3 className="text-2xl font-black text-[#092B1D] tracking-tight">Talk to a Counsellor</h3>
                     <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                       Tell us where you want to land. Verify your phone number to get instant access to the official curriculum roadmap PDF.
                     </p>
@@ -221,7 +221,7 @@ export function Hero() {
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           placeholder="Full Name *"
-                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] text-slate-900 transition-all placeholder:text-slate-400"
                         />
                       </div>
                       <div>
@@ -236,7 +236,7 @@ export function Hero() {
                             value={phone}
                             onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
                             placeholder="Phone Number *"
-                            className="w-full pl-13 pr-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                            className="w-full pl-13 pr-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] text-slate-900 transition-all placeholder:text-slate-400"
                           />
                         </div>
                       </div>
@@ -246,14 +246,14 @@ export function Hero() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="Email Address (optional)"
-                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] text-slate-900 transition-all placeholder:text-slate-400"
                         />
                       </div>
                       <div>
                         <select
                           value={program}
                           onChange={(e) => setProgram(e.target.value)}
-                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm text-slate-700 focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] transition-all cursor-pointer"
+                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm text-slate-700 focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] transition-all cursor-pointer"
                         >
                           <option value="">Select Program</option>
                           <option value="Power BI Mastery">Power BI Mastery</option>
@@ -270,7 +270,7 @@ export function Hero() {
                         <button
                           type="submit"
                           disabled={submitting}
-                          className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl hover:shadow-[#0878E8]/30 active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer flex items-center justify-center text-center gap-1.5"
+                          className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] shadow-lg shadow-[#EA580C]/25 hover:shadow-xl active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer flex items-center justify-center text-center gap-1.5"
                         >
                           {submitting ? "Sending OTP..." : "Verify Mobile & Download Curriculum →"}
                         </button>
@@ -288,7 +288,7 @@ export function Hero() {
                 {formStep === "otp" && (
                   <div className="animate-in fade-in duration-200">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200/60">
+                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/60">
                         Step 2 of 2 · Identity Verification
                       </span>
                       <button
@@ -300,31 +300,31 @@ export function Hero() {
                       </button>
                     </div>
 
-                    <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Verify Your Mobile</h3>
+                    <h3 className="text-2xl font-black text-[#092B1D] tracking-tight">Verify Your Mobile</h3>
                     <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
                       Enter the 6-digit OTP sent to{" "}
                       <strong className="text-slate-900 font-semibold">+91 {phone}</strong>
                       <button
                         type="button"
                         onClick={() => setFormStep("details")}
-                        className="text-xs font-bold text-[#0878E8] hover:underline ml-1.5 cursor-pointer"
+                        className="text-xs font-bold text-[#166534] hover:underline ml-1.5 cursor-pointer"
                       >
                         Edit
                       </button>
                     </p>
 
                     {/* Quick Demo Helper Box */}
-                    <div className="mt-4 p-3 bg-blue-50/90 border border-blue-200/70 rounded-xl flex items-center justify-between">
-                      <div className="text-xs text-blue-900">
+                    <div className="mt-4 p-3 bg-emerald-50/90 border border-emerald-200/70 rounded-xl flex items-center justify-between">
+                      <div className="text-xs text-emerald-900">
                         <span>Test OTP: </span>
-                        <span className="font-mono font-bold tracking-widest text-[#0878E8] text-sm ml-1">
+                        <span className="font-mono font-bold tracking-widest text-[#166534] text-sm ml-1">
                           {generatedOtp}
                         </span>
                       </div>
                       <button
                         type="button"
                         onClick={() => setOtp(generatedOtp)}
-                        className="text-xs font-bold text-[#0878E8] hover:text-[#0766c6] bg-white px-2.5 py-1 rounded-lg border border-blue-200 shadow-2xs hover:bg-blue-50 transition-all cursor-pointer"
+                        className="text-xs font-bold text-[#166534] hover:text-[#0f4d2a] bg-white px-2.5 py-1 rounded-lg border border-emerald-200 shadow-2xs hover:bg-emerald-50 transition-all cursor-pointer"
                       >
                         Auto-fill OTP
                       </button>
@@ -372,7 +372,7 @@ export function Hero() {
                           <button
                             type="button"
                             onClick={handleResendOtp}
-                            className="text-xs font-bold text-[#0878E8] hover:underline cursor-pointer"
+                            className="text-xs font-bold text-[#166534] hover:underline cursor-pointer"
                           >
                             Resend Verification Code
                           </button>
@@ -391,7 +391,7 @@ export function Hero() {
                           type="button"
                           onClick={() => handleVerifyOtp()}
                           disabled={otp.length !== 6 || verifying}
-                          className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all disabled:opacity-50 cursor-pointer flex items-center justify-center text-center gap-2"
+                          className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] shadow-lg shadow-[#EA580C]/25 hover:shadow-xl active:scale-[0.98] transition-all disabled:opacity-50 cursor-pointer flex items-center justify-center text-center gap-2"
                         >
                           {verifying ? (
                             <>
@@ -416,7 +416,7 @@ export function Hero() {
                       <ShieldCheck className="w-3.5 h-3.5" /> Mobile Verified (+91 {phone})
                     </span>
 
-                    <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Identity Verified!</h3>
+                    <h3 className="text-2xl font-black text-[#092B1D] tracking-tight">Identity Verified!</h3>
                     <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
                       Thank you, <strong className="text-slate-900">{name}</strong>. Your counselling slot for{" "}
                       <strong className="text-[#166534]">{program || "Hyderabad Tech Courses"}</strong> has been confirmed.

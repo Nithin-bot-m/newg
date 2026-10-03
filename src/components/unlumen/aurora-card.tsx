@@ -16,8 +16,8 @@ import { cn } from "@/lib/utils";
 export const AuroraCard = ({
   children,
   className,
-  blobColor = "#0878E8",
-  blobColor2 = "#00A86B",
+  blobColor = "#166534",
+  blobColor2 = "#EA580C",
   tilt = true,
   glowSize = 1.2,
 }: {

@@ -89,7 +89,7 @@ export const AnimatedTestimonials = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <div className="h-full w-full rounded-2xl bg-gradient-to-br from-[#0878E8]/30 via-zinc-800 to-zinc-900 ring-1 ring-white/10 flex items-center justify-center text-5xl sm:text-6xl font-black text-[#0878E8]">
+                  <div className="h-full w-full rounded-2xl bg-gradient-to-br from-[#166534]/40 via-zinc-800 to-zinc-900 ring-1 ring-emerald-500/20 flex items-center justify-center text-5xl sm:text-6xl font-black text-[#34d399]">
                     {testimonial.name.charAt(0).toUpperCase()}
                   </div>
                 </motion.div>
@@ -107,7 +107,7 @@ export const AnimatedTestimonials = ({
             <h3 className="text-xl sm:text-2xl font-bold text-neutral-200 md:text-3xl">
               {testimonials[active].name}
             </h3>
-            <p className="text-xs sm:text-sm text-[#0878E8] font-medium md:text-base mt-0.5">
+            <p className="text-xs sm:text-sm text-[#34d399] font-medium md:text-base mt-0.5">
               {testimonials[active].designation}
             </p>
             <motion.p className="mt-4 sm:mt-6 text-sm sm:text-base font-normal text-neutral-300 md:text-lg leading-relaxed">

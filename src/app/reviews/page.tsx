@@ -114,21 +114,21 @@ export default function ReviewsPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Header Hero */}
-        <section className="relative overflow-hidden bg-[#071D3A] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#0878E8]/20 via-[#166534]/25 to-transparent blur-3xl pointer-events-none" />
+        <section className="relative overflow-hidden bg-[#062117] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.18),rgba(234,88,12,0.12)_60%,transparent_100%)] pointer-events-none" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#166534]/30 via-[#EA580C]/15 to-transparent blur-3xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/35 backdrop-blur-md shadow-[0_0_18px_rgba(8,120,232,0.25)]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/30 px-4 py-1.5 text-xs font-semibold text-[#86efac] mb-5 border border-[#10B981]/30 backdrop-blur-md shadow-[0_0_18px_rgba(16,185,129,0.2)]">
               <Award className="h-3.5 w-3.5 text-amber-400" />
-              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2.2}>
+              <ShineText baseColor="#86efac" shineColor="#ffffff" duration={2.2}>
                 Proven Placement Track Record · Hyderabad Hub
               </ShineText>
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Our Placement Track Record &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">Student Reviews</span>
+              Our Placement Track Record &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#86efac] to-[#FB923C]">Student Reviews</span>
             </h1>
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-emerald-100/80 max-w-2xl mx-auto leading-relaxed">
               Real students. Real companies. Real salaries. Here&apos;s what Greenroots has delivered.
             </p>
 
@@ -178,7 +178,7 @@ export default function ReviewsPage() {
               {ROW_1_COMPANIES.map((c) => (
                 <div
                   key={c.name}
-                  className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#0878E8]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(8,120,232,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
+                  className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#166534] shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(22,101,52,0.15)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
                 >
                   <img
                     src={c.logo}
@@ -195,7 +195,7 @@ export default function ReviewsPage() {
               {ROW_2_COMPANIES.map((c) => (
                 <div
                   key={c.name}
-                  className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#0878E8]/40 shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(8,120,232,0.12)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
+                  className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-2xl bg-gray-50/70 hover:bg-white border border-gray-200/60 hover:border-[#166534] shadow-xs hover:shadow-[0_8px_25px_-6px_rgba(22,101,52,0.15)] hover:-translate-y-0.5 flex items-center justify-center p-3.5 sm:p-4.5 transition-all duration-300 group"
                 >
                   <img
                     src={c.logo}
@@ -227,7 +227,7 @@ export default function ReviewsPage() {
                 className="bg-white border border-slate-200/90 rounded-2xl p-6 hover:border-[#166534] hover:shadow-lg hover:-translate-y-1 transition-all shadow-xs flex flex-col justify-between group"
               >
                 <div>
-                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white font-black flex items-center justify-center text-sm mb-4 shadow-md group-hover:scale-105 transition-transform">
+                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white font-black flex items-center justify-center text-sm mb-4 shadow-md group-hover:scale-105 transition-transform">
                     {step.step}
                   </div>
                   <h4 className="font-bold text-gray-900 text-base mb-1.5">{step.title}</h4>
@@ -264,7 +264,7 @@ export default function ReviewsPage() {
                     {idx === 0 && (
                       <BorderBeam
                         colorFrom="#166534"
-                        colorTo="#38bdf8"
+                        colorTo="#F97316"
                         duration={6}
                         size={90}
                         borderWidth={1.5}
@@ -283,7 +283,7 @@ export default function ReviewsPage() {
                     </div>
 
                     <div className="mt-8 pt-5 border-t border-slate-100 flex items-center gap-3.5">
-                      <div className="h-11 w-11 rounded-full bg-gradient-to-br from-[#166534] to-[#071D3A] text-white font-bold flex items-center justify-center text-sm shrink-0 shadow-md">
+                      <div className="h-11 w-11 rounded-full bg-gradient-to-br from-[#166534] to-[#062117] text-white font-bold flex items-center justify-center text-sm shrink-0 shadow-md">
                         {review.name.slice(0, 2)}
                       </div>
                       <div className="min-w-0">
@@ -304,7 +304,7 @@ export default function ReviewsPage() {
               <MagneticButton asChild strength={15} className="w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto min-h-[50px] justify-center px-9 py-4 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:shadow-emerald-900/30 active:scale-[0.98] inline-flex items-center gap-2 transition-all text-center text-base"
+                  className="w-full sm:w-auto min-h-[50px] justify-center px-9 py-4 bg-gradient-to-r from-[#EA580C] to-[#F97316] hover:from-[#c2410c] hover:to-[#ea580c] text-white font-bold rounded-xl shadow-lg shadow-[#EA580C]/25 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 transition-all text-center text-base"
                 >
                   Start Your Career Transformation →
                 </Link>

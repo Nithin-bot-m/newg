@@ -26,16 +26,16 @@ const FOUNDERS = [
 
 export function Founders() {
   return (
-    <section className="relative py-12 sm:py-20 lg:py-24 bg-[#071D3A] overflow-hidden">
+    <section className="relative py-12 sm:py-20 lg:py-24 bg-[#062117] overflow-hidden">
       {/* Calm, restrained ambient light */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(8,120,232,0.14),transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(16,185,129,0.15),transparent_70%)] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             Built by trainers who’ve done the job you’re aiming for
           </h2>
-          <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+          <p className="mt-4 text-emerald-100/80 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
             All instructors have 10+ years of active industry experience. They don’t just teach — they’ve done the job you’re aiming for.
           </p>
         </div>
@@ -49,13 +49,13 @@ export function Founders() {
               glare={false}
               className="h-full rounded-3xl"
             >
-              <div className="h-full bg-white/[0.04] hover:bg-white/[0.07] backdrop-blur-md border border-white/10 hover:border-[#0878E8]/50 rounded-3xl p-5 sm:p-8 text-center flex flex-col justify-between transition-all duration-300 group">
+              <div className="h-full bg-white/[0.04] hover:bg-white/[0.07] backdrop-blur-md border border-white/10 hover:border-[#10B981]/50 rounded-3xl p-5 sm:p-8 text-center flex flex-col justify-between transition-all duration-300 group">
                 <div>
-                  <div className="relative inline-block mx-auto mb-4 sm:mb-5 p-1 rounded-full ring-2 ring-[#0878E8]/40 bg-gradient-to-tr from-[#0878E8]/20 to-[#00B8E6]/20 group-hover:ring-[#0878E8] transition-all duration-300">
+                  <div className="relative inline-block mx-auto mb-4 sm:mb-5 p-1 rounded-full ring-2 ring-[#10B981]/40 bg-gradient-to-tr from-[#166534]/30 to-[#EA580C]/20 group-hover:ring-[#10B981] transition-all duration-300">
                     <AvatarPlaceholder label={f.name || "—"} className="h-20 w-20 sm:h-24 sm:w-24 rounded-full" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">{f.name || <span className="text-gray-500">—</span>}</h3>
-                  <p className="mt-1 text-sm text-[#38bdf8] font-semibold">{f.role || <span className="text-gray-600">—</span>}</p>
+                  <p className="mt-1 text-sm text-[#FB923C] font-semibold">{f.role || <span className="text-gray-600">—</span>}</p>
                   <p className="text-xs text-slate-400 mt-0.5">{f.college || <span className="text-gray-700">—</span>}</p>
                 </div>
                 <p className="mt-4 sm:mt-6 text-sm text-slate-300 leading-relaxed">{f.bio || <span className="text-gray-700">—</span>}</p>
@@ -68,7 +68,7 @@ export function Founders() {
           <MagneticButton asChild strength={12}>
             <Link
               href="/become-a-trainer"
-              className="w-full sm:w-auto min-h-[48px] text-center px-8 py-3.5 sm:py-4 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] transition-all inline-flex items-center justify-center shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] cursor-pointer"
+              className="w-full sm:w-auto min-h-[48px] text-center px-8 py-3.5 sm:py-4 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] transition-all inline-flex items-center justify-center shadow-lg shadow-[#EA580C]/25 hover:shadow-xl active:scale-[0.98] cursor-pointer"
             >
               Apply to Join Us as a Trainer
             </Link>

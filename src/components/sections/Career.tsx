@@ -5,9 +5,9 @@ import { ImagePlaceholder } from "@/components/placeholders";
 import { AuroraCard } from "@/components/unlumen/aurora-card";
 
 const PATHS = [
-  { label: "Job Placement", color: "#00A86B" },
-  { label: "Study Abroad", color: "#0878E8" },
-  { label: "Train The Trainer", color: "#2D7FF9" },
+  { label: "Job Placement", color: "#166534" },
+  { label: "Study Abroad", color: "#EA580C" },
+  { label: "Train The Trainer", color: "#0D9488" },
 ];
 
 const FEATURES = [
@@ -27,8 +27,8 @@ export function Career() {
           <div className="order-2 lg:order-1">
             <AuroraCard
               className="aspect-[4/3] w-full"
-              blobColor="#0878E8"
-              blobColor2="#00A86B"
+              blobColor="#166534"
+              blobColor2="#EA580C"
               tilt
             >
               <div className="relative h-full w-full flex flex-col items-center justify-center p-8 text-center">
@@ -57,7 +57,7 @@ export function Career() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 + i * 0.1 }}
-                      className="rounded-lg bg-white/5 ring-1 ring-white/10 px-3 py-2 text-xs font-bold text-[#0878E8] text-center"
+                      className="rounded-lg bg-white/5 ring-1 ring-white/10 px-3 py-2 text-xs font-bold text-[#FB923C] text-center"
                     >
                       {s}
                     </motion.div>
@@ -69,7 +69,7 @@ export function Career() {
 
           {/* Right: copy */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#092B1D] leading-tight">
               From career audit to offer letter
             </h2>
             <p className="mt-4 text-gray-600">
@@ -79,7 +79,7 @@ export function Career() {
             <ul className="mt-8 space-y-3">
               {FEATURES.map((f) => (
                 <li key={f} className="flex items-start gap-3 text-gray-700">
-                  <span className="mt-0.5 shrink-0 text-[#0878E8]">
+                  <span className="mt-0.5 shrink-0 text-[#166534]">
                     <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
                       <path d="M12 2l2.39 6.95H22l-6.19 4.5L18.2 22 12 17.27 5.8 22l2.39-8.55L2 8.95h7.61z" />
                     </svg>

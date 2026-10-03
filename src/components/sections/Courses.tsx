@@ -20,7 +20,7 @@ const COURSES: Course[] = [
   {
     title: "Power BI 60-Day Mastery Track",
     tag: "High Demand",
-    accent: "#0878E8",
+    accent: "#EA580C",
     desc: "From SQL foundations to advanced DAX and live dashboards — the complete, project-led path into a Data Analyst role.",
     duration: "60 days",
     level: "Beginner-friendly",
@@ -36,7 +36,7 @@ const COURSES: Course[] = [
   {
     title: "Senior Business Analyst Program",
     tag: "Top Earner",
-    accent: "#00A86B",
+    accent: "#166534",
     desc: "Requirements engineering, process modelling, Agile delivery and stakeholder management — the full BA toolkit, end to end.",
     duration: "~10 weeks",
     level: "All levels",
@@ -52,7 +52,7 @@ const COURSES: Course[] = [
   {
     title: "Full-Stack Software Testing",
     tag: "QA Track",
-    accent: "#39b6d8",
+    accent: "#047857",
     desc: "Modern QA built for current hiring — Playwright over legacy Selenium, plus API testing and real test strategy.",
     duration: "90 hours",
     level: "Beginner-friendly",
@@ -68,7 +68,7 @@ const COURSES: Course[] = [
   {
     title: "AI-Powered Product Management",
     tag: "AI Track",
-    accent: "#e74c8c",
+    accent: "#d97706",
     desc: "Product thinking supercharged by AI — from discovery to roadmap, using GPT tools, analytics and Agile delivery.",
     duration: "16 weeks",
     level: "Mid–senior",
@@ -84,7 +84,7 @@ const COURSES: Course[] = [
   {
     title: "Tricentis Tosca Automation",
     tag: "Automation",
-    accent: "#2D7FF9",
+    accent: "#059669",
     desc: "Enterprise model-based test automation — CI/CD integration, API automation and real project practice with Tosca.",
     duration: "7 weeks",
     level: "QA background",
@@ -100,7 +100,7 @@ const COURSES: Course[] = [
   {
     title: "DevSecOps Mastery Track",
     tag: "Cloud + Security",
-    accent: "#0878E8",
+    accent: "#0D9488",
     desc: "16 modules and 25+ tools — Docker to Kubernetes, Terraform to AWS — building a full, secure delivery pipeline.",
     duration: "3 months",
     level: "Some IT exp.",
@@ -152,7 +152,7 @@ export function Courses() {
     <section id="courses" className="py-12 sm:py-16 lg:py-24 bg-gray-50 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#092B1D]">
             All 8 High-Demand Tech Programs
           </h2>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
@@ -177,7 +177,7 @@ export function Courses() {
                 {idx === 0 && (
                   <BorderBeam
                     colorFrom={course.accent}
-                    colorTo="#38bdf8"
+                    colorTo="#F97316"
                     duration={6}
                     size={90}
                     borderWidth={1.5}
@@ -185,7 +185,7 @@ export function Courses() {
                   />
                 )}
                 <div className="flex items-start justify-between gap-3 mb-3">
-                  <h3 className="text-lg font-bold text-[#071D3A] leading-snug">
+                  <h3 className="text-lg font-bold text-[#092B1D] leading-snug">
                     {course.title}
                   </h3>
                   <span
@@ -272,7 +272,7 @@ export function Courses() {
           <MagneticButton asChild strength={18}>
             <Link
               href="/contact"
-              className="px-8 py-3 bg-[#0a0a0a] text-white font-semibold rounded-lg hover:bg-[#222] transition-colors inline-block"
+              className="px-8 py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] shadow-lg shadow-[#EA580C]/25 transition-all inline-block"
             >
               Book a Free Career Audit →
             </Link>

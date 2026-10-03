@@ -14,8 +14,8 @@ export default function PrivacyPage() {
       <Header />
       <main className="flex-1 pt-24 lg:pt-28 pb-20 bg-gradient-to-b from-[#f8fafc] to-white">
         {/* Privacy Hero Header */}
-        <section className="relative overflow-hidden bg-[#071D3A] text-white py-12 sm:py-16 border-b border-white/10 text-center">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
+        <section className="relative overflow-hidden bg-[#062117] text-white py-12 sm:py-16 border-b border-white/10 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.18),rgba(234,88,12,0.12)_60%,transparent_100%)] pointer-events-none" />
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Link
               href="/"
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
               <ArrowLeft className="h-3.5 w-3.5 text-emerald-400" /> Back to Greenroots
             </Link>
             <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-              Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">Policy</span>
+              Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#86efac] to-[#FB923C]">Policy</span>
             </h1>
             <p className="text-xs sm:text-sm font-mono text-slate-300 mt-2.5">
               Last updated: 22 May 2026 · DPDP Act, 2023 Compliant
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
                 <strong className="text-gray-900"> Digital Personal Data Protection Act, 2023 (DPDP)</strong> of India.
               </p>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 1. What we collect
               </h2>
               <ul className="list-disc pl-5 space-y-2.5">
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
                 </li>
               </ul>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 2. How we use it
               </h2>
               <ul className="list-disc pl-5 space-y-2.5">
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
                 <li>To detect spam / bot submissions (we use Cloudflare Turnstile).</li>
               </ul>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 3. Who we share it with
               </h2>
               <p>
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
               </ul>
               <p>We do not sell your data. We do not share it with marketing or ad-tech networks.</p>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 4. How long we keep it
               </h2>
               <ul className="list-disc pl-5 space-y-2.5">
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
                 <li>Analytics aggregates (GA4): governed by Google&apos;s default retention.</li>
               </ul>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 5. Your rights
               </h2>
               <p>You can:</p>
@@ -111,7 +111,7 @@ export default function PrivacyPage() {
                 Contact us at <a href="mailto:greenroots.tech@outlook.com" className="text-[#166534] font-medium underline">greenroots.tech@outlook.com</a> for any of the above.
               </p>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 6. Cookies &amp; local storage
               </h2>
               <p>We use only:</p>
@@ -121,14 +121,14 @@ export default function PrivacyPage() {
                 <li>Cloudflare Turnstile — uses no tracking cookies; purely a bot challenge.</li>
               </ul>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 7. Children
               </h2>
               <p>
                 Greenroots&apos;s services are intended for adults seeking professional training. We do not knowingly collect personal information from individuals under 18 without verified parental consent.
               </p>
 
-              <h2 className="text-xl sm:text-2xl font-bold text-[#0f3f21] pt-4 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#092B1D] pt-4 tracking-tight">
                 8. Changes to this policy
               </h2>
               <p>

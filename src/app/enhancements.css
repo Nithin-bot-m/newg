@@ -1,7 +1,7 @@
 /* ==========================================================================
    ENHANCEMENTS.CSS
    Strictly Additive Visual Polish (Powered by ui-ux-pro-max design intelligence)
-   - Reuses existing colors (#0878E8, #166534, #071D3A) and tokens
+   - Brand colors matched to GROOTS logo: Corporate Forest Green (#166534, #062117, #092B1D) & Logo Orange (#EA580C)
    - Zero layout shifts, zero overrides, zero !important
    - Fully accessible with prefers-reduced-motion and high-contrast compliance
    ========================================================================== */
@@ -12,13 +12,13 @@ html {
 }
 
 ::selection {
-  background-color: rgba(8, 120, 232, 0.18);
-  color: #071D3A;
+  background-color: rgba(22, 101, 52, 0.22);
+  color: #062117;
 }
 
 ::-moz-selection {
-  background-color: rgba(8, 120, 232, 0.18);
-  color: #071D3A;
+  background-color: rgba(22, 101, 52, 0.22);
+  color: #062117;
 }
 
 /* 2. Custom Sleek Scrollbar (Non-disruptive, 8px) */
@@ -28,22 +28,22 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(7, 29, 58, 0.03);
+  background: rgba(6, 33, 23, 0.03);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(8, 120, 232, 0.28);
+  background: rgba(22, 101, 52, 0.32);
   border-radius: var(--radius, 8px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(8, 120, 232, 0.5);
+  background: rgba(234, 88, 12, 0.6);
 }
 
 /* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(8, 120, 232, 0.28) rgba(7, 29, 58, 0.03);
+  scrollbar-color: rgba(22, 101, 52, 0.32) rgba(6, 33, 23, 0.03);
 }
 
 /* 3. Accessible Focus-Visible Glow (WCAG 2.2 Compliant) */
@@ -52,7 +52,7 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid rgba(8, 120, 232, 0.65);
+  outline: 2px solid rgba(22, 101, 52, 0.65);
   outline-offset: 2px;
 }
 

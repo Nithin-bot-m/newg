@@ -45,7 +45,7 @@ export function Footer() {
       {/* Decorative ambient elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-[#166534]/30 to-transparent pointer-events-none" />
       <div className="absolute -top-24 right-1/4 w-80 h-80 bg-[#166534]/[0.03] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 left-1/4 w-80 h-80 bg-[#0878E8]/[0.03] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 left-1/4 w-80 h-80 bg-[#EA580C]/[0.03] rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-10 sm:pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">

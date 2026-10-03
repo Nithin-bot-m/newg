@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 export const MagicCard = ({
   children,
   className,
-  gradientColor = "#0878E8",
+  gradientColor = "#166534",
   gradientSize = 200,
   gradientOpacity = 0.4,
 }: {

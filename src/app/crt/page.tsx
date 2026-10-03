@@ -101,21 +101,21 @@ export default function CRTPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* CRT Hero */}
-        <section className="relative overflow-hidden bg-[#071D3A] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#0878E8]/20 via-[#166534]/25 to-transparent blur-3xl pointer-events-none" />
+        <section className="relative overflow-hidden bg-[#062117] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.18),rgba(234,88,12,0.12)_60%,transparent_100%)] pointer-events-none" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#166534]/30 via-[#EA580C]/15 to-transparent blur-3xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/35 backdrop-blur-md shadow-[0_0_18px_rgba(8,120,232,0.25)]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/30 px-4 py-1.5 text-xs font-semibold text-[#86efac] mb-5 border border-[#10B981]/30 backdrop-blur-md shadow-[0_0_18px_rgba(16,185,129,0.2)]">
               <Building className="h-3.5 w-3.5 text-amber-400" />
-              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2}>
+              <ShineText baseColor="#86efac" shineColor="#ffffff" duration={2}>
                 College Partnership Program · Hyderabad Campus Hub
               </ShineText>
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Campus Recruitment Training — <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">CRT</span>
+              Campus Recruitment Training — <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#86efac] to-[#FB923C]">CRT</span>
             </h1>
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-emerald-100/80 max-w-3xl mx-auto leading-relaxed">
               Greenroots partners with colleges to bridge the gap between academia and industry — transforming students into placement-ready, interview-confident professionals.
             </p>
 
@@ -139,7 +139,7 @@ export default function CRTPage() {
               <MagneticButton asChild strength={14} className="w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto min-h-[50px] justify-center px-8 py-3.5 bg-gradient-to-r from-[#166534] to-[#15803d] text-white font-bold rounded-xl hover:from-[#14532d] hover:to-[#166534] transition-all shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:shadow-emerald-900/30 inline-flex items-center gap-2 cursor-pointer text-center text-sm sm:text-base"
+                  className="w-full sm:w-auto min-h-[50px] justify-center px-8 py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] transition-all shadow-lg shadow-[#EA580C]/25 hover:shadow-xl inline-flex items-center gap-2 cursor-pointer text-center text-sm sm:text-base"
                 >
                   Partner With Us →
                 </Link>
@@ -177,7 +177,7 @@ export default function CRTPage() {
             <TiltCard maxTilt={6} scale={1.02} glare={true} glareOpacity={0.08} className="h-full rounded-3xl">
               <div className="h-full bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white font-black text-base shadow-md mb-5 group-hover:scale-105 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white font-black text-base shadow-md mb-5 group-hover:scale-105 transition-transform duration-300">
                     01
                   </div>
                   <h3 className="font-bold text-lg sm:text-xl text-gray-900 mb-2.5">Communication &amp; Interview Confidence</h3>
@@ -190,7 +190,7 @@ export default function CRTPage() {
             <TiltCard maxTilt={6} scale={1.02} glare={true} glareOpacity={0.08} className="h-full rounded-3xl">
               <div className="h-full bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white font-black text-base shadow-md mb-5 group-hover:scale-105 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white font-black text-base shadow-md mb-5 group-hover:scale-105 transition-transform duration-300">
                     02
                   </div>
                   <h3 className="font-bold text-lg sm:text-xl text-gray-900 mb-2.5">Aptitude &amp; Reasoning Gaps</h3>
@@ -203,7 +203,7 @@ export default function CRTPage() {
             <TiltCard maxTilt={6} scale={1.02} glare={true} glareOpacity={0.08} className="h-full rounded-3xl">
               <div className="h-full bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white font-black text-base shadow-md mb-5 group-hover:scale-105 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white font-black text-base shadow-md mb-5 group-hover:scale-105 transition-transform duration-300">
                     03
                   </div>
                   <h3 className="font-bold text-lg sm:text-xl text-gray-900 mb-2.5">No Industry Exposure</h3>
@@ -237,7 +237,7 @@ export default function CRTPage() {
                   key={p.phase}
                   className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-emerald-300/80 transition-all duration-300 flex flex-col md:flex-row gap-5 sm:gap-6 items-start group"
                 >
-                  <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-gradient-to-br from-[#166534] to-[#071D3A] text-white font-black flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
+                  <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-gradient-to-br from-[#166534] to-[#062117] text-white font-black flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300">
                     {idx + 1}
                   </div>
                   <div className="flex-1">
@@ -313,10 +313,10 @@ export default function CRTPage() {
             </div>
 
             {/* Partnership CTA */}
-            <div className="relative overflow-hidden mt-14 sm:mt-18 max-w-4xl mx-auto bg-gradient-to-br from-[#071D3A] via-[#0b294f] to-[#166534] rounded-3xl p-8 sm:p-14 text-white text-center shadow-2xl border border-white/10">
+            <div className="relative overflow-hidden mt-14 sm:mt-18 max-w-4xl mx-auto bg-gradient-to-br from-[#051c13] via-[#093522] to-[#051c13] rounded-3xl p-8 sm:p-14 text-white text-center shadow-2xl border border-emerald-500/25">
               <BorderBeam
                 colorFrom="#34d399"
-                colorTo="#38bdf8"
+                colorTo="#F97316"
                 duration={6}
                 size={140}
                 borderWidth={1.5}
@@ -326,14 +326,14 @@ export default function CRTPage() {
                 <h3 className="text-2xl sm:text-4xl font-black tracking-tight leading-snug">
                   Let&apos;s Build Placement-Ready Careers Together
                 </h3>
-                <p className="text-sm sm:text-base text-slate-200 mt-3 max-w-xl mx-auto leading-relaxed">
+                <p className="text-sm sm:text-base text-emerald-100/80 mt-3 max-w-xl mx-auto leading-relaxed">
                   We partner with college management and placement cells for structured semester and annual training drives.
                 </p>
                 <div className="mt-8">
                   <MagneticButton asChild strength={15} className="w-full sm:w-auto">
                     <Link
                       href="/contact"
-                      className="w-full sm:w-auto min-h-[50px] justify-center px-8 py-3.5 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 text-slate-950 font-black rounded-xl transition-all inline-flex items-center shadow-lg shadow-emerald-950/30 cursor-pointer text-center text-sm sm:text-base"
+                      className="w-full sm:w-auto min-h-[50px] justify-center px-8 py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] hover:from-[#c2410c] hover:to-[#ea580c] text-white font-bold rounded-xl transition-all inline-flex items-center shadow-lg shadow-[#EA580C]/30 cursor-pointer text-center text-sm sm:text-base"
                     >
                       Start a Partnership Conversation →
                     </Link>

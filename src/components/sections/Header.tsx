@@ -44,7 +44,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
         scrolled
-          ? "bg-white/98 backdrop-blur-xl border-b border-gray-200/80 shadow-[0_4px_20px_-4px_rgba(7,29,58,0.06)]"
+          ? "bg-white/98 backdrop-blur-xl border-b border-gray-200/80 shadow-[0_4px_20px_-4px_rgba(9,43,29,0.06)]"
           : "bg-white/95 backdrop-blur-md border-b border-gray-100"
       }`}
     >
@@ -105,7 +105,7 @@ export function Header() {
 
         {/* Mobile nav drawer */}
         {open && (
-          <div className="lg:hidden border-t border-gray-100 bg-white/98 backdrop-blur-xl py-3 px-2 shadow-[0_12px_28px_-6px_rgba(7,29,58,0.08)] animate-in fade-in slide-in-from-top-1.5 duration-200 ease-out">
+          <div className="lg:hidden border-t border-gray-100 bg-white/98 backdrop-blur-xl py-3 px-2 shadow-[0_12px_28px_-6px_rgba(9,43,29,0.08)] animate-in fade-in slide-in-from-top-1.5 duration-200 ease-out">
             <div className="flex flex-col space-y-1">
               {NAV_LINKS.map((link) => {
                 const isActive = active === link.label;

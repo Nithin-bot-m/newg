@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
  */
 export const WaveBackground = ({
   className,
-  color = "#00B8E6",
+  color = "#10B981",
   lineCount = 30,
   opacity = 0.15,
   speed = 1,

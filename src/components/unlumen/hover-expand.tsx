@@ -21,7 +21,7 @@ type ExpandItem = {
 export const HoverExpandList = ({
   items,
   className,
-  accentColor = "#0878E8",
+  accentColor = "#166534",
 }: {
   items: ExpandItem[];
   className?: string;

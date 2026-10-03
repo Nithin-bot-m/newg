@@ -67,14 +67,14 @@ export function StudyAbroadDestinations() {
     <section id="study-abroad" className="py-16 lg:py-24 bg-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/10 px-4 py-1.5 mb-4">
-            <Globe className="h-3.5 w-3.5 text-[#0878E8]" />
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-4 py-1.5 mb-4">
+            <Globe className="h-3.5 w-3.5 text-[#166534]" />
             <ShineText
               text="Greenroots × SIG Global Edu — Official Partner"
-              className="text-xs font-semibold text-[#0878E8]"
+              className="text-xs font-semibold text-[#166534]"
             />
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#092B1D]">
             Where do you want to land?
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -87,17 +87,17 @@ export function StudyAbroadDestinations() {
             <TiltCard
               key={dest.country}
               maxTilt={9}
-              glareColor="rgba(8, 120, 232, 0.12)"
-              className="bg-gray-50 hover:bg-white rounded-2xl p-6 ring-1 ring-gray-100 hover:ring-[#0878E8]/40 hover:shadow-lg transition-all duration-300 group h-full flex flex-col justify-between"
+              glareColor="rgba(22, 101, 52, 0.12)"
+              className="bg-gray-50 hover:bg-white rounded-2xl p-6 ring-1 ring-gray-100 hover:ring-[#166534]/40 hover:shadow-lg transition-all duration-300 group h-full flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-3xl leading-none">{dest.flag}</span>
-                  <h3 className="text-xl font-bold text-[#071D3A]">
+                  <h3 className="text-xl font-bold text-[#092B1D]">
                     {dest.country}
                   </h3>
                 </div>
-                <p className="text-xs font-semibold text-[#0878E8] uppercase tracking-wide mb-2">
+                <p className="text-xs font-semibold text-[#EA580C] uppercase tracking-wide mb-2">
                   {dest.tag}
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -111,7 +111,7 @@ export function StudyAbroadDestinations() {
         <div className="mt-12 text-center flex justify-center">
           <MagneticButton
             href="/study-abroad"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0878E8] text-white font-semibold rounded-xl hover:bg-[#0766c6] transition-colors shadow-lg shadow-[#0878E8]/20"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-semibold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] transition-all shadow-lg shadow-[#EA580C]/25"
           >
             <Plane className="h-4 w-4" />
             Get Free Counselling →

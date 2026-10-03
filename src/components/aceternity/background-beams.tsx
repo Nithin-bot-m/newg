@@ -65,9 +65,9 @@ export const BackgroundBeams = React.memo(function BackgroundBeams({
               x2="100%"
               y2="100%"
             >
-              <stop stopColor="#0878E8" stopOpacity="0" />
-              <stop offset="50%" stopColor="#0878E8" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#0878E8" stopOpacity="0" />
+              <stop stopColor="#166534" stopOpacity="0" />
+              <stop offset="50%" stopColor="#10B981" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#166534" stopOpacity="0" />
             </linearGradient>
           ))}
         </defs>

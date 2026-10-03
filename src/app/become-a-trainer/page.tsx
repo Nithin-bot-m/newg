@@ -119,21 +119,21 @@ export default function BecomeATrainerPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-[#071D3A] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),rgba(22,101,52,0.2)_50%,transparent_100%)] pointer-events-none" />
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#0878E8]/20 via-[#166534]/25 to-transparent blur-3xl pointer-events-none" />
+        <section className="relative overflow-hidden bg-[#062117] text-white py-14 sm:py-20 lg:py-24 border-b border-white/10 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.18),rgba(234,88,12,0.12)_60%,transparent_100%)] pointer-events-none" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#166534]/30 via-[#EA580C]/15 to-transparent blur-3xl pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/35 backdrop-blur-md shadow-[0_0_18px_rgba(8,120,232,0.25)]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/30 px-4 py-1.5 text-xs font-semibold text-[#86efac] mb-5 border border-[#10B981]/30 backdrop-blur-md shadow-[0_0_18px_rgba(16,185,129,0.2)]">
               <Award className="h-3.5 w-3.5 text-amber-400" />
-              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2}>
+              <ShineText baseColor="#86efac" shineColor="#ffffff" duration={2}>
                 Now Inviting Trainers &amp; Creators · High-Yield Partnership
               </ShineText>
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Teach. Grow. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa]">Earn More.</span>
+              Teach. Grow. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#34d399] via-[#86efac] to-[#FB923C]">Earn More.</span>
             </h1>
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-emerald-100/80 max-w-3xl mx-auto leading-relaxed">
               You have the expertise. We have the students, the platform, and the placement outcomes. Join Greenroots as a trainer or content partner — and double or triple your income without leaving what you already do.
             </p>
 
@@ -211,7 +211,7 @@ export default function BecomeATrainerPage() {
                 >
                   <div className="h-full bg-white rounded-3xl border border-slate-200/90 p-7 sm:p-9 shadow-sm hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between group">
                     <div>
-                      <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#0878E8] to-[#166534] text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 shadow-md">
+                      <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#EA580C] to-[#166534] text-white flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 shadow-md">
                         <Icon className="h-6 w-6" />
                       </div>
                       <h3 className="font-bold text-xl text-gray-900 mb-2">{p.title}</h3>
@@ -237,8 +237,8 @@ export default function BecomeATrainerPage() {
         </section>
 
         {/* Income Potential Breakdown */}
-        <section className="relative overflow-hidden py-16 sm:py-24 bg-gradient-to-br from-[#071D3A] via-[#0b294f] to-[#166534] text-white">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(56,189,248,0.12),transparent_100%)] pointer-events-none" />
+        <section className="relative overflow-hidden py-16 sm:py-24 bg-gradient-to-br from-[#051c13] via-[#093522] to-[#051c13] text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(16,185,129,0.15),transparent_100%)] pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
               <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30 text-xs uppercase tracking-widest font-bold">
@@ -247,7 +247,7 @@ export default function BecomeATrainerPage() {
               <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
                 Double. Triple. Your Income.
               </h2>
-              <p className="text-slate-200 text-sm sm:text-base mt-2 max-w-xl mx-auto leading-relaxed">
+              <p className="text-emerald-100/80 text-sm sm:text-base mt-2 max-w-xl mx-auto leading-relaxed">
                 Here&apos;s what realistic earning looks like when your expertise meets Greenroots&apos; student base.
               </p>
             </div>
@@ -264,8 +264,8 @@ export default function BecomeATrainerPage() {
                 </div>
               </div>
 
-              <div className="bg-white/15 backdrop-blur-md p-6 sm:p-8 rounded-3xl border-2 border-amber-400 relative shadow-2xl shadow-amber-400/10">
-                <span className="absolute -top-3 right-6 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-[10px] uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+              <div className="bg-white/15 backdrop-blur-md p-6 sm:p-8 rounded-3xl border-2 border-[#EA580C] relative shadow-2xl shadow-[#EA580C]/10">
+                <span className="absolute -top-3 right-6 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-black text-[10px] uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
                   Featured
                 </span>
                 <div className="text-sm font-bold text-amber-300">Senior Expert (10yr+)</div>
@@ -313,7 +313,7 @@ export default function BecomeATrainerPage() {
           <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-12 shadow-xl">
             <BorderBeam
               colorFrom="#34d399"
-              colorTo="#38bdf8"
+              colorTo="#F97316"
               duration={6}
               size={130}
               borderWidth={1.5}
@@ -429,7 +429,7 @@ export default function BecomeATrainerPage() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full min-h-[50px] py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center text-sm sm:text-base transition-all shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:shadow-emerald-900/30 cursor-pointer flex items-center justify-center"
+                  className="w-full min-h-[50px] py-3.5 px-6 bg-gradient-to-r from-[#EA580C] to-[#F97316] hover:from-[#c2410c] hover:to-[#ea580c] text-white font-bold rounded-xl text-center text-sm sm:text-base transition-all shadow-lg shadow-[#EA580C]/25 hover:shadow-xl cursor-pointer flex items-center justify-center"
                 >
                   {submitting ? "Submitting..." : "Submit Application →"}
                 </button>

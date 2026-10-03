@@ -56,10 +56,10 @@ export function Contact() {
           <div className="inline-flex mb-3">
             <ShineText
               text="⚡ FAST RESPONSE WITHIN 4 HOURS"
-              className="text-xs font-bold uppercase tracking-wider text-[#0878E8] bg-[#0878E8]/10 px-4 py-1.5 rounded-full"
+              className="text-xs font-bold uppercase tracking-wider text-[#166534] bg-[#166534]/10 px-4 py-1.5 rounded-full"
             />
           </div>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#092B1D]">
             Start with a free counselling call
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -72,27 +72,27 @@ export function Contact() {
           <div className="space-y-5 sm:space-y-6">
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="bg-white rounded-2xl p-5 sm:p-7 border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300">
-                <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-[#0878E8]/15 to-[#00B8E6]/15 text-[#0878E8] flex items-center justify-center mb-3.5 ring-1 ring-[#0878E8]/20">
+                <div className="h-11 w-11 rounded-xl bg-[#166534]/10 text-[#166534] flex items-center justify-center mb-3.5 ring-1 ring-[#166534]/20">
                   <Phone className="h-5 w-5" />
                 </div>
                 <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                   Phone
                 </h3>
-                <p className="mt-1.5 text-[#071D3A] font-bold text-base">
-                  <a href="tel:+919549543898" className="hover:text-[#0878E8] transition-colors">
+                <p className="mt-1.5 text-[#092B1D] font-bold text-base">
+                  <a href="tel:+919549543898" className="hover:text-[#166534] transition-colors">
                     +91 95495 43898
                   </a>
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-5 sm:p-7 border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300">
-                <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-[#0878E8]/15 to-[#00B8E6]/15 text-[#0878E8] flex items-center justify-center mb-3.5 ring-1 ring-[#0878E8]/20">
+                <div className="h-11 w-11 rounded-xl bg-[#166534]/10 text-[#166534] flex items-center justify-center mb-3.5 ring-1 ring-[#166534]/20">
                   <Mail className="h-5 w-5" />
                 </div>
                 <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                   Email
                 </h3>
-                <p className="mt-1.5 text-[#071D3A] font-bold text-base break-all">
-                  <a href="mailto:greenroots.tech@outlook.com" className="hover:text-[#0878E8] transition-colors">
+                <p className="mt-1.5 text-[#092B1D] font-bold text-base break-all">
+                  <a href="mailto:greenroots.tech@outlook.com" className="hover:text-[#166534] transition-colors">
                     greenroots.tech@outlook.com
                   </a>
                 </p>
@@ -101,15 +101,15 @@ export function Contact() {
 
             <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-2.5 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-[#071D3A]/10 text-[#071D3A] flex items-center justify-center">
-                  <MapPin className="h-4.5 w-4.5 text-[#071D3A]" />
+                <div className="h-8 w-8 rounded-lg bg-[#166534]/10 text-[#166534] flex items-center justify-center">
+                  <MapPin className="h-4.5 w-4.5 text-[#166534]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#071D3A]">Our Location</h3>
+                <h3 className="text-lg font-bold text-[#092B1D]">Our Location</h3>
               </div>
               <div className="space-y-4">
                 {LOCATIONS.map((loc, i) => (
                   <div key={`loc-${i}`}>
-                    <h4 className="text-sm font-bold text-[#071D3A]">
+                    <h4 className="text-sm font-bold text-[#092B1D]">
                       {loc.city}
                     </h4>
                     <p className="mt-1 text-sm text-gray-600 leading-relaxed">
@@ -154,7 +154,7 @@ export function Contact() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="Enter first name"
-                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
                 <div>
@@ -166,7 +166,7 @@ export function Contact() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Enter last name"
-                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
               </div>
@@ -180,7 +180,7 @@ export function Contact() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter email"
-                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
                 <div>
@@ -193,7 +193,7 @@ export function Contact() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="Enter phone"
-                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                    className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] text-slate-900 transition-all placeholder:text-slate-400"
                   />
                 </div>
               </div>
@@ -206,7 +206,7 @@ export function Contact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Type your message or goals here"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] resize-none text-slate-900 transition-all placeholder:text-slate-400"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#166534]/15 focus:border-[#166534] resize-none text-slate-900 transition-all placeholder:text-slate-400"
                 />
               </div>
               <div className="pt-2">
@@ -217,7 +217,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full min-h-[48px] py-3.5 sm:py-4 bg-gradient-to-r from-[#0878E8] via-[#00B8E6] to-[#00AFA8] text-white font-bold rounded-xl hover:opacity-95 shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer flex items-center justify-center text-center"
+                    className="w-full min-h-[48px] py-3.5 sm:py-4 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] shadow-lg shadow-[#EA580C]/25 hover:shadow-xl active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer flex items-center justify-center text-center"
                   >
                     {submitting ? "Sending..." : "Get Free Counselling →"}
                   </button>

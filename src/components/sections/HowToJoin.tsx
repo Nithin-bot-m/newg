@@ -13,12 +13,12 @@ const DATA = [
           Fill in the form — takes less than 3 minutes. Tell us your area of expertise, the engagement model you prefer (live batches, recorded modules, or 1-on-1 mentorship), and your available hours.
         </p>
         <div className="mt-6 grid grid-cols-2 gap-3">
-          <div className="bg-[#0878E8]/10 rounded-lg p-4 border border-[#0878E8]/20">
-            <p className="text-2xl font-black text-[#0878E8]">3 min</p>
+          <div className="bg-[#166534]/10 rounded-lg p-4 border border-[#166534]/20">
+            <p className="text-2xl font-black text-[#166534]">3 min</p>
             <p className="text-xs text-gray-600 mt-1">Average time to fill</p>
           </div>
           <div className="bg-gray-100 rounded-lg p-4 border border-gray-200">
-            <p className="text-2xl font-black text-[#071D3A]">48 hrs</p>
+            <p className="text-2xl font-black text-[#092B1D]">48 hrs</p>
             <p className="text-xs text-gray-600 mt-1">Response time</p>
           </div>
         </div>
@@ -40,7 +40,7 @@ const DATA = [
             "Revenue expectations and growth goals",
           ].map((point) => (
             <div key={point} className="flex items-start gap-2 text-sm text-gray-700">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#0878E8] shrink-0" />
+              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#166534] shrink-0" />
               {point}
             </div>
           ))}
@@ -61,15 +61,15 @@ const DATA = [
           </p>
           <div className="grid grid-cols-3 gap-3">
             <div className="text-center">
-              <p className="text-sm font-bold text-[#071D3A]">Clarity</p>
+              <p className="text-sm font-bold text-[#092B1D]">Clarity</p>
               <p className="text-[11px] text-gray-600 mt-1">Concept explanation</p>
             </div>
             <div className="text-center">
-              <p className="text-sm font-bold text-[#071D3A]">Depth</p>
+              <p className="text-sm font-bold text-[#092B1D]">Depth</p>
               <p className="text-[11px] text-gray-600 mt-1">Live Q&amp;A</p>
             </div>
             <div className="text-center">
-              <p className="text-sm font-bold text-[#071D3A]">Energy</p>
+              <p className="text-sm font-bold text-[#092B1D]">Energy</p>
               <p className="text-[11px] text-gray-600 mt-1">Student engagement</p>
             </div>
           </div>
@@ -89,7 +89,7 @@ const DATA = [
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-6 p-5 rounded-xl bg-gradient-to-br from-[#0878E8] to-[#00B8E6] text-white"
+          className="mt-6 p-5 rounded-xl bg-gradient-to-br from-[#166534] via-[#0B4627] to-[#062117] text-white border border-emerald-500/20"
         >
           <p className="text-xs font-bold uppercase tracking-wide opacity-70">Earnings potential</p>
           <p className="text-2xl md:text-3xl font-black mt-1">₹60,000 – ₹1.2L / mo</p>
@@ -99,9 +99,9 @@ const DATA = [
         </motion.div>
         <div className="mt-8">
           <PulsatingButton
-            pulseColor="rgba(8, 120, 232,   0.5)"
+            pulseColor="rgba(234, 88, 12, 0.4)"
             duration="1.8s"
-            className="!bg-[#0878E8] !text-white hover:!bg-[#0766c6]"
+            className="!bg-gradient-to-r !from-[#EA580C] !to-[#F97316] !text-white hover:!from-[#c2410c] hover:!to-[#ea580c] shadow-md shadow-[#EA580C]/25"
           >
             Submit Application →
           </PulsatingButton>
@@ -116,7 +116,7 @@ export function HowToJoin() {
     <section id="become-a-trainer" className="py-16 lg:py-24 bg-[#faf8f5] scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#092B1D]">
             Ready to Teach, Grow & Earn More?
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">

@@ -15,7 +15,7 @@ const PROGRAMS = [
       "60 days · Beginner-friendly · Live + recorded",
       "Power BI Desktop, Power Query, Power BI Service",
     ],
-    accent: "#0878E8",
+    accent: "#EA580C",
   },
   {
     title: "Senior Business Analyst Program",
@@ -25,7 +25,7 @@ const PROGRAMS = [
       "~10 weeks · All levels · Live online",
       "BPMN, Agile/Scrum, Jira, User Stories, Wireframing",
     ],
-    accent: "#00A86B",
+    accent: "#166534",
   },
   {
     title: "DevSecOps Mastery Track",
@@ -35,7 +35,7 @@ const PROGRAMS = [
       "3 months · Some IT exp. · Cloud labs",
       "Terraform, AWS, GitHub Actions, SonarQube",
     ],
-    accent: "#e74c8c",
+    accent: "#0D9488",
   },
 ];
 
@@ -48,11 +48,11 @@ export function Programs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="inline-flex mb-3.5">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0878E8] bg-[#0878E8]/10 px-4 py-1.5 rounded-full border border-[#0878E8]/20">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#166534] bg-[#166534]/10 px-4 py-1.5 rounded-full border border-[#166534]/20">
               ⚡ INDUSTRY-ALIGNED TRACKS
             </span>
           </div>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#092B1D] tracking-tight">
             High-Demand Tech Tracks Built for 2026
           </h2>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -90,7 +90,7 @@ export function Programs() {
                 </div>
 
                 <div className="p-5 sm:p-7 lg:p-9">
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#071D3A] tracking-tight leading-snug">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#092B1D] tracking-tight leading-snug">
                     {featured.title}
                   </h3>
 
@@ -114,7 +114,7 @@ export function Programs() {
               <div className="px-5 sm:px-7 lg:px-9 py-4 border-t border-slate-100 flex items-center justify-between min-h-[48px]">
                 <Link
                   href="/courses"
-                  className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#0878E8] hover:gap-3 transition-all min-h-[44px]"
+                  className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#166534] hover:gap-3 transition-all min-h-[44px]"
                 >
                   Learn More
                   <ArrowRight className="h-4 w-4" />
@@ -146,7 +146,7 @@ export function Programs() {
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-[#071D3A] leading-snug">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#092B1D] leading-snug">
                     {program.title}
                   </h3>
 
@@ -169,7 +169,7 @@ export function Programs() {
                 <div className="px-5 sm:px-7 py-3.5 border-t border-slate-100 flex items-center justify-between min-h-[48px]">
                   <Link
                     href="/courses"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#0878E8] hover:gap-2.5 transition-all min-h-[44px]"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#166534] hover:gap-2.5 transition-all min-h-[44px]"
                   >
                     Learn More
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -183,7 +183,7 @@ export function Programs() {
         <div className="mt-10 sm:mt-12 lg:mt-16 text-center flex justify-center">
           <MagneticButton
             href="/courses"
-            className="w-full sm:w-auto min-h-[48px] justify-center px-8 py-3.5 sm:py-4 bg-[#071D3A] text-white font-bold rounded-xl hover:bg-[#0c2e59] transition-all shadow-lg shadow-[#071D3A]/15 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto min-h-[48px] justify-center px-8 py-3.5 sm:py-4 bg-[#166534] text-white font-bold rounded-xl hover:bg-[#0f4d2a] transition-all shadow-lg shadow-[#166534]/20 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 cursor-pointer"
           >
             View All 8 Programs →
           </MagneticButton>

@@ -42,8 +42,8 @@ export const Card = React.memo(function Card({
             <span
               className="inline-block px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wide mb-2"
               style={{
-                backgroundColor: card.accent ? `${card.accent}25` : "#0878E825",
-                color: card.accent || "#0878E8",
+                backgroundColor: card.accent ? `${card.accent}25` : "#16653425",
+                color: card.accent || "#166534",
               }}
             >
               {card.tag}

@@ -27,7 +27,7 @@ const COURSES: CourseItem[] = [
   {
     title: "Power BI 60-Day Mastery Track",
     tag: "High Demand",
-    accent: "#166534",
+    accent: "#EA580C",
     desc: "From SQL foundations to advanced DAX and live dashboards — the complete, project-led path into a Data Analyst role.",
     duration: "60 days",
     level: "Beginner-friendly",
@@ -45,7 +45,7 @@ const COURSES: CourseItem[] = [
   {
     title: "Senior Business Analyst Program",
     tag: "Top Earner",
-    accent: "#0878E8",
+    accent: "#166534",
     desc: "Requirements engineering, process modelling, Agile delivery and stakeholder management — the full BA toolkit, end to end.",
     duration: "~10 weeks",
     level: "All levels",
@@ -63,7 +63,7 @@ const COURSES: CourseItem[] = [
   {
     title: "Full-Stack Software Testing",
     tag: "QA Track",
-    accent: "#0284c7",
+    accent: "#047857",
     desc: "Modern QA built for current hiring — Playwright over legacy Selenium, plus API testing and real test strategy.",
     duration: "90 hours",
     level: "Beginner-friendly",
@@ -177,33 +177,33 @@ export default function CoursesPage() {
 
       <main className="flex-1 pt-18 lg:pt-20 pb-20 bg-slate-50/60">
         {/* Page Hero Header */}
-        <section className="relative bg-[#071D3A] overflow-hidden pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 text-white">
+        <section className="relative bg-[#062117] overflow-hidden pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 text-white">
           {/* Ambient Lighting */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.22),transparent_70%)] pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(22,101,52,0.2),transparent_60%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.18),transparent_70%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(234,88,12,0.12),transparent_60%)] pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#38bdf8] mb-5 border border-[#0878E8]/30 backdrop-blur-xs">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/30 px-4 py-1.5 text-xs font-semibold text-[#86efac] mb-5 border border-[#10B981]/30 backdrop-blur-xs">
               <Sparkles className="h-3.5 w-3.5 text-amber-300" />
-              <ShineText baseColor="#38bdf8" shineColor="#ffffff" duration={2}>
+              <ShineText baseColor="#86efac" shineColor="#ffffff" duration={2}>
                 8 High-Demand Programs · Industry-Mapped Curriculums
               </ShineText>
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
               High-Demand Tech Tracks<br />
-              <span className="bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#34d399] via-[#86efac] to-[#FB923C] bg-clip-text text-transparent">
                 Built for 2026.
               </span>
             </h1>
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-emerald-100/80 max-w-3xl mx-auto leading-relaxed">
               Every track is built around what employers are hiring for right now — from ₹20,000 onwards, in 2–3 months, freshers to experienced.
             </p>
 
             {/* Pricing Banner */}
-            <div className="relative overflow-hidden mt-8 sm:mt-10 max-w-4xl mx-auto bg-gradient-to-r from-[#0c2a4f] via-[#103866] to-[#0c2a4f] rounded-2xl p-6 sm:p-8 text-white shadow-2xl border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-left">
+            <div className="relative overflow-hidden mt-8 sm:mt-10 max-w-4xl mx-auto bg-gradient-to-r from-[#051c13] via-[#093522] to-[#051c13] rounded-2xl p-6 sm:p-8 text-white shadow-2xl border border-emerald-500/25 flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-left">
               <BorderBeam
                 colorFrom="#34d399"
-                colorTo="#38bdf8"
+                colorTo="#F97316"
                 duration={7}
                 size={130}
                 borderWidth={1.5}
@@ -219,7 +219,7 @@ export default function CoursesPage() {
                 <MagneticButton asChild strength={14} className="w-full sm:w-auto">
                   <Link
                     href="/contact"
-                    className="w-full sm:w-auto min-h-[48px] justify-center px-6 py-3 bg-gradient-to-r from-[#34d399] to-[#10b981] text-[#071D3A] font-bold rounded-xl hover:opacity-95 transition-all shadow-lg shadow-emerald-500/20 shrink-0 inline-flex items-center gap-2 cursor-pointer"
+                    className="w-full sm:w-auto min-h-[48px] justify-center px-6 py-3 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] transition-all shadow-lg shadow-[#EA580C]/25 shrink-0 inline-flex items-center gap-2 cursor-pointer"
                   >
                     Get Fee Details <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -248,7 +248,7 @@ export default function CoursesPage() {
                   {idx === 0 && (
                     <BorderBeam
                       colorFrom="#166534"
-                      colorTo="#38bdf8"
+                      colorTo="#F97316"
                       duration={6}
                       size={100}
                       borderWidth={1.5}
@@ -331,7 +331,7 @@ export default function CoursesPage() {
                       <MagneticButton asChild strength={10} className="w-full">
                         <Link
                           href="/contact"
-                          className="w-full min-h-[48px] py-3.5 px-4 bg-[#166534] hover:bg-[#14532d] text-white font-bold text-sm rounded-xl text-center transition-all shadow-sm hover:shadow-md hover:shadow-emerald-900/20 active:scale-[0.98] flex items-center justify-center cursor-pointer"
+                          className="w-full min-h-[48px] py-3.5 px-4 bg-gradient-to-r from-[#EA580C] to-[#F97316] hover:from-[#c2410c] hover:to-[#ea580c] text-white font-bold text-sm rounded-xl text-center transition-all shadow-md shadow-[#EA580C]/20 active:scale-[0.98] flex items-center justify-center cursor-pointer"
                         >
                           Book Free Counselling →
                         </Link>
@@ -344,20 +344,20 @@ export default function CoursesPage() {
           </div>
 
           {/* Career Audit Callout */}
-          <div className="mt-12 sm:mt-16 relative overflow-hidden bg-gradient-to-r from-[#071D3A] via-[#0d2a52] to-[#166534] text-white rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-white/10">
+          <div className="mt-12 sm:mt-16 relative overflow-hidden bg-gradient-to-r from-[#051c13] via-[#093522] to-[#051c13] text-white rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-emerald-500/25">
             <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
             <div className="relative z-10">
               <h3 className="text-xl sm:text-3xl font-black text-white tracking-tight">
                 Not sure which course is right for you?
               </h3>
-              <p className="mt-2.5 text-xs sm:text-base text-slate-300 max-w-2xl leading-relaxed">
+              <p className="mt-2.5 text-xs sm:text-base text-emerald-100/80 max-w-2xl leading-relaxed">
                 Book a free career audit session. We&apos;ll review your background, market demand, and salary potential — then recommend the exact track that gives you the strongest return.
               </p>
             </div>
             <MagneticButton asChild strength={14} className="w-full md:w-auto shrink-0 relative z-10">
               <Link
                 href="/contact"
-                className="w-full md:w-auto min-h-[50px] justify-center px-8 py-3.5 bg-gradient-to-r from-[#34d399] to-[#10b981] text-[#071D3A] font-bold rounded-xl hover:opacity-95 transition-all shadow-lg shadow-emerald-500/25 shrink-0 inline-flex items-center gap-2 text-center cursor-pointer"
+                className="w-full md:w-auto min-h-[50px] justify-center px-8 py-3.5 bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white font-bold rounded-xl hover:from-[#c2410c] hover:to-[#ea580c] transition-all shadow-lg shadow-[#EA580C]/25 shrink-0 inline-flex items-center gap-2 text-center cursor-pointer"
               >
                 Book Free Audit →
               </Link>

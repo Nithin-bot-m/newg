@@ -26,7 +26,7 @@ export const LampContainer = ({
           className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem]"
           style={{
             background:
-              "conic-gradient(from 70deg at center top, #0878E8 0deg, transparent 180deg)",
+              "conic-gradient(from 70deg at center top, #166534 0deg, transparent 180deg)",
           }}
         >
           <div className="absolute w-[28rem] h-20 left-1/2 -translate-x-1/2 bg-white top-1/2 -translate-y-1/2" />
@@ -39,7 +39,7 @@ export const LampContainer = ({
           className="absolute inset-auto left-1/2 h-56 w-[30rem] overflow-visible"
           style={{
             background:
-              "conic-gradient(from 290deg at center top, #0878E8 0deg, transparent 180deg)",
+              "conic-gradient(from 290deg at center top, #166534 0deg, transparent 180deg)",
           }}
         >
           <div className="absolute w-[28rem] h-20 right-1/2 -translate-x-1/2 bg-white top-1/2 -translate-y-1/2" />

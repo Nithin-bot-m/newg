@@ -27,7 +27,7 @@ export function ShineText({
   duration = 2.5,
   repeatDelay = 0.6,
   baseColor = "currentColor",
-  shineColor = "#0878E8",
+  shineColor = "#10B981",
 }: ShineTextProps) {
   const shouldReduceMotion = useReducedMotion();
   const content = children ?? text;

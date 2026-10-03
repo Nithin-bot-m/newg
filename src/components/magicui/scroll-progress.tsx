@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
  */
 export const ScrollProgress = ({
   className,
-  color = "#0878E8",
+  color = "#166534",
 }: {
   className?: string;
   color?: string;
@@ -25,7 +25,7 @@ export const ScrollProgress = ({
       )}
       style={{
         scaleX: scrollYProgress,
-        background: `linear-gradient(to right, #0878E8, #00B8E6, #00AFA8, #32D583)`,
+        background: `linear-gradient(to right, #166534, #10B981, #34d399, #EA580C)`,
         boxShadow: `0 0 12px ${color}80`,
       }}
     />
