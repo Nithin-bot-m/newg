@@ -39,13 +39,13 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[75vh] lg:min-h-screen bg-[#071D3A] overflow-hidden flex items-center pt-20 lg:pt-24 pb-16 lg:pb-24">
+    <section id="hero" className="relative min-h-[70vh] lg:min-h-screen bg-[#071D3A] overflow-hidden flex items-center pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-24">
       {/* Calm, restrained ambient radial depth */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(8,120,232,0.18),transparent_70%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_50%,rgba(0,184,230,0.08),transparent_60%)] pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 w-full z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8 sm:py-12 lg:py-16 w-full z-10">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-14 items-center">
           {/* Left: copy (7 cols) */}
           <div className="lg:col-span-7 text-white">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-3.5 py-1.5 text-xs font-semibold text-[#38bdf8] mb-6 border border-[#0878E8]/30">
@@ -95,7 +95,7 @@ export function Hero() {
               <MagneticButton asChild strength={12}>
                 <a
                   href="#courses"
-                  className="w-full sm:w-auto justify-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center gap-2 cursor-pointer group text-center"
+                  className="w-full sm:w-auto min-h-[48px] justify-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center gap-2 cursor-pointer group text-center"
                 >
                   Explore 8 Programs
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -104,7 +104,7 @@ export function Hero() {
               <MagneticButton asChild strength={10}>
                 <a
                   href="#contact"
-                  className="w-full sm:w-auto text-center px-6 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-block backdrop-blur-xs cursor-pointer"
+                  className="w-full sm:w-auto min-h-[48px] text-center px-6 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-flex items-center justify-center backdrop-blur-xs cursor-pointer"
                 >
                   Talk to a Counsellor
                 </a>
@@ -114,7 +114,7 @@ export function Hero() {
 
           {/* Right: lead form (5 cols) */}
           <div className="lg:col-span-5 w-full max-w-md lg:max-w-none">
-            <div className="relative bg-white rounded-3xl shadow-2xl p-6 sm:p-9 border border-slate-200/90">
+            <div className="relative bg-white rounded-3xl shadow-2xl p-5 sm:p-8 lg:p-9 border border-slate-200/90">
               <div className="relative z-10">
                 <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Talk to a Counsellor</h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">
@@ -128,7 +128,7 @@ export function Hero() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Full Name *"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
                     />
                   </div>
                   <div>
@@ -138,7 +138,7 @@ export function Hero() {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="Phone Number *"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
                     />
                   </div>
                   <div>
@@ -147,14 +147,14 @@ export function Hero() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email Address (optional)"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
                     />
                   </div>
                   <div>
                     <select
                       value={program}
                       onChange={(e) => setProgram(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-sm text-slate-700 focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] transition-all cursor-pointer"
+                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm text-slate-700 focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] transition-all cursor-pointer"
                     >
                       <option value="">Select Program</option>
                       <option value="Power BI Mastery">Power BI Mastery</option>
@@ -171,12 +171,12 @@ export function Hero() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl hover:shadow-[#0878E8]/30 active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer"
+                      className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl hover:shadow-[#0878E8]/30 active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer flex items-center justify-center text-center"
                     >
                       {submitting ? "Sending..." : "Get Free Counselling →"}
                     </button>
                   </MagneticButton>
-                  <p className="text-xs text-slate-500 text-center">
+                  <p className="text-xs text-slate-500 text-center pt-1">
                     By submitting, you agree to our{" "}
                     <a href="/privacy" className="underline hover:text-slate-800 transition-colors">
                       Privacy Policy

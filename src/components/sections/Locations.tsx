@@ -15,18 +15,18 @@ export function Locations() {
   return (
     <section id="locations" className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
             Our Hyderabad Campus
           </h2>
-          <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+          <p className="mt-3.5 sm:mt-4 text-gray-600 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
             Unit 206, Manjeera Majestic Commercial, Opposite JNTU, Next to Lulu Mall, Kukatpally, Hyderabad — walk-in career audit and overseas education counselling under one roof.
           </p>
         </div>
 
         {/* Animmaster: Staggered Fade-In Grid with SmoothUI 3D TiltCards */}
         <StaggeredFadeGrid
-          className="grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+          className="grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6"
           staggerDelay={0.12}
         >
           {CAMPUS_HUBS.map((hub, i) => (

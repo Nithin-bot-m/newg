@@ -4,22 +4,22 @@ import Link from "next/link";
 
 export function StudentsHired() {
   return (
-    <section className="pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-24 bg-white">
+    <section className="pt-6 sm:pt-8 lg:pt-10 pb-10 sm:pb-16 lg:pb-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#071D3A] via-[#092244] to-[#040E1C] border border-white/15 p-6 sm:p-10 lg:p-16 shadow-2xl">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#071D3A] via-[#092244] to-[#040E1C] border border-white/15 p-5 sm:p-10 lg:p-16 shadow-2xl">
           <div className="relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-white">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
                 Real students. Real companies. Real salaries.
               </h2>
-              <p className="mt-4 text-blue-100/85 text-base lg:text-lg leading-relaxed max-w-xl">
+              <p className="mt-3.5 sm:mt-4 text-blue-100/85 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl">
                 Here&apos;s what Greenroots has delivered. Mock interviews, referrals, and recruiter connects — placement service charges apply, because we only charge when we deliver results.
               </p>
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <MagneticButton asChild strength={15}>
                   <Link
                     href="/contact"
-                    className="w-full sm:w-auto justify-center inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/30 hover:shadow-xl active:scale-[0.98] transition-all text-center"
+                    className="w-full sm:w-auto min-h-[48px] justify-center inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/30 hover:shadow-xl active:scale-[0.98] transition-all text-center"
                   >
                     Start Your Career Audit →
                   </Link>

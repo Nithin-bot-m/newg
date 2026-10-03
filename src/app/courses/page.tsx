@@ -177,23 +177,23 @@ export default function CoursesPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Page Hero Header */}
-        <section className="bg-gradient-to-b from-[#f3f9f5] to-white py-12 lg:py-16 border-b border-gray-100">
+        <section className="bg-gradient-to-b from-[#f3f9f5] to-white py-10 sm:py-12 lg:py-16 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-4 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-3.5 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20">
               <Sparkles className="h-3.5 w-3.5 text-amber-500" />
               <ShineText baseColor="#166534" shineColor="#15803d" duration={2}>
                 8 High-Demand Programs · Industry-Mapped Curriculums
               </ShineText>
             </span>
-            <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
               High-Demand Tech Tracks Built for 2026
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
               Every track is built around what employers are hiring for right now — from ₹20,000 onwards, in 2–3 months, freshers to experienced.
             </p>
 
             {/* Pricing Banner */}
-            <div className="relative overflow-hidden mt-8 max-w-4xl mx-auto bg-gradient-to-r from-[#166534] to-[#0f3f21] rounded-2xl p-6 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
+            <div className="relative overflow-hidden mt-6 sm:mt-8 max-w-4xl mx-auto bg-gradient-to-r from-[#166534] to-[#0f3f21] rounded-2xl p-5 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-left">
               <BorderBeam
                 colorFrom="#34d399"
                 colorTo="#38bdf8"
@@ -202,17 +202,17 @@ export default function CoursesPage() {
                 borderWidth={1.5}
                 radius={16}
               />
-              <div className="relative z-10">
+              <div className="relative z-10 w-full sm:w-auto text-center sm:text-left">
                 <div className="text-2xl sm:text-3xl font-black text-amber-300">From ₹20,000 onwards</div>
-                <div className="text-sm sm:text-base text-gray-200 mt-1">
+                <div className="text-xs sm:text-sm md:text-base text-gray-200 mt-1">
                   All programs · <strong>2 to 3 months</strong> · EMI available on request
                 </div>
               </div>
-              <div className="relative z-10">
-                <MagneticButton asChild strength={14}>
+              <div className="relative z-10 w-full sm:w-auto">
+                <MagneticButton asChild strength={14} className="w-full sm:w-auto">
                   <Link
                     href="/contact"
-                    className="px-6 py-3 bg-white text-[#166534] font-bold rounded-xl hover:bg-gray-100 transition-all shadow-md shrink-0 inline-flex items-center gap-2"
+                    className="w-full sm:w-auto min-h-[48px] justify-center px-6 py-3 bg-white text-[#166534] font-bold rounded-xl hover:bg-gray-100 transition-all shadow-md shrink-0 inline-flex items-center gap-2"
                   >
                     Get Fee Details <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -246,7 +246,7 @@ export default function CoursesPage() {
                     />
                   )}
                   {/* Card Top */}
-                  <div className="p-6 sm:p-8 border-b border-gray-100 bg-[#fbfdfa]">
+                  <div className="p-5 sm:p-8 border-b border-gray-100 bg-[#fbfdfa]">
                     <div className="flex items-center justify-between gap-2 mb-3">
                       <span
                         className="px-3 py-1 rounded-full text-xs font-bold text-white shadow-xs"
@@ -256,13 +256,13 @@ export default function CoursesPage() {
                       </span>
                       <span className="text-xs font-semibold text-gray-500 bg-gray-100/80 px-2.5 py-0.5 rounded-full">{course.mode}</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-2">
                       {course.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
                       {course.desc}
                     </p>
-                    <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-gray-500 pt-2 border-t border-gray-100">
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-medium text-gray-500 pt-2 border-t border-gray-100">
                       <span className="flex items-center gap-1.5">
                         <Clock className="h-3.5 w-3.5 text-[#166534]" /> {course.duration}
                       </span>
@@ -276,14 +276,14 @@ export default function CoursesPage() {
                   </div>
 
                   {/* Card Bottom */}
-                  <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div className="p-5 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
                     <div>
                       <h4 className="text-xs uppercase tracking-wider font-bold text-gray-400 mb-3">
                         What you&apos;ll master
                       </h4>
                       <ul className="space-y-2">
                         {course.learn.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700">
+                          <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700">
                             <Check className="h-4 w-4 text-[#166534] shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </li>
@@ -319,7 +319,7 @@ export default function CoursesPage() {
                       <MagneticButton asChild strength={10} className="w-full">
                         <Link
                           href="/contact"
-                          className="w-full py-3 px-4 bg-[#166534] hover:bg-[#14532d] text-white font-bold text-sm rounded-xl text-center transition-all shadow-sm hover:shadow-md active:scale-[0.98] block"
+                          className="w-full min-h-[48px] py-3 px-4 bg-[#166534] hover:bg-[#14532d] text-white font-bold text-sm rounded-xl text-center transition-all shadow-sm hover:shadow-md active:scale-[0.98] flex items-center justify-center"
                         >
                           Book Free Counselling →
                         </Link>
@@ -332,19 +332,19 @@ export default function CoursesPage() {
           </div>
 
           {/* Career Audit Callout */}
-          <div className="mt-16 bg-[#f3f9f5] border border-[#166534]/20 rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
+          <div className="mt-12 sm:mt-16 bg-[#f3f9f5] border border-[#166534]/20 rounded-2xl p-5 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+              <h3 className="text-lg sm:text-2xl font-bold text-gray-900">
                 Not sure which course is right for you?
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-gray-600 max-w-2xl leading-relaxed">
+              <p className="mt-2 text-xs sm:text-base text-gray-600 max-w-2xl leading-relaxed">
                 Book a free career audit session. We&apos;ll review your background, market demand, and salary potential — then recommend the exact track that gives you the strongest return.
               </p>
             </div>
-            <MagneticButton asChild strength={15}>
+            <MagneticButton asChild strength={15} className="w-full md:w-auto">
               <Link
                 href="/contact"
-                className="px-7 py-3.5 bg-[#166534] text-white font-bold rounded-xl hover:bg-[#14532d] transition-all shadow-md hover:shadow-lg active:scale-[0.98] shrink-0 inline-flex items-center gap-2"
+                className="w-full md:w-auto min-h-[48px] justify-center px-7 py-3.5 bg-[#166534] text-white font-bold rounded-xl hover:bg-[#14532d] transition-all shadow-md hover:shadow-lg active:scale-[0.98] shrink-0 inline-flex items-center gap-2 text-center"
               >
                 Book Free Audit →
               </Link>

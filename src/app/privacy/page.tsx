@@ -21,8 +21,8 @@ export default function PrivacyPage() {
             <ArrowLeft className="h-3.5 w-3.5" /> Back to Greenroots
           </Link>
 
-          <div className="bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-12 shadow-sm">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
+          <div className="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-12 shadow-sm">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
               Privacy Policy
             </h1>
             <p className="text-xs sm:text-sm font-mono text-slate-500 mt-2 mb-8 pb-6 border-b border-slate-100">

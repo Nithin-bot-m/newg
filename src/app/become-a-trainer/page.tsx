@@ -119,39 +119,39 @@ export default function BecomeATrainerPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#f3f9f5] via-white to-white py-14 lg:py-20 border-b border-slate-100 text-center">
+        <section className="relative overflow-hidden bg-gradient-to-b from-[#f3f9f5] via-white to-white py-10 sm:py-14 lg:py-20 border-b border-slate-100 text-center">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(22,101,52,0.08),rgba(8,120,232,0.04)_60%,transparent_100%)] pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-4 py-1.5 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20 backdrop-blur-xs">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-3.5 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20 backdrop-blur-xs">
               <Award className="h-3.5 w-3.5 text-amber-500" />
               <ShineText baseColor="#166534" shineColor="#15803d" duration={2}>
                 Now Inviting Trainers &amp; Creators · High-Yield Partnership
               </ShineText>
             </span>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15]">
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15]">
               Teach. Grow. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#166534] via-[#15803d] to-[#0878E8]">Earn More.</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               You have the expertise. We have the students, the platform, and the placement outcomes. Join Greenroots as a trainer or content partner — and double or triple your income without leaving what you already do.
             </p>
 
             {/* Quick Stats */}
-            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="bg-white/90 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl font-black text-[#166534]">5yr+</div>
-                <div className="text-xs text-slate-500 mt-1 font-medium">Minimum Experience</div>
+            <div className="mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 max-w-4xl mx-auto">
+              <div className="bg-white/90 backdrop-blur-xs p-3.5 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
+                <div className="text-xl sm:text-3xl font-black text-[#166534]">5yr+</div>
+                <div className="text-xs text-slate-500 mt-0.5 sm:mt-1 font-medium">Minimum Experience</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl font-black text-[#166534]">2–3×</div>
-                <div className="text-xs text-slate-500 mt-1 font-medium">Income Potential</div>
+              <div className="bg-white/90 backdrop-blur-xs p-3.5 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
+                <div className="text-xl sm:text-3xl font-black text-[#166534]">2–3×</div>
+                <div className="text-xs text-slate-500 mt-0.5 sm:mt-1 font-medium">Income Potential</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl font-black text-[#166534]">IT &amp; Non-IT</div>
-                <div className="text-xs text-slate-500 mt-1 font-medium">Both Welcome</div>
+              <div className="bg-white/90 backdrop-blur-xs p-3.5 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
+                <div className="text-xl sm:text-3xl font-black text-[#166534]">IT &amp; Non-IT</div>
+                <div className="text-xs text-slate-500 mt-0.5 sm:mt-1 font-medium">Both Welcome</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-xs p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl font-black text-[#166534]">Flexible</div>
-                <div className="text-xs text-slate-500 mt-1 font-medium">Teach Live or Record</div>
+              <div className="bg-white/90 backdrop-blur-xs p-3.5 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs hover:shadow-md hover:border-emerald-300/60 transition-all duration-300">
+                <div className="text-xl sm:text-3xl font-black text-[#166534]">Flexible</div>
+                <div className="text-xs text-slate-500 mt-0.5 sm:mt-1 font-medium">Teach Live or Record</div>
               </div>
             </div>
           </div>
@@ -281,7 +281,7 @@ export default function BecomeATrainerPage() {
             </p>
           </div>
 
-          <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-lg">
+          <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-5 sm:p-10 shadow-lg">
             <BorderBeam
               colorFrom="#34d399"
               colorTo="#38bdf8"
@@ -290,7 +290,7 @@ export default function BecomeATrainerPage() {
               borderWidth={1.5}
               radius={24}
             />
-            <form onSubmit={handleSubmit} className="relative z-10 space-y-5">
+            <form onSubmit={handleSubmit} className="relative z-10 space-y-4 sm:space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 mb-1.5">Full Name *</label>
@@ -300,7 +300,7 @@ export default function BecomeATrainerPage() {
                     placeholder="Your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                    className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                   />
                 </div>
                 <div>
@@ -311,7 +311,7 @@ export default function BecomeATrainerPage() {
                     placeholder="+91 XXXXX XXXXX"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                    className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                   />
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function BecomeATrainerPage() {
                   placeholder="you@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                  className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                 />
               </div>
 
@@ -335,7 +335,7 @@ export default function BecomeATrainerPage() {
                     required
                     value={profile}
                     onChange={(e) => setProfile(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                    className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                   >
                     <option value="">-- Select Profile --</option>
                     <option>IT Professional</option>
@@ -351,7 +351,7 @@ export default function BecomeATrainerPage() {
                   <select
                     value={exp}
                     onChange={(e) => setExp(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                    className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                   >
                     <option value="">-- Select Experience --</option>
                     <option>5–7 years</option>
@@ -370,7 +370,7 @@ export default function BecomeATrainerPage() {
                   placeholder="e.g. Power BI, DevSecOps, QA, HR, Aptitude, Soft Skills..."
                   value={domain}
                   onChange={(e) => setDomain(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                  className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                 />
               </div>
 
@@ -381,7 +381,7 @@ export default function BecomeATrainerPage() {
                   placeholder="Paste your profile URL or handle"
                   value={social}
                   onChange={(e) => setSocial(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                  className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                 />
               </div>
 
@@ -392,7 +392,7 @@ export default function BecomeATrainerPage() {
                   placeholder="Your background, what you teach, what you're looking for in a partnership..."
                   value={msg}
                   onChange={(e) => setMsg(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                 />
               </div>
 
@@ -400,7 +400,7 @@ export default function BecomeATrainerPage() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center transition-all shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 cursor-pointer"
+                  className="w-full min-h-[48px] py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center transition-all shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 cursor-pointer flex items-center justify-center"
                 >
                   {submitting ? "Submitting..." : "Submit Application →"}
                 </button>

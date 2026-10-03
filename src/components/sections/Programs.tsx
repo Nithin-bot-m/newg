@@ -44,15 +44,15 @@ export function Programs() {
   const supporting = PROGRAMS.slice(1);
 
   return (
-    <section id="courses" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-slate-50/60 to-white scroll-mt-20">
+    <section id="courses" className="py-12 sm:py-20 lg:py-24 bg-gradient-to-b from-white via-slate-50/60 to-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="inline-flex mb-3.5">
             <span className="text-xs font-bold uppercase tracking-wider text-[#0878E8] bg-[#0878E8]/10 px-4 py-1.5 rounded-full border border-[#0878E8]/20">
               ⚡ INDUSTRY-ALIGNED TRACKS
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
             High-Demand Tech Tracks Built for 2026
           </h2>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -60,8 +60,8 @@ export function Programs() {
           </p>
         </div>
 
-        {/* Editorial Bento System */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        {/* Editorial Bento System — vertical catalogue flow on mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-stretch">
           {/* Dominant Featured Program (7 cols) */}
           <div className="lg:col-span-7">
             <TiltCard
@@ -89,12 +89,12 @@ export function Programs() {
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-9">
-                  <h3 className="text-2xl sm:text-3xl font-black text-[#071D3A] tracking-tight leading-snug">
+                <div className="p-5 sm:p-7 lg:p-9">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#071D3A] tracking-tight leading-snug">
                     {featured.title}
                   </h3>
 
-                  <ul className="mt-6 space-y-3">
+                  <ul className="mt-4 sm:mt-6 space-y-2.5 sm:space-y-3">
                     {featured.points.map((point) => (
                       <li
                         key={point}
@@ -111,10 +111,10 @@ export function Programs() {
                 </div>
               </div>
 
-              <div className="px-6 sm:px-9 pb-6 sm:pb-9 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div className="px-5 sm:px-7 lg:px-9 py-4 border-t border-slate-100 flex items-center justify-between min-h-[48px]">
                 <Link
                   href="/courses"
-                  className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#0878E8] hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#0878E8] hover:gap-3 transition-all min-h-[44px]"
                 >
                   Learn More
                   <ArrowRight className="h-4 w-4" />
@@ -124,7 +124,7 @@ export function Programs() {
           </div>
 
           {/* Supporting Programs Column (5 cols, stacked) */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
             {supporting.map((program) => (
               <TiltCard
                 key={program.title}
@@ -132,8 +132,8 @@ export function Programs() {
                 glareColor={`rgba(${parseInt(program.accent.slice(1,3),16)}, ${parseInt(program.accent.slice(3,5),16)}, ${parseInt(program.accent.slice(5,7),16)}, 0.08)`}
                 className="flex-1 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
               >
-                <div className="p-6 sm:p-7">
-                  <div className="flex items-center justify-between gap-3 mb-3.5">
+                <div className="p-5 sm:p-7">
+                  <div className="flex items-center justify-between gap-3 mb-3">
                     <span
                       className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wide"
                       style={{
@@ -150,7 +150,7 @@ export function Programs() {
                     {program.title}
                   </h3>
 
-                  <ul className="mt-4 space-y-2.5">
+                  <ul className="mt-3.5 space-y-2.5">
                     {program.points.map((point) => (
                       <li
                         key={point}
@@ -166,10 +166,10 @@ export function Programs() {
                   </ul>
                 </div>
 
-                <div className="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                <div className="px-5 sm:px-7 py-3.5 border-t border-slate-100 flex items-center justify-between min-h-[48px]">
                   <Link
                     href="/courses"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#0878E8] hover:gap-2.5 transition-all"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#0878E8] hover:gap-2.5 transition-all min-h-[44px]"
                   >
                     Learn More
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -180,10 +180,10 @@ export function Programs() {
           </div>
         </div>
 
-        <div className="mt-12 lg:mt-16 text-center flex justify-center">
+        <div className="mt-10 sm:mt-12 lg:mt-16 text-center flex justify-center">
           <MagneticButton
             href="/courses"
-            className="w-full sm:w-auto justify-center px-8 py-4 bg-[#071D3A] text-white font-bold rounded-xl hover:bg-[#0c2e59] transition-all shadow-lg shadow-[#071D3A]/15 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto min-h-[48px] justify-center px-8 py-3.5 sm:py-4 bg-[#071D3A] text-white font-bold rounded-xl hover:bg-[#0c2e59] transition-all shadow-lg shadow-[#071D3A]/15 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 cursor-pointer"
           >
             View All 8 Programs →
           </MagneticButton>

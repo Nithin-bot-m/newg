@@ -35,7 +35,7 @@ export function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden scroll-mt-20">
+    <section id="faq" className="relative py-12 sm:py-20 lg:py-24 bg-white overflow-hidden scroll-mt-20">
       {/* Calm, quiet background texture */}
       <DotPattern
         color="#94a3b8"
@@ -45,8 +45,8 @@ export function FAQ() {
         cr={1}
       />
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 z-10">
-        <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-14">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#071D3A] tracking-tight">
             Before You Apply
           </h2>
           <p className="mt-4 text-gray-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -58,7 +58,7 @@ export function FAQ() {
           </p>
         </div>
 
-        <div className="space-y-3.5">
+        <div className="space-y-3">
           {FAQS.map((faq, i) => {
             const open = openIdx === i;
             return (
@@ -71,15 +71,15 @@ export function FAQ() {
                 }`}
               >
                 <button
-                  className="w-full flex items-center justify-between gap-4 px-6 py-4.5 text-left cursor-pointer"
+                  className="w-full min-h-[52px] flex items-center justify-between gap-3.5 px-4 sm:px-6 py-4 text-left cursor-pointer"
                   onClick={() => setOpenIdx(open ? null : i)}
                   aria-expanded={open}
                 >
-                  <span className={`text-sm sm:text-base font-bold transition-colors ${open ? "text-[#0878E8]" : "text-[#071D3A]"}`}>
+                  <span className={`text-[15px] sm:text-base font-bold transition-colors leading-snug ${open ? "text-[#0878E8]" : "text-[#071D3A]"}`}>
                     {faq.q}
                   </span>
                   <span
-                    className={`shrink-0 h-8 w-8 rounded-full flex items-center justify-center transition-all duration-200 ${
+                    className={`shrink-0 h-9 w-9 rounded-full flex items-center justify-center transition-all duration-200 ${
                       open ? "bg-[#0878E8] text-white shadow-xs" : "bg-gray-100 text-gray-600"
                     }`}
                   >
@@ -87,7 +87,7 @@ export function FAQ() {
                   </span>
                 </button>
                 {open && (
-                  <div className="px-6 pb-6 text-sm sm:text-[15px] text-gray-600 leading-relaxed border-t border-[#0878E8]/10 pt-4">
+                  <div className="px-4 sm:px-6 pb-5 pt-3 text-sm sm:text-[15px] text-gray-600 leading-relaxed border-t border-[#0878E8]/10">
                     {faq.a}
                   </div>
                 )}
@@ -96,16 +96,16 @@ export function FAQ() {
           })}
         </div>
 
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+        <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3.5">
           <a
             href="/contact"
-            className="w-full sm:w-auto text-center px-7 py-3.5 border border-gray-300 text-[#071D3A] font-bold rounded-xl hover:bg-gray-50 active:scale-[0.98] transition-all shadow-xs"
+            className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 border border-gray-300 text-[#071D3A] font-bold rounded-xl hover:bg-gray-50 active:scale-[0.98] transition-all shadow-xs inline-flex items-center justify-center"
           >
             See If You Qualify
           </a>
           <a
             href="/become-a-trainer"
-            className="w-full sm:w-auto text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all"
+            className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center justify-center"
           >
             Apply to Join Us →
           </a>

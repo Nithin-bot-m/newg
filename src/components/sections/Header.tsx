@@ -104,7 +104,7 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2.5 -mr-2 text-gray-800 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2.5 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-800 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-[#166534]"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -114,7 +114,7 @@ export function Header() {
 
         {/* Mobile nav drawer */}
         {open && (
-          <div className="lg:hidden border-t border-gray-100 py-4 space-y-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="lg:hidden border-t border-gray-100 py-4 px-1 space-y-1 animate-in fade-in slide-in-from-top-2 duration-200">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.label;
               return (
@@ -125,7 +125,7 @@ export function Header() {
                     setActive(link.label);
                     setOpen(false);
                   }}
-                  className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-all ${
+                  className={`px-4 py-3 min-h-[44px] flex items-center text-[15px] font-medium rounded-xl transition-all ${
                     isActive
                       ? "bg-[#166534] text-white font-semibold shadow-xs"
                       : "text-gray-700 hover:bg-gray-100/70 hover:text-[#166534]"
@@ -139,14 +139,14 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-lg hover:bg-[#166534]/5 transition-colors"
+                className="flex-1 min-h-[46px] flex items-center justify-center text-center px-4 py-3 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-xl hover:bg-[#166534]/5 active:scale-[0.98] transition-colors"
               >
                 Career Audit
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="flex-1 text-center px-4 py-2.5 text-sm font-semibold bg-[#166534] text-white rounded-lg hover:bg-[#14532d] shadow-sm transition-colors"
+                className="flex-1 min-h-[46px] flex items-center justify-center text-center px-4 py-3 text-sm font-semibold bg-[#166534] text-white rounded-xl hover:bg-[#14532d] shadow-sm active:scale-[0.98] transition-colors"
               >
                 Enrol Now →
               </Link>

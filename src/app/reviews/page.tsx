@@ -111,38 +111,38 @@ export default function ReviewsPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Header Hero */}
-        <section className="bg-gradient-to-b from-[#f3f9f5] to-white py-12 lg:py-16 border-b border-gray-100 text-center">
+        <section className="bg-gradient-to-b from-[#f3f9f5] to-white py-10 sm:py-12 lg:py-16 border-b border-gray-100 text-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-4 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-3.5 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20">
               <Award className="h-3.5 w-3.5 text-amber-500" />
               <ShineText baseColor="#166534" shineColor="#15803d" duration={2.2}>
                 Proven Placement Track Record · Hyderabad Hub
               </ShineText>
             </span>
-            <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+            <h1 className="text-2xl sm:text-5xl font-black text-gray-900 tracking-tight">
               Our Placement Track Record & Student Reviews
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
               Real students. Real companies. Real salaries. Here&apos;s what Greenroots has delivered.
             </p>
 
             {/* Stats Row */}
-            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-3xl sm:text-4xl font-black text-[#166534]">85%</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Placement Rate</div>
+            <div className="mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-4xl mx-auto">
+              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="text-2xl sm:text-4xl font-black text-[#166534]">85%</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Placement Rate</div>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-3xl sm:text-4xl font-black text-[#166534]">₹4.5L</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Avg. Fresher Package</div>
+              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="text-2xl sm:text-4xl font-black text-[#166534]">₹4.5L</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Avg. Fresher Package</div>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-3xl sm:text-4xl font-black text-[#166534]">60+</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Alumni Placed</div>
+              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="text-2xl sm:text-4xl font-black text-[#166534]">60+</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Alumni Placed</div>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
-                <div className="text-3xl sm:text-4xl font-black text-[#166534]">3 mo</div>
-                <div className="text-xs sm:text-sm text-gray-500 mt-1.5 font-medium">Avg. Time to Offer</div>
+              <div className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-200/80 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="text-2xl sm:text-4xl font-black text-[#166534]">3 mo</div>
+                <div className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">Avg. Time to Offer</div>
               </div>
             </div>
           </div>
@@ -259,11 +259,11 @@ export default function ReviewsPage() {
             </div>
 
             {/* Bottom CTA */}
-            <div className="mt-14 text-center">
-              <MagneticButton asChild strength={15}>
+            <div className="mt-10 sm:mt-14 text-center">
+              <MagneticButton asChild strength={15} className="w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="px-8 py-3.5 bg-[#166534] hover:bg-[#14532d] text-white font-bold rounded-xl shadow-md hover:shadow-lg active:scale-[0.98] inline-flex items-center gap-2 transition-all"
+                  className="w-full sm:w-auto min-h-[48px] justify-center px-8 py-3.5 bg-[#166534] hover:bg-[#14532d] text-white font-bold rounded-xl shadow-md hover:shadow-lg active:scale-[0.98] inline-flex items-center gap-2 transition-all text-center"
                 >
                   Start Your Career Transformation →
                 </Link>

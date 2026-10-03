@@ -52,19 +52,19 @@ export default function ContactPage() {
 
       <main className="flex-1 pt-24 lg:pt-28 pb-20">
         {/* Contact Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#f3f9f5] via-white to-white py-14 lg:py-20 border-b border-slate-100 text-center">
+        <section className="relative overflow-hidden bg-gradient-to-b from-[#f3f9f5] via-white to-white py-10 sm:py-14 lg:py-20 border-b border-slate-100 text-center">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(22,101,52,0.08),rgba(8,120,232,0.04)_60%,transparent_100%)] pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-4 py-1.5 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20 backdrop-blur-xs">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#166534]/10 px-3.5 py-1 text-xs font-semibold text-[#166534] mb-4 border border-[#166534]/20 backdrop-blur-xs">
               <Phone className="h-3.5 w-3.5 text-amber-500" />
               <ShineText baseColor="#166534" shineColor="#15803d" duration={2}>
                 Direct Support &amp; Walk-in Kukatpally Campus
               </ShineText>
             </span>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15]">
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15]">
               Let&apos;s Talk About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#166534] via-[#15803d] to-[#0878E8]">Your Career.</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               Fill out the form or reach us directly. Our team will get back to you within a few hours with program details and next steps.
             </p>
           </div>
@@ -145,13 +145,13 @@ export default function ContactPage() {
               </div>
 
               {/* WhatsApp Button */}
-              <div className="mt-8">
+              <div className="mt-7 sm:mt-8">
                 <MagneticButton asChild strength={14} className="w-full">
                   <a
                     href="https://wa.me/919549543898?text=Hi%20Greenroots!%20I%27d%20like%20to%20know%20more%20about%20your%20training%20programs."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-4 px-6 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 inline-flex items-center justify-center gap-2 transition-all cursor-pointer"
+                    className="w-full min-h-[48px] py-3.5 sm:py-4 px-6 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 inline-flex items-center justify-center gap-2 transition-all cursor-pointer text-sm sm:text-base text-center"
                   >
                     WhatsApp Us Now (+91 95495 43898) →
                   </a>
@@ -160,7 +160,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: Enquiry Form */}
-            <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-lg">
+            <div className="relative overflow-hidden bg-white border border-slate-200/90 rounded-3xl p-5 sm:p-10 shadow-lg">
               <BorderBeam
                 colorFrom="#34d399"
                 colorTo="#38bdf8"
@@ -171,7 +171,7 @@ export default function ContactPage() {
               />
               <div className="relative z-10">
                 <h3 className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight">Send an Enquiry</h3>
-                <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-6">
+                <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-5 sm:mb-6">
                   We&apos;ll reply with a personalised program recommendation within 4 hours.
                 </p>
 
@@ -185,7 +185,7 @@ export default function ContactPage() {
                         placeholder="Your name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       />
                     </div>
                     <div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                         placeholder="+91 XXXXX XXXXX"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       />
                     </div>
                   </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                       placeholder="you@email.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                      className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                     />
                   </div>
 
@@ -219,7 +219,7 @@ export default function ContactPage() {
                         required
                         value={course}
                         onChange={(e) => setCourse(e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       >
                         <option value="">-- Select Program --</option>
                         <option>Power BI 60-Day Mastery</option>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                       <select
                         value={status}
                         onChange={(e) => setStatus(e.target.value)}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                        className="w-full min-h-[46px] px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                       >
                         <option value="">-- Select Status --</option>
                         <option>Fresh Graduate</option>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                       placeholder="Tell us about your background, career goals, or any specific questions..."
                       value={msg}
                       onChange={(e) => setMsg(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm bg-slate-50/50 focus:bg-white focus:outline-hidden focus:border-[#166534] focus:ring-4 focus:ring-emerald-500/10 transition-all text-slate-900"
                     />
                   </div>
 
@@ -265,7 +265,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center transition-all shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 cursor-pointer"
+                      className="w-full min-h-[48px] py-3.5 px-6 bg-gradient-to-r from-[#166534] to-[#15803d] hover:from-[#14532d] hover:to-[#166534] text-white font-bold rounded-xl text-center transition-all shadow-md shadow-emerald-950/20 hover:shadow-lg hover:shadow-emerald-900/30 cursor-pointer flex items-center justify-center"
                     >
                       {submitting ? "Submitting..." : "Submit Enquiry & Book Free Audit →"}
                     </button>
