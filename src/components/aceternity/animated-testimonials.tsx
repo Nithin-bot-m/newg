@@ -21,6 +21,7 @@ export const AnimatedTestimonials = ({
   className?: string;
 }) => {
   const [active, setActive] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
@@ -31,14 +32,21 @@ export const AnimatedTestimonials = ({
   };
 
   useEffect(() => {
-    if (autoplay) {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (autoplay && mounted) {
       const interval = setInterval(handleNext, 6000);
       return () => clearInterval(interval);
     }
-     
-  }, [autoplay]);
+  }, [autoplay, mounted, testimonials.length]);
 
-  const randomRotateY = () => Math.floor(Math.random() * 21) - 10;
+  // Deterministic angles based on index to ensure SSR and client hydration HTML match 100%
+  const getRotateY = (idx: number) => {
+    const ROTATIONS = [-7, 5, -8, 6, -4, 8];
+    return ROTATIONS[idx % ROTATIONS.length];
+  };
 
   return (
     <div
@@ -50,15 +58,11 @@ export const AnimatedTestimonials = ({
       <div className="relative grid grid-cols-1 gap-6 sm:gap-10 md:grid-cols-2 md:gap-20 items-center">
         <div>
           <div className="relative h-56 w-56 sm:h-72 sm:w-72 md:h-96 md:w-96 mx-auto">
-            <AnimatePresence>
+            <AnimatePresence initial={false}>
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={`avatar-${testimonial.name}`}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.9,
-                    rotateY: randomRotateY(),
-                  }}
+                  initial={false}
                   animate={
                     index === active
                       ? {
@@ -70,7 +74,7 @@ export const AnimatedTestimonials = ({
                       : {
                           opacity: 0,
                           scale: 0.9,
-                          rotateY: randomRotateY(),
+                          rotateY: getRotateY(index),
                           zIndex: 0,
                         }
                   }

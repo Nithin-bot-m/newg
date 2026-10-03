@@ -58,8 +58,8 @@ export const DotPattern = ({
     return {
       x: col * width + cx + x,
       y: row * height + cy + y,
-      delay: Math.random() * 5,
-      duration: Math.random() * 3 + 2,
+      delay: ((i * 7) % 50) / 10,
+      duration: 2 + ((i * 3) % 30) / 10,
     };
   });
 
