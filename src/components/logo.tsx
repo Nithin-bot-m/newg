@@ -43,7 +43,7 @@ export function Logo({
       alt="GROOTS — Education to Employment"
       className={cn(
         "object-contain",
-        showTagline ? "h-10" : "h-9",
+        !className?.includes("h-") && (showTagline ? "h-10" : "h-9"),
         imgClassName,
         className,
       )}
