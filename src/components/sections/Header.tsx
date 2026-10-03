@@ -53,13 +53,13 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 shrink-0 py-1 transition-opacity duration-200 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#166534] focus-visible:ring-offset-2 rounded-lg"
+            className="flex items-center gap-2 shrink-0 py-0.5 transition-all duration-200 hover:opacity-95 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#166534] focus-visible:ring-offset-2 rounded-lg"
             aria-label="Greenroots Home"
           >
             <Logo
               variant="dark"
-              showTagline={false}
-              className="h-9 lg:h-10 w-auto"
+              showTagline
+              className="h-11 sm:h-12 lg:h-14 w-auto drop-shadow-xs"
             />
           </Link>
 
