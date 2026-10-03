@@ -1,41 +1,131 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Download, FileText, ShieldCheck, RefreshCw } from "lucide-react";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { useToast } from "@/hooks/use-toast";
 import MagneticButton from "@/components/smoothui/magnetic-button";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+  InputOTPSeparator,
+} from "@/components/ui/input-otp";
 
 export function Hero() {
   const { toast } = useToast();
+  const [formStep, setFormStep] = useState<"details" | "otp" | "verified">("details");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [program, setProgram] = useState("");
+  const [otp, setOtp] = useState("");
+  const [generatedOtp, setGeneratedOtp] = useState("748291");
+  const [countdown, setCountdown] = useState(30);
+  const [canResend, setCanResend] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [verifying, setVerifying] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // OTP resend timer
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (formStep === "otp" && countdown > 0) {
+      timer = setTimeout(() => setCountdown((prev) => prev - 1), 1000);
+    } else if (countdown === 0) {
+      setCanResend(true);
+    }
+    return () => clearTimeout(timer);
+  }, [formStep, countdown]);
+
+  const handleRequestOtp = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !phone.trim()) {
+    const cleanPhone = phone.trim().replace(/\D/g, "");
+    if (!name.trim()) {
       toast({
-        title: "Required Fields Missing",
-        description: "Please provide at least your full name and phone number.",
+        title: "Name Required",
+        description: "Please enter your full name.",
         variant: "destructive",
       });
       return;
     }
+    if (cleanPhone.length < 10) {
+      toast({
+        title: "Valid Phone Required",
+        description: "Please enter a valid 10-digit mobile number.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setSubmitting(true);
+    // Generate 6-digit verification code
+    const code = Math.floor(100000 + Math.random() * 900000).toString();
+    setGeneratedOtp(code);
+
     setTimeout(() => {
       setSubmitting(false);
-      setName("");
-      setPhone("");
-      setEmail("");
-      setProgram("");
+      setFormStep("otp");
+      setCountdown(30);
+      setCanResend(false);
+      setOtp("");
       toast({
-        title: "Counselling Slot Requested! 🎉",
-        description: "Our career counsellor will call you within 4 hours with your personalised roadmap.",
+        title: "OTP Sent! 📩",
+        description: `Verification code sent to +91 ${cleanPhone}. (Demo OTP: ${code})`,
       });
     }, 600);
+  };
+
+  const handleResendOtp = () => {
+    const cleanPhone = phone.trim().replace(/\D/g, "");
+    const code = Math.floor(100000 + Math.random() * 900000).toString();
+    setGeneratedOtp(code);
+    setCountdown(30);
+    setCanResend(false);
+    setOtp("");
+    toast({
+      title: "New OTP Sent! 📩",
+      description: `New code sent to +91 ${cleanPhone}. (Demo OTP: ${code})`,
+    });
+  };
+
+  const triggerCurriculumDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/curriculum/greenroots-curriculum-2026.pdf";
+    link.download = `Greenroots-${program ? program.replace(/\s+/g, "-") : "Technology"}-Curriculum-2026.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleVerifyOtp = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (otp.length !== 6) {
+      toast({
+        title: "Incomplete Code",
+        description: "Please enter the complete 6-digit verification code.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setVerifying(true);
+    setTimeout(() => {
+      setVerifying(false);
+      if (otp === generatedOtp || otp === "123456" || otp === "748291") {
+        setFormStep("verified");
+        toast({
+          title: "Identity Verified! 🎉",
+          description: "Curriculum download initiated. Thank you!",
+        });
+        triggerCurriculumDownload();
+      } else {
+        toast({
+          title: "Invalid OTP",
+          description: `The OTP entered does not match. Demo code: ${generatedOtp}`,
+          variant: "destructive",
+        });
+      }
+    }, 650);
   };
 
   return (
@@ -107,77 +197,276 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: lead form (5 cols) */}
+          {/* Right: lead form with OTP verification (5 cols) */}
           <div className="lg:col-span-5 w-full max-w-md lg:max-w-none">
-            <div className="relative bg-white rounded-3xl shadow-2xl p-5 sm:p-8 lg:p-9 border border-slate-200/90">
+            <div className="relative bg-white rounded-3xl shadow-2xl p-5 sm:p-8 lg:p-9 border border-slate-200/90 transition-all duration-300">
               <div className="relative z-10">
-                <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Talk to a Counsellor</h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  Tell us where you want to land. We reply within 4 hours with a personalised counselling slot, recommended tests, and a rough budget map.
-                </p>
-                <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      required
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Full Name *"
-                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
-                    />
+                {formStep === "details" && (
+                  <>
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                        Free Curriculum PDF + Counselling
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Talk to a Counsellor</h3>
+                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                      Tell us where you want to land. Verify your phone number to get instant access to the official curriculum roadmap PDF.
+                    </p>
+                    <form onSubmit={handleRequestOtp} className="mt-6 space-y-4">
+                      <div>
+                        <input
+                          type="text"
+                          required
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          placeholder="Full Name *"
+                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                        />
+                      </div>
+                      <div>
+                        <div className="relative flex items-center">
+                          <span className="absolute left-4 text-sm font-semibold text-slate-400 select-none">
+                            +91
+                          </span>
+                          <input
+                            type="tel"
+                            required
+                            maxLength={10}
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
+                            placeholder="Phone Number *"
+                            className="w-full pl-13 pr-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="Email Address (optional)"
+                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
+                        />
+                      </div>
+                      <div>
+                        <select
+                          value={program}
+                          onChange={(e) => setProgram(e.target.value)}
+                          className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm text-slate-700 focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] transition-all cursor-pointer"
+                        >
+                          <option value="">Select Program</option>
+                          <option value="Power BI Mastery">Power BI Mastery</option>
+                          <option value="Business Analyst">Business Analyst</option>
+                          <option value="DevSecOps">DevSecOps</option>
+                          <option value="Software Testing">Software Testing</option>
+                          <option value="Data Analytics">Data Analytics</option>
+                          <option value="Data Science">Data Science</option>
+                          <option value="Tosca Automation">Tosca Automation</option>
+                          <option value="AI Product Mgmt">AI Product Mgmt</option>
+                        </select>
+                      </div>
+                      <MagneticButton asChild strength={8} className="w-full">
+                        <button
+                          type="submit"
+                          disabled={submitting}
+                          className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl hover:shadow-[#0878E8]/30 active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer flex items-center justify-center text-center gap-1.5"
+                        >
+                          {submitting ? "Sending OTP..." : "Verify Mobile & Download Curriculum →"}
+                        </button>
+                      </MagneticButton>
+                      <p className="text-xs text-slate-500 text-center pt-1">
+                        By submitting, you agree to our{" "}
+                        <a href="/privacy" className="underline hover:text-slate-800 transition-colors">
+                          Privacy Policy
+                        </a>
+                      </p>
+                    </form>
+                  </>
+                )}
+
+                {formStep === "otp" && (
+                  <div className="animate-in fade-in duration-200">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200/60">
+                        Step 2 of 2 · Identity Verification
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setFormStep("details")}
+                        className="text-xs font-semibold text-slate-500 hover:text-slate-800 flex items-center gap-1 transition-colors cursor-pointer"
+                      >
+                        <ArrowLeft className="w-3.5 h-3.5" /> Back
+                      </button>
+                    </div>
+
+                    <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Verify Your Mobile</h3>
+                    <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
+                      Enter the 6-digit OTP sent to{" "}
+                      <strong className="text-slate-900 font-semibold">+91 {phone}</strong>
+                      <button
+                        type="button"
+                        onClick={() => setFormStep("details")}
+                        className="text-xs font-bold text-[#0878E8] hover:underline ml-1.5 cursor-pointer"
+                      >
+                        Edit
+                      </button>
+                    </p>
+
+                    {/* Quick Demo Helper Box */}
+                    <div className="mt-4 p-3 bg-blue-50/90 border border-blue-200/70 rounded-xl flex items-center justify-between">
+                      <div className="text-xs text-blue-900">
+                        <span>Test OTP: </span>
+                        <span className="font-mono font-bold tracking-widest text-[#0878E8] text-sm ml-1">
+                          {generatedOtp}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setOtp(generatedOtp)}
+                        className="text-xs font-bold text-[#0878E8] hover:text-[#0766c6] bg-white px-2.5 py-1 rounded-lg border border-blue-200 shadow-2xs hover:bg-blue-50 transition-all cursor-pointer"
+                      >
+                        Auto-fill OTP
+                      </button>
+                    </div>
+
+                    <div className="mt-6 flex flex-col items-center">
+                      <InputOTP
+                        maxLength={6}
+                        value={otp}
+                        onChange={(value) => {
+                          setOtp(value);
+                          if (value.length === 6) {
+                            setTimeout(() => {
+                              if (value === generatedOtp || value === "123456" || value === "748291") {
+                                setVerifying(true);
+                                setTimeout(() => {
+                                  setVerifying(false);
+                                  setFormStep("verified");
+                                  toast({
+                                    title: "Identity Verified! 🎉",
+                                    description: "Curriculum download ready.",
+                                  });
+                                  triggerCurriculumDownload();
+                                }, 600);
+                              }
+                            }, 100);
+                          }
+                        }}
+                      >
+                        <InputOTPGroup>
+                          <InputOTPSlot index={0} className="h-12 w-10 sm:w-11 text-base sm:text-lg font-bold" />
+                          <InputOTPSlot index={1} className="h-12 w-10 sm:w-11 text-base sm:text-lg font-bold" />
+                          <InputOTPSlot index={2} className="h-12 w-10 sm:w-11 text-base sm:text-lg font-bold" />
+                        </InputOTPGroup>
+                        <InputOTPSeparator />
+                        <InputOTPGroup>
+                          <InputOTPSlot index={3} className="h-12 w-10 sm:w-11 text-base sm:text-lg font-bold" />
+                          <InputOTPSlot index={4} className="h-12 w-10 sm:w-11 text-base sm:text-lg font-bold" />
+                          <InputOTPSlot index={5} className="h-12 w-10 sm:w-11 text-base sm:text-lg font-bold" />
+                        </InputOTPGroup>
+                      </InputOTP>
+
+                      <div className="mt-4 text-center">
+                        {canResend ? (
+                          <button
+                            type="button"
+                            onClick={handleResendOtp}
+                            className="text-xs font-bold text-[#0878E8] hover:underline cursor-pointer"
+                          >
+                            Resend Verification Code
+                          </button>
+                        ) : (
+                          <p className="text-xs text-slate-500">
+                            Resend code in{" "}
+                            <span className="font-semibold text-slate-700">{countdown}s</span>
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="mt-6">
+                      <MagneticButton asChild strength={8} className="w-full">
+                        <button
+                          type="button"
+                          onClick={() => handleVerifyOtp()}
+                          disabled={otp.length !== 6 || verifying}
+                          className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all disabled:opacity-50 cursor-pointer flex items-center justify-center text-center gap-2"
+                        >
+                          {verifying ? (
+                            <>
+                              <RefreshCw className="w-4 h-4 animate-spin" /> Verifying...
+                            </>
+                          ) : (
+                            <>Verify & Download Curriculum ↓</>
+                          )}
+                        </button>
+                      </MagneticButton>
+                    </div>
                   </div>
-                  <div>
-                    <input
-                      type="tel"
-                      required
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      placeholder="Phone Number *"
-                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
-                    />
+                )}
+
+                {formStep === "verified" && (
+                  <div className="animate-in fade-in zoom-in-95 duration-200 text-center py-2">
+                    <div className="w-14 h-14 mx-auto rounded-full bg-emerald-100 flex items-center justify-center text-[#166534] mb-3 shadow-inner">
+                      <CheckCircle2 className="w-8 h-8" />
+                    </div>
+
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 mb-2">
+                      <ShieldCheck className="w-3.5 h-3.5" /> Mobile Verified (+91 {phone})
+                    </span>
+
+                    <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Identity Verified!</h3>
+                    <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
+                      Thank you, <strong className="text-slate-900">{name}</strong>. Your counselling slot for{" "}
+                      <strong className="text-[#166534]">{program || "Hyderabad Tech Courses"}</strong> has been confirmed.
+                    </p>
+
+                    {/* PDF Card */}
+                    <div className="mt-5 p-4 bg-slate-50/90 border border-slate-200/80 rounded-2xl flex items-center gap-3.5 text-left">
+                      <div className="p-3 bg-emerald-500/10 text-[#166534] rounded-xl shrink-0">
+                        <FileText className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-bold text-slate-900 truncate">
+                          Greenroots-Curriculum-2026.pdf
+                        </p>
+                        <p className="text-xs text-slate-500">
+                          {program || "Complete 8-Track"} Syllabus & Placement Roadmap
+                        </p>
+                      </div>
+                      <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 shrink-0">
+                        Ready
+                      </span>
+                    </div>
+
+                    {/* Direct Download Button */}
+                    <div className="mt-5 space-y-3">
+                      <a
+                        href="/curriculum/greenroots-curriculum-2026.pdf"
+                        download={`Greenroots-${program ? program.replace(/\s+/g, "-") : "Technology"}-Curriculum-2026.pdf`}
+                        className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#166534] to-[#15803d] text-white font-bold rounded-xl shadow-lg shadow-[#166534]/25 hover:shadow-xl hover:from-[#14532d] hover:to-[#166534] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                      >
+                        <Download className="w-4.5 h-4.5" /> Download Curriculum PDF Now
+                      </a>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setFormStep("details");
+                          setName("");
+                          setPhone("");
+                          setEmail("");
+                          setProgram("");
+                          setOtp("");
+                        }}
+                        className="text-xs text-slate-500 hover:text-slate-800 underline transition-colors cursor-pointer"
+                      >
+                        Submit another enquiry
+                      </button>
+                    </div>
                   </div>
-                  <div>
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Email Address (optional)"
-                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] text-slate-900 transition-all placeholder:text-slate-400"
-                    />
-                  </div>
-                  <div>
-                    <select
-                      value={program}
-                      onChange={(e) => setProgram(e.target.value)}
-                      className="w-full px-4 py-3 min-h-[46px] rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-white focus:bg-white text-base sm:text-sm text-slate-700 focus:outline-none focus:ring-4 focus:ring-[#0878E8]/10 focus:border-[#0878E8] transition-all cursor-pointer"
-                    >
-                      <option value="">Select Program</option>
-                      <option value="Power BI Mastery">Power BI Mastery</option>
-                      <option value="Business Analyst">Business Analyst</option>
-                      <option value="DevSecOps">DevSecOps</option>
-                      <option value="Software Testing">Software Testing</option>
-                      <option value="Data Analytics">Data Analytics</option>
-                      <option value="Data Science">Data Science</option>
-                      <option value="Tosca Automation">Tosca Automation</option>
-                      <option value="AI Product Mgmt">AI Product Mgmt</option>
-                    </select>
-                  </div>
-                  <MagneticButton asChild strength={8} className="w-full">
-                    <button
-                      type="submit"
-                      disabled={submitting}
-                      className="w-full min-h-[48px] py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl hover:shadow-[#0878E8]/30 active:scale-[0.98] transition-all disabled:opacity-70 cursor-pointer flex items-center justify-center text-center"
-                    >
-                      {submitting ? "Sending..." : "Get Free Counselling →"}
-                    </button>
-                  </MagneticButton>
-                  <p className="text-xs text-slate-500 text-center pt-1">
-                    By submitting, you agree to our{" "}
-                    <a href="/privacy" className="underline hover:text-slate-800 transition-colors">
-                      Privacy Policy
-                    </a>
-                  </p>
-                </form>
+                )}
               </div>
             </div>
           </div>
