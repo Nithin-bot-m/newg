@@ -1,133 +1,73 @@
 # Deploy Greenroots to Cloudflare Pages
 
-This project is pre-configured for **static export** to Cloudflare Pages. No server runtime required — runs entirely on Cloudflare's global CDN, free tier friendly.
+This project is pre-configured for **static export** to Cloudflare Pages. It compiles static HTML, CSS, JavaScript, and assets directly into the `./out` directory, running on Cloudflare's global CDN with zero server runtime required.
 
 ---
 
-## Option A — Deploy via Cloudflare Dashboard (recommended, no CLI)
+## ⚠️ CRITICAL: Cloudflare Pages Build Settings
 
-1. Push the project to a GitHub repo (public or private).
-2. Go to **Cloudflare Pages** → **Create a project** → **Connect to Git**.
-3. Select your repo.
-4. Configure build:
-   - **Framework preset:** `Next.js`
-   - **Build command:** `bun run build` *(or `npm run build` if you don't have Bun)*
-   - **Build output directory:** `out`
-   - **Node version:** `20` (set via env var `NODE_VERSION=20`)
-5. Click **Save and Deploy**.
-
-You'll get a URL like `greenroots.pages.dev` once deployed. Custom domains can be attached in the Pages dashboard under **Custom domains**.
+Cloudflare Pages often fails on Next.js 16 projects for two reasons:
+1. **Wrong Framework Preset:** Selecting "Next.js" makes Cloudflare expect Edge SSR / `@cloudflare/next-on-pages` and look for `.next` instead of `out`. **You must select `None` or `Next.js (Static HTML Export)`.**
+2. **Old Node Version:** Cloudflare Pages defaults to Node 12 or 16 if unspecified. Next.js 16 requires **Node 20**. (This repo includes `.nvmrc` and `.node-version` pinning Node 20).
 
 ---
 
-## Option B — Deploy via Wrangler CLI
+## Step-by-Step Deployment via Cloudflare Pages Dashboard
+
+1. **Push your code to GitHub / GitLab**.
+2. Open the [Cloudflare Dashboard](https://dash.cloudflare.com/) and go to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
+3. Select your repository: `greenroots-full-project` (or your repo name).
+4. In the **Set up builds and deployments** screen, configure:
+
+| Setting | Value | Note |
+| :--- | :--- | :--- |
+| **Framework preset** | `None` *(or `Next.js (Static HTML Export)`)* | ⚠️ **DO NOT select standard `Next.js`** |
+| **Build command** | `npm run build` | Runs `next build` to create static `./out` |
+| **Build output directory** | `out` | Next.js exports static files here |
+| **Root directory** | `/` | Leave empty / default unless in a subdirectory |
+
+5. Under **Environment variables (advanced)**, add:
+   - Variable name: `NODE_VERSION`
+   - Value: `20`
+6. Click **Save and Deploy**.
+
+---
+
+## Troubleshooting Common Cloudflare Deployment Errors
+
+### 1. `Error: Output directory "out" not found` or looks for `.next`
+- **Cause:** Framework preset is set to `Next.js` (which attempts Edge SSR and looks for `.next` or `.vercel/output/static`).
+- **Fix:** In Cloudflare Pages project settings → **Builds & deployments** → **Build configurations** → Change **Framework preset** to `None`, **Build command** to `npm run build`, and **Build output directory** to `out`. Trigger a new deployment.
+
+### 2. `Unsupported engine: node` or `Node.js version 16.x is not supported by Next.js`
+- **Cause:** Cloudflare Pages build environment is using an outdated Node.js runtime.
+- **Fix:** Ensure `NODE_VERSION=20` is set in **Settings** → **Environment variables**. The repo also includes `.nvmrc` and `.node-version` specifying `20` to guarantee Cloudflare uses Node 20.
+
+### 3. Deploy via Wrangler CLI (Alternative)
+
+If you prefer deploying directly from your terminal:
 
 ```bash
-# 1. Install wrangler globally
+# 1. Install wrangler globally or use npx
 npm install -g wrangler
 
-# 2. Authenticate with your Cloudflare account
+# 2. Login to Cloudflare
 wrangler login
 
 # 3. Build the static site
-cd /home/z/my-project
-bun run build
+npm run build
 
-# 4. Deploy to Cloudflare Pages
+# 4. Deploy the out folder
 wrangler pages deploy out --project-name=greenroots
 ```
-
-First deploy will create the project automatically. Subsequent deploys update it.
-
----
-
-## Option C — Direct upload (no Git, no CLI)
-
-If you just want to upload the pre-built `out/` folder:
-
-1. Zip the `out/` directory:
-   ```bash
-   cd /home/z/my-project
-   zip -r greenroots.zip out/
-   ```
-2. Download `greenroots.zip` to your machine.
-3. Go to **Cloudflare Pages** → **Create project** → **Direct Upload**.
-4. Drag the zip into the upload area.
-5. Done — instant `*.pages.dev` URL.
 
 ---
 
 ## Configuration summary (already in the repo)
 
-### `next.config.ts`
-```ts
-output: "export"                  // generate static HTML/CSS/JS in ./out
-images: { unoptimized: true }     // CF Pages doesn't run Next image optimizer
-trailingSlash: true               // cleaner URLs on static hosting
-```
+- **`next.config.ts`**: Configured with `output: "export"`, `images: { unoptimized: true }`, and `trailingSlash: true`.
+- **`.nvmrc` & `.node-version`**: Pin Node.js version 20 for Cloudflare's build runners.
+- **`wrangler.toml`**: Configures `pages_build_output_dir = "out"`, `compatibility_flags = ["nodejs_compat"]`, and `compatibility_date = "2024-09-23"`.
+- **`public/_headers`**: Cloudflare security headers + long-term caching for static assets.
+- **`public/_redirects`**: Redirect rule support for Cloudflare Pages.
 
-### `public/_headers` (auto-applied by Cloudflare Pages)
-- Security headers (CSP, X-Frame-Options, etc.) on all routes
-- 1-year immutable cache on `/_next/static/*`, SVG, and WOFF2 fonts
-
-### `public/_redirects` (auto-applied by Cloudflare Pages)
-- Empty by default — add 301 redirects here if you change URL structure later
-
----
-
-## Verifying the build locally
-
-```bash
-cd /home/z/my-project
-bun run build                    # builds to ./out
-bunx serve out -p 3001           # preview locally at http://localhost:3001
-```
-
-Open http://localhost:3001 — you should see the full Greenroots site, identical to the live z.ai preview.
-
----
-
-## What works on Cloudflare Pages
-
-- ✅ All 20 sections (Hero, Courses, Mentors, FAQ, etc.) — fully static HTML
-- ✅ Mobile + desktop responsive layouts
-- ✅ Yellow accent color scheme (`#F9D032`) and dark theme sections
-- ✅ All CTAs and form inputs (note: forms don't submit yet — wire them to Formspree/Netlify Forms/Cloudflare Workers when ready)
-
-## What doesn't work (without extra setup)
-
-- ❌ Next.js Image Optimization (we already disabled it — placeholders render fine)
-- ❌ Server-side API routes (we marked `/api` as `force-static` — it returns a static JSON)
-- ❌ NextAuth.js sessions (would need Cloudflare Workers + KV if you add auth later)
-
-If you need dynamic features later, switch to **`@cloudflare/next-on-pages`** adapter — but for a marketing site, static export is simpler and faster.
-
----
-
-## Custom domain setup
-
-After deployment:
-
-1. In Cloudflare Pages dashboard → your project → **Custom domains** → **Set up a domain**
-2. Enter `yourdomain.com` (and `www.yourdomain.com` if desired)
-3. Cloudflare auto-provisions the SSL cert and adds the CNAME record (if your DNS is on Cloudflare)
-4. Wait 2–5 minutes — your site is now live on your own domain
-
----
-
-## Costs
-
-- **Free tier:** 500 builds/month, unlimited bandwidth, unlimited requests, 20,000 files per deployment — more than enough for this site
-- **Paid tier ($20/mo):** only needed if you exceed build limits or want Cloudflare Analytics Pro
-
----
-
-## Support files in this repo
-
-- `next.config.ts` — static export config
-- `public/_headers` — Cloudflare Pages security headers + asset caching
-- `public/_redirects` — Cloudflare Pages redirect rules (empty)
-- `src/app/api/route.ts` — marked `force-static` so it builds cleanly
-- `DEPLOY.md` (this file) — deployment guide
-
-Build verified working: 2.1MB total output, 4 prerendered pages, zero server runtime required.
