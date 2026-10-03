@@ -1,6 +1,6 @@
 "use client";
 
-import { Marquee } from "@/components/magicui/marquee";
+import InfiniteSlider from "@/components/smoothui/infinite-slider";
 
 const ROW_1_LOGOS = [
   { name: "TCS", logo: "/logos/companies/tcs.svg" },
@@ -33,52 +33,40 @@ export function LogoStrip() {
         <p className="text-center text-xs sm:text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">
           Hiring Partners & Alumni Recruiters
         </p>
-        <div className="relative w-full overflow-hidden space-y-3.5 [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-          {/* Row 1 moving left */}
-          <Marquee
-            reverse={false}
-            pauseOnHover={true}
-            duration="28s"
-            gap="1.25rem"
-            repeat={4}
-          >
+        <div className="relative w-full overflow-hidden space-y-4 [mask-image:linear-gradient(to_right,transparent,white_8%,white_92%,transparent)]">
+          {/* Row 1 moving forward */}
+          <InfiniteSlider speed={45} speedOnHover={15} gap={20}>
             {ROW_1_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/70 hover:bg-white border border-gray-100 hover:border-[#0878E8] shadow-xs hover:shadow-sm flex items-center justify-center p-3 sm:p-4 transition-all duration-300"
+                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/80 hover:bg-white border border-gray-100 hover:border-[#166534]/50 shadow-xs hover:shadow-md flex items-center justify-center p-3 sm:p-4 transition-all duration-300 group"
               >
                 <img
                   src={c.logo}
                   alt={c.name}
-                  className="h-7 sm:h-8 w-auto max-w-[110px] sm:max-w-[130px] object-contain"
+                  className="h-7 sm:h-8 w-auto max-w-[110px] sm:max-w-[130px] object-contain group-hover:scale-105 transition-transform"
                   loading="lazy"
                 />
               </div>
             ))}
-          </Marquee>
+          </InfiniteSlider>
 
-          {/* Row 2 moving right */}
-          <Marquee
-            reverse={true}
-            pauseOnHover={true}
-            duration="28s"
-            gap="1.25rem"
-            repeat={4}
-          >
+          {/* Row 2 moving reverse */}
+          <InfiniteSlider speed={40} speedOnHover={15} reverse gap={20}>
             {ROW_2_LOGOS.map((c) => (
               <div
                 key={c.name}
-                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/70 hover:bg-white border border-gray-100 hover:border-[#0878E8] shadow-xs hover:shadow-sm flex items-center justify-center p-3 sm:p-4 transition-all duration-300"
+                className="h-16 sm:h-20 w-36 sm:w-48 shrink-0 rounded-xl bg-gray-50/80 hover:bg-white border border-gray-100 hover:border-[#166534]/50 shadow-xs hover:shadow-md flex items-center justify-center p-3 sm:p-4 transition-all duration-300 group"
               >
                 <img
                   src={c.logo}
                   alt={c.name}
-                  className="h-7 sm:h-8 w-auto max-w-[110px] sm:max-w-[130px] object-contain"
+                  className="h-7 sm:h-8 w-auto max-w-[110px] sm:max-w-[130px] object-contain group-hover:scale-105 transition-transform"
                   loading="lazy"
                 />
               </div>
             ))}
-          </Marquee>
+          </InfiniteSlider>
         </div>
       </div>
     </section>

@@ -8,6 +8,9 @@ import { CircularText } from "@/components/animmaster/circular-text";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { PulsatingButton } from "@/components/magicui/pulsating-button";
 import { useToast } from "@/hooks/use-toast";
+import ShineText from "@/components/smoothui/shine-text";
+import BorderBeam from "@/components/smoothui/border-beam";
+import MagneticButton from "@/components/smoothui/magnetic-button";
 
 export function Hero() {
   const { toast } = useToast();
@@ -57,31 +60,25 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: copy */}
           <div className="text-white">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/20 px-4 py-1.5 text-xs font-semibold text-[#0878E8] mb-6">
-              <Sparkles className="h-3.5 w-3.5" />
-              100% Career Audit Included
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/20 px-4 py-1.5 text-xs font-semibold text-[#0878E8] mb-6 border border-[#0878E8]/30">
+              <Sparkles className="h-3.5 w-3.5 text-amber-300" />
+              <ShineText baseColor="#93c5fd" shineColor="#ffffff" duration={2.2}>
+                100% Career Audit Included · Hyderabad Tech Training
+              </ShineText>
             </span>
 
-            {/* Animmaster: Glitch Text replaces Aceternity TextGenerateEffect */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight text-white">
-              <GlitchText
-                text="Build a Career"
-                as="span"
-                className="text-white inline-block"
-                scrambleDuration={1400}
-              />
-              <br />
-              <span className="text-[#0878E8] inline-block mt-2">
-                <GlitchText
-                  text="Actually Wants."
-                  as="span"
-                  scrambleDuration={1800}
-                  rgbSplit={false}
-                />
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08] tracking-tight text-white">
+              Build a Career<br />
+              <span className="bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa] bg-clip-text text-transparent">
+                That Actually Works.
               </span>
             </h1>
 
-            <div className="mt-8 space-y-3">
+            <p className="mt-6 text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl">
+              Greenroots delivers job-ready technology training — from Power BI to DevSecOps — with a career audit, personalised counselling, and placement support. We match you to the right technology, build your skills from zero, and stand beside you until you land the role.
+            </p>
+
+            <div className="mt-6 space-y-3">
               {[
                 "Career Audit First — assess your background, strengths, and market fit",
                 "Industry-Mapped Curriculum benchmarked to TCS, Infosys, Accenture, Deloitte",
@@ -89,7 +86,7 @@ export function Hero() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-gray-300">
                   <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#0878E8] shrink-0" />
-                  <span className="text-base lg:text-lg">{item}</span>
+                  <span className="text-sm sm:text-base">{item}</span>
                 </div>
               ))}
             </div>
@@ -115,12 +112,14 @@ export function Hero() {
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                 </PulsatingButton>
               </a>
-              <a
-                href="#contact"
-                className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-colors inline-block"
-              >
-                Talk to a Counsellor
-              </a>
+              <MagneticButton asChild strength={15}>
+                <a
+                  href="#contact"
+                  className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors inline-block"
+                >
+                  Talk to a Counsellor
+                </a>
+              </MagneticButton>
 
               {/* Animmaster: Circular Text rotating badge */}
               <div className="hidden sm:block ml-2">
@@ -139,72 +138,84 @@ export function Hero() {
 
           {/* Right: lead form */}
           <div className="lg:justify-self-end w-full max-w-md">
-            <div className="bg-white rounded-2xl shadow-2xl p-6 lg:p-8">
-              <h3 className="text-2xl font-bold text-[#071D3A]">Talk to a Counsellor</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Tell us where you want to land. We reply within 4 hours with a personalised counselling slot, recommended tests, and a rough budget map.
-              </p>
-              <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Full Name *"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    required
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder="Phone Number *"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email Address (optional)"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
-                  />
-                </div>
-                <div>
-                  <select
-                    value={program}
-                    onChange={(e) => setProgram(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent"
-                  >
-                    <option value="">Select Program</option>
-                    <option value="Power BI Mastery">Power BI Mastery</option>
-                    <option value="Business Analyst">Business Analyst</option>
-                    <option value="DevSecOps">DevSecOps</option>
-                    <option value="Software Testing">Software Testing</option>
-                    <option value="Data Analytics">Data Analytics</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="Tosca Automation">Tosca Automation</option>
-                    <option value="AI Product Mgmt">AI Product Mgmt</option>
-                  </select>
-                </div>
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full py-3 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-lg hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 transition-all disabled:opacity-70 cursor-pointer"
-                >
-                  {submitting ? "Sending..." : "Get Free Counselling →"}
-                </button>
-                <p className="text-xs text-gray-500 text-center">
-                  By submitting, you agree to our{" "}
-                  <a href="#contact" className="underline hover:text-gray-700">
-                    Privacy Policy
-                  </a>
+            <div className="relative bg-white rounded-2xl shadow-2xl p-6 lg:p-8 overflow-hidden">
+              <BorderBeam
+                colorFrom="#0878E8"
+                colorTo="#34d399"
+                duration={5}
+                size={110}
+                borderWidth={1.5}
+                radius={16}
+              />
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-[#071D3A]">Talk to a Counsellor</h3>
+                <p className="mt-2 text-sm text-gray-600">
+                  Tell us where you want to land. We reply within 4 hours with a personalised counselling slot, recommended tests, and a rough budget map.
                 </p>
-              </form>
+                <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+                  <div>
+                    <input
+                      type="text"
+                      required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Full Name *"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      required
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="Phone Number *"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Email Address (optional)"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent text-gray-900"
+                    />
+                  </div>
+                  <div>
+                    <select
+                      value={program}
+                      onChange={(e) => setProgram(e.target.value)}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0878E8] focus:border-transparent"
+                    >
+                      <option value="">Select Program</option>
+                      <option value="Power BI Mastery">Power BI Mastery</option>
+                      <option value="Business Analyst">Business Analyst</option>
+                      <option value="DevSecOps">DevSecOps</option>
+                      <option value="Software Testing">Software Testing</option>
+                      <option value="Data Analytics">Data Analytics</option>
+                      <option value="Data Science">Data Science</option>
+                      <option value="Tosca Automation">Tosca Automation</option>
+                      <option value="AI Product Mgmt">AI Product Mgmt</option>
+                    </select>
+                  </div>
+                  <MagneticButton asChild strength={10} className="w-full">
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="w-full py-3 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-lg hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 transition-all disabled:opacity-70 cursor-pointer"
+                    >
+                      {submitting ? "Sending..." : "Get Free Counselling →"}
+                    </button>
+                  </MagneticButton>
+                  <p className="text-xs text-gray-500 text-center">
+                    By submitting, you agree to our{" "}
+                    <a href="#contact" className="underline hover:text-gray-700">
+                      Privacy Policy
+                    </a>
+                  </p>
+                </form>
+              </div>
             </div>
           </div>
         </div>

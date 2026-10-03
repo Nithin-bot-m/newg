@@ -2,6 +2,7 @@
 
 import { ImagePlaceholder } from "@/components/placeholders";
 import { StaggeredFadeGrid } from "@/components/animmaster/staggered-fade-grid";
+import { TiltCard } from "@/components/smoothui/tilt-card";
 
 const CAMPUS_HUBS = [
   { name: "Tech Labs", tag: "High-spec workstations & dual monitors" },
@@ -19,31 +20,33 @@ export function Locations() {
             Our Hyderabad Campus
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Manjeera Majestic Commercial, JNTU Road, Hyderabad — walk-in counselling for tech training and overseas education under one roof.
+            Unit 206, Manjeera Majestic Commercial, Opposite JNTU, Next to Lulu Mall, Kukatpally, Hyderabad — walk-in career audit and overseas education counselling under one roof.
           </p>
         </div>
 
-        {/* Animmaster: Staggered Fade-In Grid */}
+        {/* Animmaster: Staggered Fade-In Grid with SmoothUI 3D TiltCards */}
         <StaggeredFadeGrid
           className="grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
           staggerDelay={0.12}
         >
           {CAMPUS_HUBS.map((hub, i) => (
-            <div
+            <TiltCard
               key={`hub-${i}`}
+              maxTilt={8}
+              glareColor="rgba(8, 120, 232, 0.18)"
               className="group relative overflow-hidden rounded-2xl bg-gray-50 hover:shadow-xl transition-all duration-300 h-full border border-gray-100"
             >
               <ImagePlaceholder
                 label={hub.name}
                 className="aspect-[3/4] w-full"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-4 sm:p-6">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-4 sm:p-6 pointer-events-none">
                 <h3 className="text-lg sm:text-xl font-bold text-white">
                   {hub.name}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-300 mt-1">{hub.tag}</p>
               </div>
-            </div>
+            </TiltCard>
           ))}
         </StaggeredFadeGrid>
       </div>

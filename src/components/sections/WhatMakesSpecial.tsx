@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { BentoGrid, BentoGridItem } from "@/components/aceternity/bento-grid";
 import { Clock, BarChart3, FileText, Users, Target, Briefcase } from "lucide-react";
+import { ShineText } from "@/components/smoothui/shine-text";
 
 /* Skeleton headers — animated visual placeholders for each bento card.
    Defined BEFORE the ITEMS array so the TDZ (temporal dead zone) doesn't
@@ -173,6 +174,12 @@ export function WhatMakesSpecial() {
     <section className="pt-12 sm:pt-16 lg:pt-20 pb-0 bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
+          <div className="inline-flex mb-3">
+            <ShineText
+              text="✦ THE GREENROOTS ADVANTAGE"
+              className="text-xs font-bold uppercase tracking-wider text-[#0878E8] bg-white/5 border border-white/10 px-4 py-1.5 rounded-full"
+            />
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">
             Not just training. Transformation.
           </h2>

@@ -4,44 +4,44 @@ const TESTIMONIALS = [
   {
     quote:
       "The Power BI track was exactly what I needed. Rushi's training style is very practical — we worked on real dashboards from week one. Got placed at Deloitte within 2 months of completing the program.",
-    name: "Graduate One",
-    designation: "Power BI 60-Day Mastery Track",
+    name: "Sai Krishna",
+    designation: "Power BI Track · Placed at Deloitte",
   },
   {
     quote:
       "I came in as a fresher with zero IT knowledge. The career audit helped me find the BA path and the training was incredibly structured. Cleared my first interview at Infosys in the third month.",
-    name: "Graduate Two",
-    designation: "Senior Business Analyst Program",
+    name: "Priyanka M.",
+    designation: "Business Analyst Track · Placed at Infosys",
   },
   {
     quote:
       "DevSecOps is a niche skill and Greenroots covers it in incredible depth. Docker, Kubernetes, Terraform — all covered with live cloud labs. The content is premium and the support doesn't stop after training.",
-    name: "Graduate Three",
-    designation: "DevSecOps Mastery Track",
+    name: "Venkatesh R.",
+    designation: "DevSecOps Track · Placed at Capgemini",
   },
   {
     quote:
       "After 2 years of a gap, I was nervous to re-enter IT. Greenroots made it stress-free — the resume rebuild and LinkedIn profile update alone got me 4 interview calls in the first week after posting.",
-    name: "Graduate Four",
-    designation: "Full-Stack Software Testing",
+    name: "Sneha K.",
+    designation: "Software Testing · Career Gap to IT",
   },
   {
     quote:
       "Tosca training here is unlike anything on YouTube. They use actual enterprise project structures, not toy examples. The mock interviews were harder than the real ones — which is exactly what you need.",
-    name: "Graduate Five",
-    designation: "Tricentis Tosca Automation",
+    name: "Mohammed Adil",
+    designation: "Tricentis Tosca Automation · Placed",
   },
   {
     quote:
-      "I was scared to speak in English. After Greenroots training, I cleared 3 interviews and got placed.",
-    name: "CRT Graduate",
-    designation: "Campus Recruitment Training",
+      "The AI Product Management track is genuinely ahead of the market. I got an offer as an Associate PM within 3 weeks of finishing — and the interviewers were impressed by the AI tool fluency they hadn't seen before.",
+    name: "Rahul Verma",
+    designation: "AI Product Management Track · Associate PM",
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-20 lg:py-28 overflow-hidden relative bg-black">
+    <section id="reviews" className="py-20 lg:py-28 overflow-hidden relative bg-black scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 lg:mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white">

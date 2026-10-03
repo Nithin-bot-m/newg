@@ -13,7 +13,7 @@ const PATHS = [
 const FEATURES = [
   "Secure a 6-month internship to gain hands-on experience",
   "Dedicated 1:1 personalised career coach",
-  "Access to 75+ marquee recruiters",
+  "Access to 600+ recruitment partners (TCS, Infosys, Deloitte, Amazon, Cognizant)",
   "ATS-optimised resume & LinkedIn profile overhaul",
   "100% placement assistance — we only charge when we deliver",
 ];

@@ -47,7 +47,7 @@ export const PulsatingButton = React.forwardRef<
         {...props}
       >
         {children}
-        <style jsx>{`
+        <style>{`
           @keyframes pulsate {
             0% {
               box-shadow: 0 0 0 0 var(--pulse-color);

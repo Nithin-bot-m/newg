@@ -1,4 +1,8 @@
+import Link from "next/link";
 import { Globe, Plane } from "lucide-react";
+import { TiltCard } from "@/components/smoothui/tilt-card";
+import { MagneticButton } from "@/components/smoothui/magnetic-button";
+import { ShineText } from "@/components/smoothui/shine-text";
 
 type Destination = {
   flag: string;
@@ -60,13 +64,16 @@ const DESTINATIONS: Destination[] = [
 
 export function StudyAbroadDestinations() {
   return (
-    <section id="study-abroad" className="py-16 lg:py-24 bg-white">
+    <section id="study-abroad" className="py-16 lg:py-24 bg-white scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/15 px-4 py-1.5 text-xs font-semibold text-[#0878E8] mb-4">
-            <Globe className="h-3.5 w-3.5" />
-            Greenroots × SIG Global Edu — Official Partner
-          </span>
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#0878E8]/10 px-4 py-1.5 mb-4">
+            <Globe className="h-3.5 w-3.5 text-[#0878E8]" />
+            <ShineText
+              text="Greenroots × SIG Global Edu — Official Partner"
+              className="text-xs font-semibold text-[#0878E8]"
+            />
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             Where do you want to land?
           </h2>
@@ -77,31 +84,38 @@ export function StudyAbroadDestinations() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {DESTINATIONS.map((dest) => (
-            <div
+            <TiltCard
               key={dest.country}
-              className="bg-gray-50 hover:bg-white rounded-2xl p-6 ring-1 ring-gray-100 hover:ring-[#0878E8]/40 hover:shadow-lg transition-all duration-300 group"
+              maxTilt={9}
+              glareColor="rgba(8, 120, 232, 0.12)"
+              className="bg-gray-50 hover:bg-white rounded-2xl p-6 ring-1 ring-gray-100 hover:ring-[#0878E8]/40 hover:shadow-lg transition-all duration-300 group h-full flex flex-col justify-between"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-3xl leading-none">{dest.flag}</span>
-                <h3 className="text-xl font-bold text-[#071D3A]">
-                  {dest.country}
-                </h3>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-3xl leading-none">{dest.flag}</span>
+                  <h3 className="text-xl font-bold text-[#071D3A]">
+                    {dest.country}
+                  </h3>
+                </div>
+                <p className="text-xs font-semibold text-[#0878E8] uppercase tracking-wide mb-2">
+                  {dest.tag}
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {dest.desc}
+                </p>
               </div>
-              <p className="text-xs font-semibold text-[#0878E8] uppercase tracking-wide mb-2">
-                {dest.tag}
-              </p>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {dest.desc}
-              </p>
-            </div>
+            </TiltCard>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <button className="inline-flex items-center gap-2 px-8 py-3 bg-[#0878E8] text-white font-semibold rounded-lg hover:bg-[#0766c6] transition-colors">
+        <div className="mt-12 text-center flex justify-center">
+          <MagneticButton
+            href="/study-abroad"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0878E8] text-white font-semibold rounded-xl hover:bg-[#0766c6] transition-colors shadow-lg shadow-[#0878E8]/20"
+          >
             <Plane className="h-4 w-4" />
-            Get Free Counselling
-          </button>
+            Get Free Counselling →
+          </MagneticButton>
         </div>
       </div>
     </section>

@@ -113,7 +113,7 @@ const DATA = [
 
 export function HowToJoin() {
   return (
-    <section className="py-16 lg:py-24 bg-[#faf8f5]">
+    <section id="become-a-trainer" className="py-16 lg:py-24 bg-[#faf8f5] scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">

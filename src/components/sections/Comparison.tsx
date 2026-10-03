@@ -2,6 +2,7 @@
 import { Check, X } from "lucide-react";
 import { LampContainer } from "@/components/aceternity/lamp-effect";
 import { motion } from "motion/react";
+import BorderBeam from "@/components/smoothui/border-beam";
 
 const ROWS = [
   "Fear of interviews and group discussions",
@@ -16,7 +17,7 @@ const TRAD = [false, false, false, false, false, false];
 
 export function Comparison() {
   return (
-    <section className="py-0 lg:py-0 bg-white overflow-hidden relative">
+    <section id="crt" className="py-0 lg:py-0 bg-white overflow-hidden relative scroll-mt-20">
       {/* Lamp effect as the section header */}
       <LampContainer className="min-h-[28rem] bg-white">
         <motion.h2
@@ -40,8 +41,16 @@ export function Comparison() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24">
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto -mt-8">
           {/* Quad Advantage column */}
-          <div className="bg-gradient-to-br from-[#071D3A] via-[#0A2A54] to-[#04142B] border border-[#00AFA8]/50 rounded-2xl p-6 lg:p-8 text-white shadow-xl">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#071D3A] via-[#0A2A54] to-[#04142B] border border-[#00AFA8]/50 rounded-2xl p-6 lg:p-8 text-white shadow-xl">
+            <BorderBeam
+              colorFrom="#32D583"
+              colorTo="#00B8E6"
+              duration={6}
+              size={120}
+              borderWidth={1.5}
+              radius={16}
+            />
+            <div className="relative z-10 flex items-center gap-3 mb-6">
               <div className="h-10 w-10 rounded-lg bg-[#32D583] text-[#071D3A] flex items-center justify-center font-black">
                 ✓
               </div>

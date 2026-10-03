@@ -55,3 +55,7 @@ prompt
 
 # Skills directory
 /skills/
+
+# Scratch & Archives
+scratch/
+*.zip

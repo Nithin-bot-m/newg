@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { ImagePlaceholder } from "@/components/placeholders";
 import { ArrowRight } from "lucide-react";
-import { TiltCard } from "@/components/unlumen/tilt-card";
-import { BorderBeam } from "@/components/magicui/border-beam";
-import { MagicCard } from "@/components/magicui/magic-card";
+import { TiltCard } from "@/components/smoothui/tilt-card";
+import { BorderBeam } from "@/components/smoothui/border-beam";
+import { MagneticButton } from "@/components/smoothui/magnetic-button";
+import { ShineText } from "@/components/smoothui/shine-text";
 
 const PROGRAMS = [
   {
@@ -41,9 +43,15 @@ const PROGRAMS = [
 
 export function Programs() {
   return (
-    <section id="programs" className="py-8 sm:py-12 lg:py-16 bg-gray-50">
+    <section id="courses" className="py-8 sm:py-12 lg:py-16 bg-gray-50 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
+          <div className="inline-flex mb-3">
+            <ShineText
+              text="⚡ INDUSTRY-ALIGNED TRACKS"
+              className="text-xs font-bold uppercase tracking-wider text-[#0878E8] bg-[#0878E8]/10 px-4 py-1.5 rounded-full"
+            />
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
             High-Demand Tech Tracks Built for 2026
           </h2>
@@ -56,24 +64,18 @@ export function Programs() {
           {PROGRAMS.map((program) => (
             <TiltCard
               key={program.title}
-              className="relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
-              maxTilt={6}
-              glareColor={`rgba(${parseInt(program.accent.slice(1,3),16)}, ${parseInt(program.accent.slice(3,5),16)}, ${parseInt(program.accent.slice(5,7),16)}, 0.18)`}
+              className="relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col h-full border border-gray-100"
+              maxTilt={7}
+              glareColor={`rgba(${parseInt(program.accent.slice(1,3),16)}, ${parseInt(program.accent.slice(3,5),16)}, ${parseInt(program.accent.slice(5,7),16)}, 0.16)`}
             >
-              {/* Magic UI: BorderBeam - animated gradient traveling along the border */}
+              {/* SmoothUI: BorderBeam animated border glow */}
               <BorderBeam
-                size={120}
-                duration={8}
+                size={160}
+                duration={7}
                 colorFrom={program.accent}
                 colorTo="#00AFA8"
               />
-              {/* Magic UI: MagicCard - mouse-following spotlight */}
-              <MagicCard
-                gradientColor={program.accent}
-                gradientSize={150}
-                gradientOpacity={0.15}
-                className="flex flex-col h-full"
-              >
+              <div className="flex flex-col h-full">
                 <ImagePlaceholder
                   label="Programme cover image"
                   className="aspect-[16/10] w-full"
@@ -105,20 +107,26 @@ export function Programs() {
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#071D3A] hover:gap-2.5 transition-all">
+                  <Link
+                    href="/courses"
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0878E8] hover:gap-2.5 transition-all"
+                  >
                     Learn More
                     <ArrowRight className="h-3.5 w-3.5" />
-                  </button>
+                  </Link>
                 </div>
-              </MagicCard>
+              </div>
             </TiltCard>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <button className="px-8 py-3 bg-[#0a0a0a] text-white font-semibold rounded-lg hover:bg-[#222] transition-colors">
+        <div className="mt-12 text-center flex justify-center">
+          <MagneticButton
+            href="/courses"
+            className="px-8 py-3.5 bg-[#0a0a0a] text-white font-semibold rounded-xl hover:bg-[#222] transition-colors shadow-lg shadow-black/10 inline-flex items-center gap-2"
+          >
             View All 8 Programs →
-          </button>
+          </MagneticButton>
         </div>
       </div>
     </section>

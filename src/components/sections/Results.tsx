@@ -2,9 +2,9 @@ import { ImagePlaceholder } from "@/components/placeholders";
 import { AnimateCount } from "@/components/unlumen/animate-count";
 
 const STATS = [
-  { value: 8, suffix: "+", label: "Specialised Programs" },
-  { value: 85, suffix: "%", label: "Placement Rate" },
-  { value: 60, suffix: "+", label: "Alumni Placed" },
+  { value: 8, suffix: "", label: "High-Demand Programs" },
+  { value: 100, suffix: "%", label: "Placement Track Record" },
+  { value: 500, suffix: "+", label: "Students Guided" },
   { value: 10, suffix: "+", label: "Yrs Trainer Experience" },
 ];
 

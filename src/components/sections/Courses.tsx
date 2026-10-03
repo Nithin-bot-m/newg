@@ -1,4 +1,8 @@
 import { ArrowRight, Clock, Users, MonitorPlay } from "lucide-react";
+import TiltCard from "@/components/smoothui/tilt-card";
+import BorderBeam from "@/components/smoothui/border-beam";
+import MagneticButton from "@/components/smoothui/magnetic-button";
+import Link from "next/link";
 
 type Course = {
   title: string;
@@ -145,7 +149,7 @@ const COURSES: Course[] = [
 
 export function Courses() {
   return (
-    <section id="courses" className="py-12 sm:py-16 lg:py-24 bg-gray-50">
+    <section id="courses" className="py-12 sm:py-16 lg:py-24 bg-gray-50 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 lg:mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071D3A]">
@@ -157,88 +161,107 @@ export function Courses() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {COURSES.map((course) => (
-            <div
+          {COURSES.map((course, idx) => (
+            <TiltCard
               key={course.title}
-              className="bg-white rounded-2xl p-6 lg:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col border-t-4"
-              style={{ borderTopColor: course.accent }}
+              maxTilt={6}
+              scale={1.015}
+              glare={true}
+              glareOpacity={0.12}
+              className="h-full rounded-2xl"
             >
-              <div className="flex items-start justify-between gap-3 mb-3">
-                <h3 className="text-lg font-bold text-[#071D3A] leading-snug">
-                  {course.title}
-                </h3>
-                <span
-                  className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide"
-                  style={{
-                    backgroundColor: `${course.accent}20`,
-                    color: course.accent,
-                  }}
-                >
-                  {course.tag}
-                </span>
-              </div>
-
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {course.desc}
-              </p>
-
-              {/* Meta row */}
-              <div className="mt-4 flex flex-wrap gap-3 text-xs text-gray-500">
-                <span className="inline-flex items-center gap-1">
-                  <Clock className="h-3.5 w-3.5" />
-                  {course.duration}
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <Users className="h-3.5 w-3.5" />
-                  {course.level}
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <MonitorPlay className="h-3.5 w-3.5" />
-                  {course.mode}
-                </span>
-              </div>
-
-              {/* Topics list */}
-              <ul className="mt-5 space-y-2 flex-1">
-                {course.topics.map((topic) => (
-                  <li
-                    key={topic}
-                    className="flex items-start gap-2 text-sm text-gray-700"
-                  >
-                    <span
-                      className="mt-1.5 h-1.5 w-1.5 rounded-full shrink-0"
-                      style={{ backgroundColor: course.accent }}
-                    />
-                    {topic}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Tools */}
-              <div className="mt-5 pt-5 border-t border-gray-100">
-                <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-2">
-                  Tools covered
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {course.tools.map((tool) => (
-                    <span
-                      key={tool}
-                      className="px-2 py-0.5 rounded-md bg-gray-100 text-[11px] font-medium text-gray-700"
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#071D3A] hover:gap-2.5 transition-all"
-                style={{ color: course.accent }}
+              <div
+                className="h-full bg-white rounded-2xl p-6 lg:p-7 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col border-t-4 relative overflow-hidden"
+                style={{ borderTopColor: course.accent }}
               >
-                Book Free Counselling
-                <ArrowRight className="h-3.5 w-3.5" />
-              </button>
-            </div>
+                {idx === 0 && (
+                  <BorderBeam
+                    colorFrom={course.accent}
+                    colorTo="#38bdf8"
+                    duration={6}
+                    size={90}
+                    borderWidth={1.5}
+                    radius={16}
+                  />
+                )}
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <h3 className="text-lg font-bold text-[#071D3A] leading-snug">
+                    {course.title}
+                  </h3>
+                  <span
+                    className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide"
+                    style={{
+                      backgroundColor: `${course.accent}20`,
+                      color: course.accent,
+                    }}
+                  >
+                    {course.tag}
+                  </span>
+                </div>
+
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {course.desc}
+                </p>
+
+                {/* Meta row */}
+                <div className="mt-4 flex flex-wrap gap-3 text-xs text-gray-500">
+                  <span className="inline-flex items-center gap-1">
+                    <Clock className="h-3.5 w-3.5" />
+                    {course.duration}
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <Users className="h-3.5 w-3.5" />
+                    {course.level}
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <MonitorPlay className="h-3.5 w-3.5" />
+                    {course.mode}
+                  </span>
+                </div>
+
+                {/* Topics list */}
+                <ul className="mt-5 space-y-2 flex-1">
+                  {course.topics.map((topic) => (
+                    <li
+                      key={topic}
+                      className="flex items-start gap-2 text-sm text-gray-700"
+                    >
+                      <span
+                        className="mt-1.5 h-1.5 w-1.5 rounded-full shrink-0"
+                        style={{ backgroundColor: course.accent }}
+                      />
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Tools */}
+                <div className="mt-5 pt-5 border-t border-gray-100">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-2">
+                    Tools covered
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {course.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="px-2 py-0.5 rounded-md bg-gray-100 text-[11px] font-medium text-gray-700"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <Link
+                  href="/contact"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold hover:gap-2.5 transition-all"
+                  style={{ color: course.accent }}
+                >
+                  Book Free Counselling
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
+            </TiltCard>
           ))}
         </div>
 
@@ -246,9 +269,14 @@ export function Courses() {
           <p className="text-gray-600 mb-4">
             Not sure which course is right for you? Book a free career audit session.
           </p>
-          <button className="px-8 py-3 bg-[#0a0a0a] text-white font-semibold rounded-lg hover:bg-[#222] transition-colors">
-            Book a Free Career Audit →
-          </button>
+          <MagneticButton asChild strength={18}>
+            <Link
+              href="/contact"
+              className="px-8 py-3 bg-[#0a0a0a] text-white font-semibold rounded-lg hover:bg-[#222] transition-colors inline-block"
+            >
+              Book a Free Career Audit →
+            </Link>
+          </MagneticButton>
         </div>
       </div>
     </section>

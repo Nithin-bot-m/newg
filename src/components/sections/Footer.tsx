@@ -1,36 +1,39 @@
+import Link from "next/link";
 import { Logo } from "@/components/logo";
 
 const FOOTER_COLUMNS = [
   {
     title: "Programs",
     links: [
-      { name: "Power BI Mastery", href: "#courses" },
-      { name: "Business Analyst", href: "#courses" },
-      { name: "DevSecOps", href: "#courses" },
-      { name: "Data Analytics", href: "#courses" },
-      { name: "Software Testing", href: "#courses" },
-      { name: "Data Science", href: "#courses" },
+      { name: "Power BI Mastery", href: "/courses" },
+      { name: "Business Analyst", href: "/courses" },
+      { name: "DevSecOps", href: "/courses" },
+      { name: "Data Analytics", href: "/courses" },
+      { name: "Software Testing", href: "/courses" },
+      { name: "Data Science", href: "/courses" },
     ],
   },
   {
     title: "Services",
     links: [
-      { name: "Career Audit", href: "#contact" },
-      { name: "Course Counselling", href: "#contact" },
-      { name: "Resume Building", href: "#services" },
-      { name: "Mock Interviews", href: "#campus" },
-      { name: "Placement Support", href: "#programs" },
-      { name: "Study Abroad Wing", href: "#study-abroad" },
+      { name: "Career Audit", href: "/contact" },
+      { name: "Course Counselling", href: "/contact" },
+      { name: "Resume Building", href: "/courses" },
+      { name: "Mock Interviews", href: "/crt" },
+      { name: "Placement Support", href: "/reviews" },
+      { name: "Study Abroad Wing", href: "/study-abroad" },
     ],
   },
   {
     title: "Quick Links",
     links: [
-      { name: "About Greenroots", href: "#hero" },
-      { name: "Campus Hub", href: "#locations" },
-      { name: "Expert Mentors", href: "#mentors" },
-      { name: "FAQs", href: "#faq" },
-      { name: "Contact & Walk-in", href: "#contact" },
+      { name: "About Greenroots", href: "/#hero" },
+      { name: "All Programs", href: "/courses" },
+      { name: "Student Reviews", href: "/reviews" },
+      { name: "CRT Programs", href: "/crt" },
+      { name: "Become a Trainer", href: "/become-a-trainer" },
+      { name: "Study Abroad", href: "/study-abroad" },
+      { name: "Privacy Policy", href: "/privacy" },
     ],
   },
 ];
@@ -42,9 +45,9 @@ export function Footer() {
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <a href="#hero" className="inline-flex mb-4">
+            <Link href="/" className="inline-flex mb-4">
               <Logo variant="light" showTagline className="h-10" />
-            </a>
+            </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-md">
               Greenroots is a technology training institute in Hyderabad offering job-ready courses in Power BI, Data Analytics, Business Analysis, DevSecOps and Software Testing — with a free career audit and placement support.
             </p>
@@ -64,13 +67,19 @@ export function Footer() {
                 </a>
               </p>
               <p>
+                Address:{" "}
+                <span className="text-gray-300">
+                  Unit 206, Manjeera Majestic Commercial, Opp. JNTU, Next to Lulu Mall, Kukatpally, Hyderabad
+                </span>
+              </p>
+              <p className="pt-1">
                 <a
-                  href="https://wa.me/919549543898?text=Hi%20Greenroots,%20I%20would%20like%20to%20know%20more%20about%20your%20courses."
+                  href="https://wa.me/919549543898?text=Hi%20Greenroots!%20I%27d%20like%20to%20know%20more%20about%20your%20training%20programs."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#0878E8] font-medium"
                 >
-                  Chat with us on WhatsApp →
+                  Chat with us on WhatsApp (+91 95495 43898) →
                 </a>
               </p>
             </div>
@@ -85,12 +94,12 @@ export function Footer() {
               <ul className="space-y-2.5">
                 {col.links.map((link) => (
                   <li key={link.name}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-sm text-gray-400 hover:text-[#0878E8] transition-colors"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -103,19 +112,32 @@ export function Footer() {
           <p className="text-xs text-gray-500">
             © {new Date().getFullYear()} Green Roots Technologies. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            {["Twitter", "LinkedIn", "Instagram", "YouTube"].map((s) => (
-              <a
-                key={s}
-                href="#"
-                aria-label={s}
-                className="h-8 w-8 rounded-full bg-white/5 ring-1 ring-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
-              >
-                <span className="text-[10px] font-bold text-gray-400">
-                  {s.charAt(0)}
-                </span>
-              </a>
-            ))}
+          <div className="flex items-center gap-6">
+            <Link
+              href="/privacy"
+              className="text-xs text-gray-400 hover:text-white transition-colors underline"
+            >
+              Privacy Policy
+            </Link>
+            <div className="flex items-center gap-3">
+              {[
+                { name: "LinkedIn", href: "https://www.linkedin.com/company/grootstechnologies/" },
+                { name: "Instagram", href: "https://www.instagram.com/grootstechnologies/" },
+                { name: "YouTube", href: "https://youtube.com/@greenroots_techtalks" },
+                { name: "WhatsApp", href: "https://wa.me/919549543898?text=Hi%20Greenroots!%20I'd%20like%20to%20chat." },
+              ].map((s) => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.name}
+                  className="px-2.5 py-1 text-xs rounded-full bg-white/5 ring-1 ring-white/10 hover:bg-white/10 text-gray-300 hover:text-white transition-colors"
+                >
+                  {s.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

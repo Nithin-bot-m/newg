@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev --webpack -p 3000",
     "build": "next build",
     "build:pages": "next build && echo 'Static site ready in ./out'",
     "start": "bunx serve out -p 3000",

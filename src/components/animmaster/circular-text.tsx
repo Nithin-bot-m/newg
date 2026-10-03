@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -25,9 +26,25 @@ export const CircularText = ({
   color?: string;
   children?: React.ReactNode; // center content (icon, CTA, etc.)
 }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Split text into characters, distribute around the circle
   const chars = text.split("");
   const radius = size / 2 - fontSize;
+
+  if (!mounted) {
+    return (
+      <div
+        className={cn("relative flex items-center justify-center", className)}
+        style={{ width: size, height: size }}
+      >
+        {children}
+      </div>
+    );
+  }
 
   return (
     <motion.div
