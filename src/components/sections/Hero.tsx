@@ -53,7 +53,7 @@ export function Hero() {
               <span>100% Career Audit Included · Hyderabad Tech Training</span>
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08] tracking-tight text-white">
+            <h1 className="text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.12] sm:leading-[1.08] tracking-tight text-white">
               Build a Career<br />
               <span className="bg-gradient-to-r from-[#34d399] via-[#38bdf8] to-[#60a5fa] bg-clip-text text-transparent">
                 That Actually Works.
@@ -91,11 +91,11 @@ export function Hero() {
               <span className="block mt-1 text-slate-400 text-sm sm:text-base">who want a job, not just a degree.</span>
             </div>
 
-            <div className="mt-9 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-4">
               <MagneticButton asChild strength={12}>
                 <a
                   href="#courses"
-                  className="px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center gap-2 cursor-pointer group"
+                  className="w-full sm:w-auto justify-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center gap-2 cursor-pointer group text-center"
                 >
                   Explore 8 Programs
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -104,7 +104,7 @@ export function Hero() {
               <MagneticButton asChild strength={10}>
                 <a
                   href="#contact"
-                  className="px-6 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-block backdrop-blur-xs cursor-pointer"
+                  className="w-full sm:w-auto text-center px-6 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-block backdrop-blur-xs cursor-pointer"
                 >
                   Talk to a Counsellor
                 </a>
@@ -114,7 +114,7 @@ export function Hero() {
 
           {/* Right: lead form (5 cols) */}
           <div className="lg:col-span-5 w-full max-w-md lg:max-w-none">
-            <div className="relative bg-white rounded-3xl shadow-2xl p-7 sm:p-9 border border-slate-200/90">
+            <div className="relative bg-white rounded-3xl shadow-2xl p-6 sm:p-9 border border-slate-200/90">
               <div className="relative z-10">
                 <h3 className="text-2xl font-black text-[#071D3A] tracking-tight">Talk to a Counsellor</h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">

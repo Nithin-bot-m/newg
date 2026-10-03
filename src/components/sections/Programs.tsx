@@ -89,7 +89,7 @@ export function Programs() {
                   </div>
                 </div>
 
-                <div className="p-7 sm:p-9">
+                <div className="p-6 sm:p-9">
                   <h3 className="text-2xl sm:text-3xl font-black text-[#071D3A] tracking-tight leading-snug">
                     {featured.title}
                   </h3>
@@ -111,7 +111,7 @@ export function Programs() {
                 </div>
               </div>
 
-              <div className="px-7 sm:px-9 pb-7 sm:pb-9 pt-2 border-t border-slate-100 flex items-center justify-between">
+              <div className="px-6 sm:px-9 pb-6 sm:pb-9 pt-3 border-t border-slate-100 flex items-center justify-between">
                 <Link
                   href="/courses"
                   className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#0878E8] hover:gap-3 transition-all"
@@ -166,7 +166,7 @@ export function Programs() {
                   </ul>
                 </div>
 
-                <div className="px-6 sm:p-7 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div className="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
                   <Link
                     href="/courses"
                     className="inline-flex items-center gap-1.5 text-sm font-bold text-[#0878E8] hover:gap-2.5 transition-all"
@@ -183,7 +183,7 @@ export function Programs() {
         <div className="mt-12 lg:mt-16 text-center flex justify-center">
           <MagneticButton
             href="/courses"
-            className="px-8 py-4 bg-[#071D3A] text-white font-bold rounded-xl hover:bg-[#0c2e59] transition-all shadow-lg shadow-[#071D3A]/15 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto justify-center px-8 py-4 bg-[#071D3A] text-white font-bold rounded-xl hover:bg-[#0c2e59] transition-all shadow-lg shadow-[#071D3A]/15 hover:shadow-xl active:scale-[0.98] inline-flex items-center gap-2 cursor-pointer"
           >
             View All 8 Programs →
           </MagneticButton>

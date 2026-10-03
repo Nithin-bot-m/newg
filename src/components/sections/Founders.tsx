@@ -49,7 +49,7 @@ export function Founders() {
               glare={false}
               className="h-full rounded-3xl"
             >
-              <div className="h-full bg-white/[0.04] hover:bg-white/[0.07] backdrop-blur-md border border-white/10 hover:border-[#0878E8]/50 rounded-3xl p-7 sm:p-8 text-center flex flex-col justify-between transition-all duration-300 group">
+              <div className="h-full bg-white/[0.04] hover:bg-white/[0.07] backdrop-blur-md border border-white/10 hover:border-[#0878E8]/50 rounded-3xl p-6 sm:p-8 text-center flex flex-col justify-between transition-all duration-300 group">
                 <div>
                   <div className="relative inline-block mx-auto mb-5 p-1 rounded-full ring-2 ring-[#0878E8]/40 bg-gradient-to-tr from-[#0878E8]/20 to-[#00B8E6]/20 group-hover:ring-[#0878E8] transition-all duration-300">
                     <AvatarPlaceholder label={f.name || "—"} className="h-24 w-24 rounded-full" />
@@ -68,7 +68,7 @@ export function Founders() {
           <MagneticButton asChild strength={12}>
             <Link
               href="/become-a-trainer"
-              className="px-8 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] transition-all inline-block shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] cursor-pointer"
+              className="w-full sm:w-auto text-center px-8 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] transition-all inline-block shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] cursor-pointer"
             >
               Apply to Join Us as a Trainer
             </Link>

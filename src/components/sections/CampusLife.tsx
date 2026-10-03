@@ -55,16 +55,16 @@ export function CampusLife() {
               ))}
             </div>
 
-            <div className="mt-9 flex flex-wrap gap-3.5">
+            <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-3.5">
               <a
                 href="#contact"
-                className="px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-block cursor-pointer"
+                className="w-full sm:w-auto text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-block cursor-pointer"
               >
                 Book a Free Career Audit
               </a>
               <a
                 href="#contact"
-                className="px-7 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-block backdrop-blur-xs cursor-pointer"
+                className="w-full sm:w-auto text-center px-7 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-block backdrop-blur-xs cursor-pointer"
               >
                 Talk to a Counsellor
               </a>

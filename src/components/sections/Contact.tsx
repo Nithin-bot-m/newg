@@ -131,7 +131,7 @@ export function Contact() {
                     href="https://wa.me/919549543898?text=Hi%20Greenroots!%20I%27d%20like%20to%20know%20more%20about%20your%20training%20programs."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-[#166534] hover:text-[#14532d] bg-[#166534]/10 hover:bg-[#166534]/15 px-4.5 py-2.5 rounded-xl transition-colors"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-[#166534] hover:text-[#14532d] bg-[#166534]/10 hover:bg-[#166534]/15 px-3.5 sm:px-4.5 py-2.5 rounded-xl transition-colors text-center"
                   >
                     Chat with us on WhatsApp (+91 95495 43898) →
                   </MagneticButton>
@@ -141,7 +141,7 @@ export function Contact() {
           </div>
 
           {/* Right: contact form */}
-          <div className="relative bg-white rounded-3xl shadow-xl border border-slate-200/90 p-7 sm:p-9 lg:p-10">
+          <div className="relative bg-white rounded-3xl shadow-xl border border-slate-200/90 p-6 sm:p-9 lg:p-10">
             <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>

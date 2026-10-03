@@ -62,7 +62,7 @@ export function Header() {
           </Link>
 
           {/* Desktop nav - matching user screenshot */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 p-1 bg-gray-50/60 rounded-xl border border-gray-100/80">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 p-1 bg-gray-50/60 rounded-xl border border-gray-100/80">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.label;
               return (
@@ -72,8 +72,8 @@ export function Header() {
                   onClick={() => setActive(link.label)}
                   className={
                     isActive
-                      ? "px-4 py-1.5 text-[14px] xl:text-[15px] font-bold text-white bg-[#166534] hover:bg-[#14532d] rounded-lg shadow-sm transition-all duration-200 inline-flex items-center justify-center"
-                      : "px-3.5 py-1.5 text-[14px] xl:text-[15px] font-medium text-gray-700 hover:text-[#166534] hover:bg-white/90 rounded-lg transition-all duration-150 inline-flex items-center justify-center"
+                      ? "px-2.5 xl:px-4 py-1.5 text-[13px] xl:text-[15px] font-bold text-white bg-[#166534] hover:bg-[#14532d] rounded-lg shadow-sm transition-all duration-200 inline-flex items-center justify-center whitespace-nowrap"
+                      : "px-2.5 xl:px-3.5 py-1.5 text-[13px] xl:text-[15px] font-medium text-gray-700 hover:text-[#166534] hover:bg-white/90 rounded-lg transition-all duration-150 inline-flex items-center justify-center whitespace-nowrap"
                   }
                 >
                   {link.label}
@@ -83,11 +83,11 @@ export function Header() {
           </nav>
 
           {/* CTA buttons */}
-          <div className="hidden lg:flex items-center gap-2.5">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0">
             <MagneticButton asChild strength={10}>
               <Link
                 href="/contact"
-                className="px-4 py-2 text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-lg hover:border-[#166534] hover:bg-[#166534]/5 active:scale-[0.98] transition-all inline-block"
+                className="px-3 xl:px-4 py-2 text-xs xl:text-sm font-semibold text-[#166534] border border-[#166534]/30 rounded-lg hover:border-[#166534] hover:bg-[#166534]/5 active:scale-[0.98] transition-all inline-block whitespace-nowrap"
               >
                 Career Audit
               </Link>
@@ -95,7 +95,7 @@ export function Header() {
             <MagneticButton asChild strength={14}>
               <Link
                 href="/contact"
-                className="px-4 py-2 text-sm font-semibold bg-[#166534] text-white rounded-lg hover:bg-[#14532d] shadow-sm hover:shadow-md hover:shadow-[#166534]/20 active:scale-[0.98] transition-all inline-block"
+                className="px-3 xl:px-4 py-2 text-xs xl:text-sm font-semibold bg-[#166534] text-white rounded-lg hover:bg-[#14532d] shadow-sm hover:shadow-md hover:shadow-[#166534]/20 active:scale-[0.98] transition-all inline-block whitespace-nowrap"
               >
                 Enrol Now →
               </Link>
