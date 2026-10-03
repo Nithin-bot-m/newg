@@ -1,6 +1,7 @@
 "use client";
 
 import { ImagePlaceholder } from "@/components/placeholders";
+import MagneticButton from "@/components/smoothui/magnetic-button";
 
 const TAGS = [
   "Communication Fundamentals",
@@ -56,18 +57,22 @@ export function CampusLife() {
             </div>
 
             <div className="mt-8 sm:mt-9 flex flex-col sm:flex-row sm:items-center gap-3.5">
-              <a
-                href="#contact"
-                className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center justify-center cursor-pointer"
-              >
-                Book a Free Career Audit
-              </a>
-              <a
-                href="#contact"
-                className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-flex items-center justify-center backdrop-blur-xs cursor-pointer"
-              >
-                Talk to a Counsellor
-              </a>
+              <MagneticButton asChild>
+                <a
+                  href="#contact"
+                  className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center justify-center cursor-pointer"
+                >
+                  Book a Free Career Audit
+                </a>
+              </MagneticButton>
+              <MagneticButton asChild>
+                <a
+                  href="#contact"
+                  className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all inline-flex items-center justify-center backdrop-blur-xs cursor-pointer"
+                >
+                  Talk to a Counsellor
+                </a>
+              </MagneticButton>
             </div>
           </div>
 

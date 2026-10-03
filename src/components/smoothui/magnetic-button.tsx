@@ -94,32 +94,34 @@ const MagneticButton = ({
 
   const isEffectDisabled = disabled || shouldReduceMotion || !isHoverDevice;
 
+  // Normalize strength so both fractional (0.3) and integer (10-15) inputs feel identical and ultra-smooth
+  const normalizedStrength =
+    strength > 1
+      ? Math.min(strength / 35, 0.45)
+      : Math.min(Math.max(strength, 0.15), 0.45);
+
   const handleMouseMove = useCallback(
     (event: React.MouseEvent<HTMLDivElement>) => {
-      if (isEffectDisabled || !buttonRef.current) {
+      if (isEffectDisabled) {
         return;
       }
 
-      const rect = buttonRef.current.getBoundingClientRect();
+      const target = buttonRef.current || wrapperRef.current;
+      if (!target) return;
+
+      const rect = target.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
 
       const distanceX = event.clientX - centerX;
       const distanceY = event.clientY - centerY;
-      const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
-      if (distance < radius) {
-        const factor = 1 - distance / radius;
-        const moveX = distanceX * strength * factor;
-        const moveY = distanceY * strength * factor;
-        x.set(moveX);
-        y.set(moveY);
-      } else {
-        x.set(0);
-        y.set(0);
-      }
+      const moveX = distanceX * normalizedStrength;
+      const moveY = distanceY * normalizedStrength;
+      x.set(moveX);
+      y.set(moveY);
     },
-    [isEffectDisabled, radius, strength, x, y]
+    [isEffectDisabled, normalizedStrength, x, y]
   );
 
   const handleMouseLeave = useCallback(() => {
@@ -127,7 +129,10 @@ const MagneticButton = ({
     y.set(0);
   }, [x, y]);
 
-  const buttonClasses = cn(magneticButtonVariants({ className, size, variant }));
+  const buttonClasses = cn(
+    magneticButtonVariants({ className, size, variant }),
+    "transition-all active:scale-[0.97] cursor-pointer"
+  );
 
   const renderContent = () => {
     // If asChild is true, or if child is already a valid React element (e.g. <button>, <a>, <Link>),
@@ -192,17 +197,25 @@ const MagneticButton = ({
   return (
     // biome-ignore lint/a11y/noStaticElementInteractions: Mouse events are for visual effect, not interaction
     <div
-      className="inline-block"
+      className={cn(
+        "inline-block relative",
+        className?.includes("w-full") && "w-full sm:w-auto"
+      )}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
       ref={wrapperRef}
       role="presentation"
       style={{
-        margin: `-${radius / 2}px`,
-        padding: `${radius / 2}px`,
+        padding: "6px",
+        margin: "-6px",
       }}
     >
-      <motion.div style={{ x, y }}>
+      <motion.div
+        style={{ x, y }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 450, damping: 25 }}
+        className={cn(className?.includes("w-full") && "w-full")}
+      >
         {renderContent()}
       </motion.div>
     </div>

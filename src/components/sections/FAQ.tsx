@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { DotPattern } from "@/components/magicui/dot-pattern";
+import MagneticButton from "@/components/smoothui/magnetic-button";
 
 const FAQS = [
   {
@@ -97,18 +98,22 @@ export function FAQ() {
         </div>
 
         <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-          <a
-            href="/contact"
-            className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 border border-gray-300 text-[#071D3A] font-bold rounded-xl hover:bg-gray-50 active:scale-[0.98] transition-all shadow-xs inline-flex items-center justify-center"
-          >
-            See If You Qualify
-          </a>
-          <a
-            href="/become-a-trainer"
-            className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center justify-center"
-          >
-            Apply to Join Us →
-          </a>
+          <MagneticButton asChild>
+            <a
+              href="/contact"
+              className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 border border-gray-300 text-[#071D3A] font-bold rounded-xl hover:bg-gray-50 active:scale-[0.98] transition-all shadow-xs inline-flex items-center justify-center cursor-pointer"
+            >
+              See If You Qualify
+            </a>
+          </MagneticButton>
+          <MagneticButton asChild>
+            <a
+              href="/become-a-trainer"
+              className="w-full sm:w-auto min-h-[48px] text-center px-7 py-3.5 bg-gradient-to-r from-[#0878E8] to-[#00B8E6] text-white font-bold rounded-xl hover:from-[#0766c6] hover:to-[#00a3cc] shadow-lg shadow-[#0878E8]/25 hover:shadow-xl active:scale-[0.98] transition-all inline-flex items-center justify-center cursor-pointer"
+            >
+              Apply to Join Us →
+            </a>
+          </MagneticButton>
         </div>
       </div>
     </section>
